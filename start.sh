@@ -58,7 +58,7 @@ fi
 echo
 
 
-echo "
+echo -n "
 [Desktop Entry]
 Comment[es_ES]=
 Comment=
