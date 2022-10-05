@@ -2,17 +2,17 @@
 
 ####Epoff Module####
 #Variables
-Dir_principal=$(cat $HOME/.bashrc | grep dir_epik00 | cut -c12-)
-Config=$(echo "$Dir_principal/config.txt" 2>/dev/null)
+Dir_principal=$(grep dir_epik00 "$HOME"/.bashrc | cut -c12-)
+Config="$Dir_principal"/config.txt
 bucle=bucle
-Brillo_Alerta=$(cat "$Config" | grep epopbrilloalerta= | awk '{print $2}')
-Brillo_Normal=$(cat "$Config" | grep epopbrillo= | awk '{print $2}')
-display=$(cat "$Config" | grep epopdisplay= | awk '{print $2}')
+Brillo_Alerta=$(grep epopbrilloalerta= "$Config" | awk '{print $2}')
+Brillo_Normal=$(grep epopbrillo= "$Config" | awk '{print $2}')
+display=$(grep epopdisplay= "$Config" | awk '{print $2}')
 
 #Loop
 while [[ $bucle == bucle ]]; do
   #Scanear thumbshot.py
-  python3=$(ps aux | grep thumbshot.py | grep -v grep | grep -o python3 | tail -1)
+  python3=$(pgrep thumbshot.py | grep -v grep | grep -o python3 | tail -1)
 
   #Si es detectado entonces:
   if [[ $python3 = python3 ]]; then
@@ -33,7 +33,7 @@ while [[ $bucle == bucle ]]; do
     #Loop
     while [[ $epon == true ]]; do
       #Scanear thumbshot.py
-      p=$(ps aux | grep thumbshot.py | grep -v grep | grep -o python3 | tail -1)
+      p=$(pgrep thumbshot.py | grep -v grep | grep -o python3 | tail -1)
       # Si es detectado entonces:
       if [[ $p = python3 ]]; then
         #Reiniciar cuenta atras
@@ -59,4 +59,3 @@ while [[ $bucle == bucle ]]; do
   #Tiempo Entre bucle (para ahorrar cpu)
   sleep 0.05
 done
-
