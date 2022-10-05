@@ -14,6 +14,8 @@ while [ $x = "x" ]; do
     config_newline=$(cat -n "$Dir_principal"/config.txt | tail -1 | awk '{print $1}' )
     config_line=$(cat -n /tmp/Epik00-main/config.txt | tail -1 | awk '{print $1}' )
 
+    if [ "$latestversion" -gt "$version" ]; then
+    
     if [ "$config_newline" = "$config_line" ]; then
     rm /tmp/Epik00-main/config.txt 2>/dev/null
     else
@@ -22,15 +24,16 @@ while [ $x = "x" ]; do
     notify-send "Actualizacion de Epik00" "Epik00 ha sido actualizado, (reconfigurelo antes del proximo reinicio" -t 3000
     fi
     
-    if [ "$latestversion" -gt "$version" ]; then
         cp -ru /tmp/Epik00-main/* "$Dir_principal" 2>/dev/null
+        chmod +x "$Dir_principal"/start.sh
         rm -rf ./Epik00-main 2>/dev/null
         rm main*.zip 2>/dev/null
-        sleep 900 
+
     else
         rm -rf ./Epik00-main 2>/dev/null
         rm main*.zip 2>/dev/null
-        sleep 900
+
     fi
+    sleep 900 
 done
 
