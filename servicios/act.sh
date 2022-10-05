@@ -31,5 +31,6 @@ while [ $x = "x" ]; do
         rm -rf ./Epik00-main 2>/dev/null
         rm main*.zip 2>/dev/null
         sleep 900
+        
     fi
 done
