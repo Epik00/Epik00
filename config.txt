@@ -4,11 +4,11 @@
 #### EPOP.SH
 
   ## Brillo normal/alerta de epop.sh
-  epopbrillo=( 1 )              //Por defecto: 1
-  epopbrilloalerta=( 1.3 )      //Por defecto: 1.3
+  epopbrillo=( 1 )          //Por defecto: 1
+  epopbrilloalerta=( 1.3 )  //Por defecto: 1.3
 
   ## Escritorio al que debe cambiar epop.sh en alerta
-  epopdisplay=( 1 )
+  epopdisplay=( 1 )         //Por defecto: 1
 
 
 #### START.SH
@@ -17,12 +17,10 @@
 ## Inicio de Automatico Scripts:
 
  #Actualizacion Completa desde github:
- act00=( false )  // Por defecto: true
+ act00=( true )             // Por defecto: true
 
  #Limpiar historial
- starthistorial=( true ) // Por defecto: false
+ starthistorial=( false )   // Por defecto: false
 
  #Inicio de Epop.sh
- startepop=( true ) // Por defecto: true
-
-
+ startepop=( true )         // Por defecto: true
