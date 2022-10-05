@@ -10,7 +10,7 @@ while [[ $x = x ]]; do
    azul='\033[0;34m'
 
    #Variables
-   Dir_principal=$(cat "$HOME"/.bashrc | grep dir_epik00 | cut -c12-)
+   Dir_principal=$(grep dir_epik00 "$HOME"/.bashrc | cut -c12-)
    Dir_config="$Dir_principal/config.txt"
    dir_epop="$Dir_principal/servicios/epop.sh"
    dir_hist="$Dir_principal/servicios/hist.sh"
@@ -19,7 +19,7 @@ while [[ $x = x ]]; do
    ##Epop
    pid_epop=$(top -b -n 1 | grep epop.sh | head -n1 | awk '{print $1}' | tr -d "[:space:]")
    name_epop=$(top -b -n 1 | grep epop.sh | head -n1 | rev | awk '{print $1}' | rev | tr -d "[:space:]")
-   start_epop=$(cat "$Dir_config" | grep startepop= | awk '{print $2}' | tr -d "[:space:]")
+   start_epop=$(grep startepop= "$Dir_config" | awk '{print $2}' | tr -d "[:space:]")
    if [[ $name_epop = "epop.sh" ]]; then
       status_epop_m="   Activado"
       status_epop=$(echo -e "$verde" "   Activado" "$normal")
@@ -39,7 +39,7 @@ while [[ $x = x ]]; do
    ##Hist
    pid_hist=$(top -b -n 1 | grep hist.sh | head -n1 | awk '{print $1}' | tr -d "[:space:]")
    name_hist=$(top -b -n 1 | grep hist.sh | head -n1 | rev | awk '{print $1}' | rev | tr -d "[:space:]")
-   start_hist=$(cat "$Dir_config" | grep starthistorial= | awk '{print $2}' | tr -d "[:space:]")
+   start_hist=$(grep starthistorial= "$Dir_config" | awk '{print $2}' | tr -d "[:space:]")
    if [[ $name_hist = "hist.sh" ]]; then
       status_hist=$(echo -e "$verde" "   Activado" "$normal")
       status_hist_m="   Activado"
@@ -58,7 +58,7 @@ while [[ $x = x ]]; do
    ##Actualizador
    pid_act=$(top -b -n 1 | grep act.sh | head -n1 | awk '{print $1}' | tr -d "[:space:]")
    name_act=$(top -b -n 1 | grep act.sh | head -n1 | rev | awk '{print $1}' | rev | tr -d "[:space:]")
-   start_act=$(cat "$Dir_config" | grep act00= | awk '{print $2}' | tr -d "[:space:]")
+   start_act=$(grep act00= "$Dir_config" | awk '{print $2}' | tr -d "[:space:]")
    if [[ $name_act = "act.sh" ]]; then
       status_act=$(echo -e "$verde" "   Activado" "$normal")
       status_act_m="   Activado"
@@ -86,19 +86,19 @@ while [[ $x = x ]]; do
    echo " Num   Procesos     Estado       Inicio        Pid"
    echo
    printf "  1)   epop.sh   "
-   printf "$status_epop  "
-   printf "$start_epop_h "
-   printf "$pid_epop"
+   printf %s\ "$status_epop  "
+   printf %s\ "$start_epop_h "
+   printf %s\ "$pid_epop"
    echo
    printf "  2)   hist.sh   "
-   printf "$status_hist  "
-   printf "$start_hist_h "
-   printf "$pid_hist"
+   printf %s\ "$status_hist  "
+   printf %s\ "$start_hist_h "
+   printf %s\ "$pid_hist"
    echo
    printf "  3)   act.sh    "
-   printf "$status_act  "
-   printf "$start_act_h "
-   printf "$pid_act"
+   printf %s\ "$status_act  "
+   printf %s\ "$start_act_h "
+   printf %s\ "$pid_act"
    echo
    printf "  0)   Salir"
    #Input
@@ -229,7 +229,6 @@ while [[ $x = x ]]; do
 
          fi
 
-
       else
 
          if [[ $status_hist_m = "Desactivado" ]]; then
@@ -352,4 +351,3 @@ while [[ $x = x ]]; do
 
    clear
 done
-
