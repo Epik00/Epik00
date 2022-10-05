@@ -32,21 +32,21 @@ html=$(find "$Dir_pass" -name ".*.html" 2>/dev/null | head -n1 | tr -d "[:space:
 
 #Si no se encuentra el listado:
 if [[ $html == "" ]]; then
-echo -e $rojo " #####   ###    ####   #### " $normal
-echo -e $rojo " #   #  #   #  #      #     " $normal
-echo -e $rojo " #####  #####   ###    ###  " $normal
-echo -e $rojo " #      #   #      #      # " $normal
-echo -e $rojo " #      #   #  ####   ####  " $normal
+echo -e "$rojo" " #####   ###    ####   #### " "$normal"
+echo -e "$rojo" " #   #  #   #  #      #     " "$normal"
+echo -e "$rojo" " #####  #####   ###    ###  " "$normal"
+echo -e "$rojo" " #      #   #      #      # " "$normal"
+echo -e "$rojo" " #      #   #  ####   ####  " "$normal"
     echo
     echo Acceso Denegado!!!
     echo
     exit
 else
-echo -e $blue " #####   ###    ####   #### " $normal
-echo -e $blue " #   #  #   #  #      #     " $normal
-echo -e $blue " #####  #####   ###    ###  " $normal
-echo -e $blue " #      #   #      #      # " $normal
-echo -e $blue " #      #   #  ####   ####  " $normal
+echo -e "$blue" " #####   ###    ####   #### " "$normal"
+echo -e "$blue" " #   #  #   #  #      #     " "$normal"
+echo -e "$blue" " #####  #####   ###    ###  " "$normal"
+echo -e "$blue" " #      #   #      #      # " "$normal"
+echo -e "$blue" " #      #   #  ####   ####  " "$normal"
     echo
 fi
 

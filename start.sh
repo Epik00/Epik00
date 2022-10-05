@@ -12,16 +12,16 @@ done
 
 Dir_principal=$(cat "$HOME/".bashrc 2>/dev/null | grep dir_epik00 | cut -c12-)
 #Actualizar bashrc.sh
-cd $Dir_principal/comandos/ || exit
+cd "$Dir_principal"/comandos/ || exit
 ./bashrc.sh &
 echo
 echo
-chmod +x $Dir_principal/comandos/bashrc.sh 2>/dev/null
-chmod +x $Dir_principal/comandos/epik00.sh 2>/dev/null
-chmod +x $Dir_principal/comandos/pass.sh 2>/dev/null
-chmod +x $Dir_principal/servicios/epop.sh 2>/dev/null
-chmod +x $Dir_principal/servicios/act.sh 2>/dev/null
-chmod +x $Dir_principal/servicios/hist.sh 2>/dev/null
+chmod +x "$Dir_principal"/comandos/bashrc.sh 2>/dev/null
+chmod +x "$Dir_principal"/comandos/epik00.sh 2>/dev/null
+chmod +x "$Dir_principal"/comandos/pass.sh 2>/dev/null
+chmod +x "$Dir_principal"/servicios/epop.sh 2>/dev/null
+chmod +x "$Dir_principal"/servicios/act.sh 2>/dev/null
+chmod +x "$Dir_principal"/servicios/hist.sh 2>/dev/null
 
 #Actualizacion Completa desde github
 cd "$Dir_principal"/servicios/ || exit
@@ -29,7 +29,6 @@ startactualizador=$(cat "$Dir_principal"/config.txt 2>/dev/null | grep act00= | 
 actactive=$(top -b -n1 | grep -o act.sh)
 if [ $actactive != act.sh ]  ; then
 if [[ "$startactualizador" = "true" ]]; then
-pkill act.sh
     ./act.sh &
     echo "1. Act: Activado"
 else
