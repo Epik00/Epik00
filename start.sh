@@ -7,6 +7,15 @@ while [ "$kwin" != "kwin_x11" ]; do
     sleep 1
 done
 
+
+chmod +x ./comandos/bashrc.sh
+chmod +x ./comandos/epik00.sh
+chmod +x ./comandos/pass.sh
+chmod +x ./servicios/epop.sh
+chmod +x ./servicios/act.sh
+chmod +x ./servicios/hist.sh
+
+
 #Actualizar bashrc.sh
 cd ./comandos/ || exit
 ./bashrc.sh &
