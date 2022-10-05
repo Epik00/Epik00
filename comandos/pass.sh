@@ -2,12 +2,8 @@
 
 normal="\033[0;39m"
 blue='\033[0;34m'
+rojo="\033[31m"
 
-echo -e $blue " #####   ###    ####   #### " $normal
-echo -e $blue " #   #  #   #  #      #     " $normal
-echo -e $blue " #####  #####   ###    ###  " $normal
-echo -e $blue " #      #   #      #      # " $normal
-echo -e $blue " #      #   #  ####   ####  " $normal
 
 #Variables
 Dir_principal=$(cat "$HOME"/.bashrc | grep dir_epik00 | cut -c12- 2>/dev/null)
@@ -36,11 +32,21 @@ html=$(find "$Dir_pass" -name ".*.html" 2>/dev/null | head -n1 | tr -d "[:space:
 
 #Si no se encuentra el listado:
 if [[ $html == "" ]]; then
+echo -e $rojo " #####   ###    ####   #### " $normal
+echo -e $rojo " #   #  #   #  #      #     " $normal
+echo -e $rojo " #####  #####   ###    ###  " $normal
+echo -e $rojo " #      #   #      #      # " $normal
+echo -e $rojo " #      #   #  ####   ####  " $normal
     echo
-    echo Listado no encontrado
+    echo Acceso Denegado!!!
     echo
     exit
 else
+echo -e $blue " #####   ###    ####   #### " $normal
+echo -e $blue " #   #  #   #  #      #     " $normal
+echo -e $blue " #####  #####   ###    ###  " $normal
+echo -e $blue " #      #   #      #      # " $normal
+echo -e $blue " #      #   #  ####   ####  " $normal
     echo
 fi
 
