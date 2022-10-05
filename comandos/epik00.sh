@@ -229,6 +229,7 @@ while [[ $x = x ]]; do
 
          fi
 
+
       else
 
          if [[ $status_hist_m = "InActivo" ]]; then
