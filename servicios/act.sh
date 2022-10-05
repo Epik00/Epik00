@@ -9,8 +9,7 @@ while [[ $x = "x" ]]; do
     rm -rf ./Epik00-main
     wget https://github.com/Epik00/Epik00/archive/refs/heads/main.zip
     unzip -o main*.zip
-    cd Epik00-main || exit
-    latestversion=$(cat ./README.md | grep "version" | awk '{print $3}' | tr -d "., ")
+    latestversion=$(cat ./Epik00-main/README.md | grep "version" | awk '{print $3}' | tr -d "., ")
     version=$(cat "$Dir_principal"/README.md | grep "version" | awk '{print $3}' | tr -d "., ")
     if [ "$latestversion" -gt "$version" ]; then
         cp -ru /tmp/Epik00-main/* "$Dir_principal"
