@@ -39,3 +39,4 @@ sed -i '/epik00/d' "$dir_bashrc"
     echo "alias epik00='$dir_epik00sh'"
 } >>"$dir_bashrc"
 exec bash
+

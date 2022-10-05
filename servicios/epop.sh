@@ -59,3 +59,4 @@ while [[ $bucle == bucle ]]; do
   #Tiempo Entre bucle (para ahorrar cpu)
   sleep 0.05
 done
+

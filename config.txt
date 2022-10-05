@@ -24,3 +24,4 @@
 
  #Inicio de Epop.sh
  startepop=( true )         // Por defecto: true
+ 
