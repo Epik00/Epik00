@@ -16,10 +16,10 @@ while [[ $x = "x" ]]; do
         cp -ru /tmp/Epik00-main/* "$Dir_principal"
         rm -rf ./Epik00-main
         rm main*.zip
-        sleep 1800
+        sleep 60
     else
         rm -rf ./Epik00-main
         rm main*.zip
-        sleep 1800
+        sleep 60
     fi
 done
