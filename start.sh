@@ -27,7 +27,7 @@ echo
 cd "$Dir_principal"/servicios/ || exit
 startactualizador=$(cat "$Dir_principal"/config.txt 2>/dev/null | grep act= | awk '{print $2}')
 if [[ "$startactualizador" = "true" ]]; then
-    ./act.sh
+    ./act.sh &
     echo "1. Act: Activado"
 else
     echo "1. Act.sh: Desactivado"
