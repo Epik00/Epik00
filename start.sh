@@ -27,7 +27,7 @@ chmod +x "$Dir_principal"/servicios/hist.sh 2>/dev/null
 cd "$Dir_principal"/servicios/ || exit
 startactualizador=$(cat "$Dir_principal"/config.txt 2>/dev/null | grep act00= | awk '{print $2}')
 actactive=$(top -b -n1 | grep -o act.sh)
-if [ $actactive != act.sh ]  ; then
+if [ "$actactive" != act.sh ]  ; then
 if [[ "$startactualizador" = "true" ]]; then
     ./act.sh &
     echo "1. Act: Activado"
@@ -56,4 +56,29 @@ else
 fi
 
 echo
+
+
+echo "{
+[Desktop Entry]
+Comment[es_ES]=
+Comment=
+Exec=$Dir_principal/start.sh
+GenericName[es_ES]=
+GenericName=
+Icon=dialog-scripts
+MimeType=
+Name[es_ES]=start.sh
+Name=start.sh
+Path=
+StartupNotify=false
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-AutostartScript=true
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+}" > "$HOME"/.config/autostart
+
 
