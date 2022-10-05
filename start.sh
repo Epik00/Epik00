@@ -16,12 +16,12 @@ cd $Dir_principal/comandos/ || exit
 ./bashrc.sh &
 echo
 echo
-chmod +x $Dir_principal/comandos/bashrc.sh
-chmod +x $Dir_principal/comandos/epik00.sh
-chmod +x $Dir_principal/comandos/pass.sh
-chmod +x $Dir_principal/servicios/epop.sh
-chmod +x $Dir_principal/servicios/act.sh
-chmod +x $Dir_principal/servicios/hist.shs
+chmod +x $Dir_principal/comandos/bashrc.sh 2>/dev/null
+chmod +x $Dir_principal/comandos/epik00.sh 2>/dev/null
+chmod +x $Dir_principal/comandos/pass.sh 2>/dev/null
+chmod +x $Dir_principal/servicios/epop.sh 2>/dev/null
+chmod +x $Dir_principal/servicios/act.sh 2>/dev/null
+chmod +x $Dir_principal/servicios/hist.sh 2>/dev/null
 
 #Actualizacion Completa desde github
 cd "$Dir_principal"/servicios/ || exit

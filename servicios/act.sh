@@ -28,7 +28,7 @@ while [ $x = "x" ]; do
         rm -rf ./Epik00-main 2>/dev/null
         rm main.zip* 2>/dev/null
         chmod +x "$Dir_principal"/start.sh
-        $Dir_principal/start.sh 
+        $Dir_principal/start.sh &
 
     else
         rm -rf ./Epik00-main 2>/dev/null
