@@ -79,6 +79,6 @@ X-DBUS-StartupType=
 X-KDE-AutostartScript=true
 X-KDE-SubstituteUID=false
 X-KDE-Username=
-}" > "$HOME"/.config/autostart
+}" > "$HOME"/.config/autostart/start.sh.desktop
 
 
