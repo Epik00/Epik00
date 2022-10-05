@@ -8,7 +8,7 @@ while [[ $x = "x" ]]; do
     rm main*.zip 2>/dev/null
     rm -rf ./Epik00-main 2>/dev/null
     wget https://github.com/Epik00/Epik00/archive/refs/heads/main.zip 2>/dev/null
-    unzip -o main*.zip 2>/dev/null
+    unzip -qq -o main*.zip 2>/dev/null
     latestversion=$(cat ./Epik00-main/README.md 2>/dev/null | grep "version" 2>/dev/null | awk '{print $3}' 2>/dev/null | tr -d "., " 2>/dev/null)
     version=$(cat "$Dir_principal"/README.md 2>/dev/null | grep "version" 2>/dev/null | awk '{print $3}' 2>/dev/null | tr -d "., ") 2>/dev/null
     if [ "$latestversion" -gt "$version" ]; then
