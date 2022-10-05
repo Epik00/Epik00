@@ -37,7 +37,7 @@ while [ $x = "x" ]; do
         rm main*.zip 2>/dev/null
 
     fi
-    rm wget-log.* 2>/dev/null
+    rm wget-log* 2>/dev/null
     sleep 900 
 done
 
