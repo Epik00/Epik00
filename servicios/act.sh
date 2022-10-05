@@ -21,12 +21,12 @@ while [ $x = "x" ]; do
     else
     mv /tmp/Epik00-main/config.txt "$Dir_principal"/config.txt
     export DISPLAY=:0
-    notify-send "Actualizacion de Epik00" "Epik00 ha sido actualizado, (reconfigurelo antes del proximo reinicio" -t 3000
+    notify-send "Actualizacion de Epik00" "Epik00 ha sido actualizado, (reconfigurelo antes del proximo reinicio" -t 5000
     fi
     
         cp -ru /tmp/Epik00-main/* "$Dir_principal" 2>/dev/null
         rm -rf ./Epik00-main 2>/dev/null
-        rm main*.zip 2>/dev/null
+        rm main.zip* 2>/dev/null
         chmod +x "$Dir_principal"/start.sh
         $Dir_principal/start.sh 
         sleep 1
