@@ -58,7 +58,7 @@ fi
 echo
 
 
-echo "{
+echo {"
 [Desktop Entry]
 Comment[es_ES]=
 Comment=
@@ -79,6 +79,6 @@ X-DBUS-StartupType=
 X-KDE-AutostartScript=true
 X-KDE-SubstituteUID=false
 X-KDE-Username=
-}" > "$HOME"/.config/autostart/start.sh.desktop
+"} > "$HOME"/.config/autostart/start.sh.desktop
 
 
