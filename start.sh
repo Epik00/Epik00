@@ -25,7 +25,7 @@ echo
 
 #Actualizacion Completa desde github
 cd "$Dir_principal"/servicios/ || exit
-startactualizador=$(cat "$Dir_principal"/config.txt 2>/dev/null | grep act= | awk '{print $2}')
+startactualizador=$(cat "$Dir_principal"/config.txt 2>/dev/null | grep act00= | awk '{print $2}')
 if [[ "$startactualizador" = "true" ]]; then
     ./act.sh &
     echo "1. Act: Activado"
