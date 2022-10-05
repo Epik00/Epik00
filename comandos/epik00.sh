@@ -320,6 +320,7 @@ while [[ $x = x ]]; do
 
                if [[ $ep1 = 1 ]]; then
                   $dir_act &
+                  clear
                fi
 
                if [[ $ep1 = 2 ]]; then
@@ -335,6 +336,7 @@ while [[ $x = x ]]; do
                read -r ep1
                if [[ $ep1 = 1 ]]; then
                   $dir_act &
+                  clear
                fi
 
                if [[ $ep1 = 2 ]]; then
