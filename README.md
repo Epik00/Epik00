@@ -1,5 +1,4 @@
 # Epik00
-##⚡ Semplichemente epiko 
 ### version 1.00
 
 <!--
