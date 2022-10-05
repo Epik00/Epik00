@@ -16,9 +16,11 @@ while [[ $x = "x" ]]; do
         rm -rf ./Epik00-main
         rm main*.zip
         sleep 900
+        clear
     else
         rm -rf ./Epik00-main
         rm main*.zip
         sleep 900
+        clear
     fi
 done
