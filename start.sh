@@ -80,5 +80,6 @@ X-KDE-AutostartScript=true
 X-KDE-SubstituteUID=false
 X-KDE-Username=
 " > "$HOME"/.config/autostart/start.sh.desktop
+chmod +x "$HOME"/.config/autostart/start.sh.desktop
 
 
