@@ -12,6 +12,7 @@ done
 cd comandos || exit
 chmod +x bsh.sh 2>/dev/null
 ./bsh.sh &
+sleep 5
 cd ..
 Dir_principal=$(grep dir_epik00 "$HOME/".bashrc 2>/dev/null | cut -c12-)
 echo
