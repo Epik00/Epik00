@@ -50,7 +50,7 @@ else
 fi
 
 echo
-
+mkdir "$HOME"/.config/autostart/
 echo -n "
 [Desktop Entry]
 Comment[es_ES]=
