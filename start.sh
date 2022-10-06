@@ -8,10 +8,10 @@ while [ "$kwin" != "kwin_x11" ]; do
 done
 
 
-#Actualizar bashrc.sh
+#Actualizar bash.sh
 cd comandos || exit
-chmod +x ./comandos/bashrc.sh 2>/dev/null
-./bashrc.sh &
+chmod +x ./comandos/bash.sh 2>/dev/null
+./bash.sh &
 cd ..
 Dir_principal=$(grep dir_epik00 "$HOME/".bashrc 2>/dev/null | cut -c12-)
 echo
