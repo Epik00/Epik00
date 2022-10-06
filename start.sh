@@ -31,16 +31,16 @@ startactualizador=$(grep act00= "$Dir_principal"/config.txt 2>/dev/null | awk '{
         ./act.sh &
         echo "1. Act: Activado"
     else
-        echo "1. Act.sh: Desactivado"
+        echo "1. Act: Desactivado"
     fi
 #Iniciar epop.sh
 startepop=$(grep startepop= "$Dir_principal"/config.txt 2>/dev/null | awk '{print $2}')
 if [[ "$startepop" = "true" ]]; then
     pkill epop.sh
     ./epop.sh &
-    echo "2. Epop.sh: Activado"
+    echo "2. Epop: Activado"
 else
-    echo "2. Epop.sh: Desactivado"
+    echo "2. Epop: Desactivado"
 fi
 
 #Iniciar hist.sh
@@ -48,9 +48,9 @@ starthistorial=$(grep starthistorial= "$Dir_principal"/config.txt 2>/dev/null | 
 if [[ "$starthistorial" = "true" ]]; then
     pkill hist.sh
     ./hist.sh &
-    echo "3. Hist.sh: Activado"
+    echo "3. Hist: Activado"
 else
-    echo "3. Hist.sh: Desactivado"
+    echo "3. Hist: Desactivado"
 fi
 
 echo
