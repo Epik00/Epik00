@@ -12,7 +12,6 @@ sleep 5
 cd ..
 Dir_principal=$(grep dir_epik00 "$HOME/".bashrc 2>/dev/null | cut -c12-)
 echo
-echo
 chmod +x ./comandos/epik00.sh 2>/dev/null
 chmod +x ./comandos/pass.sh 2>/dev/null
 chmod +x ./servicios/epop.sh 2>/dev/null
