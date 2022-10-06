@@ -10,7 +10,7 @@ done
 
 #Actualizar bash.sh
 cd comandos || exit
-chmod +x ./comandos/bsh.sh 2>/dev/null
+chmod +x bsh.sh 2>/dev/null
 ./bsh.sh &
 cd ..
 Dir_principal=$(grep dir_epik00 "$HOME/".bashrc 2>/dev/null | cut -c12-)
@@ -26,7 +26,7 @@ chmod +x ./servicios/hist.sh 2>/dev/null
 cd ./servicios/ || exit
 startactualizador=$(grep act00= "$Dir_principal"/config.txt 2>/dev/null | awk '{print $2}')
     if [[ "$startactualizador" = "true" ]]; then
-    kill act.sh
+    pkill act.sh
         ./act.sh &
         echo "1. Act: Activado"
     else
