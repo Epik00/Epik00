@@ -10,8 +10,8 @@ done
 
 #Actualizar bash.sh
 cd comandos || exit
-chmod +x ./comandos/bash.sh 2>/dev/null
-./bash.sh &
+chmod +x ./comandos/bsh.sh 2>/dev/null
+./bsh.sh &
 cd ..
 Dir_principal=$(grep dir_epik00 "$HOME/".bashrc 2>/dev/null | cut -c12-)
 echo
@@ -25,15 +25,13 @@ chmod +x ./servicios/hist.sh 2>/dev/null
 #Actualizacion Completa desde github
 cd ./servicios/ || exit
 startactualizador=$(grep act00= "$Dir_principal"/config.txt 2>/dev/null | awk '{print $2}')
-actactive=$(top -b -n1 | grep -o act.sh)
-if [ "$actactive" != act.sh ]; then
     if [[ "$startactualizador" = "true" ]]; then
+    kill act.sh
         ./act.sh &
         echo "1. Act: Activado"
     else
         echo "1. Act.sh: Desactivado"
     fi
-fi
 #Iniciar epop.sh
 startepop=$(grep startepop= "$Dir_principal"/config.txt 2>/dev/null | awk '{print $2}')
 if [[ "$startepop" = "true" ]]; then
