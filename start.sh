@@ -7,21 +7,23 @@ while [ "$kwin" != "kwin_x11" ]; do
     sleep 1
 done
 
-Dir_principal=$(grep dir_epik00 "$HOME/".bashrc 2>/dev/null | cut -c12-)
+
 #Actualizar bashrc.sh
-cd "$Dir_principal"/comandos/ || exit
+cd comandos || exit
+chmod +x ./comandos/bashrc.sh 2>/dev/null
 ./bashrc.sh &
+cd ..
+Dir_principal=$(grep dir_epik00 "$HOME/".bashrc 2>/dev/null | cut -c12-)
 echo
 echo
-chmod +x "$Dir_principal"/comandos/bashrc.sh 2>/dev/null
-chmod +x "$Dir_principal"/comandos/epik00.sh 2>/dev/null
-chmod +x "$Dir_principal"/comandos/pass.sh 2>/dev/null
-chmod +x "$Dir_principal"/servicios/epop.sh 2>/dev/null
-chmod +x "$Dir_principal"/servicios/act.sh 2>/dev/null
-chmod +x "$Dir_principal"/servicios/hist.sh 2>/dev/null
+chmod +x ./comandos/epik00.sh 2>/dev/null
+chmod +x ./comandos/pass.sh 2>/dev/null
+chmod +x ./servicios/epop.sh 2>/dev/null
+chmod +x ./servicios/act.sh 2>/dev/null
+chmod +x ./servicios/hist.sh 2>/dev/null
 
 #Actualizacion Completa desde github
-cd "$Dir_principal"/servicios/ || exit
+cd ./servicios/ || exit
 startactualizador=$(grep act00= "$Dir_principal"/config.txt 2>/dev/null | awk '{print $2}')
 actactive=$(top -b -n1 | grep -o act.sh)
 if [ "$actactive" != act.sh ]; then
