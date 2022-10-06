@@ -1,15 +1,11 @@
 #!/bin/bash
 
 ####Comandos
-kwin=$(top -b -n1 | grep -o kwin_x11)
-while [ "$kwin" != "kwin_x11" ]; do
-    kwin=$(top -b -n1 | grep -o kwin_x11)
-    sleep 1
-done
-
+sleep 3
 
 #Actualizar bash.sh
-cd comandos || exit
+Dir_principal=$(grep dir_epik00 "$HOME/".bashrc 2>/dev/null | cut -c12-)
+cd comandos || cd $Dir_principal/comandos || exit
 chmod +x bsh.sh 2>/dev/null
 ./bsh.sh &
 sleep 5
