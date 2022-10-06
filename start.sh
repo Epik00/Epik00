@@ -5,7 +5,7 @@ sleep 3
 
 #Actualizar bash.sh
 Dir_principal=$(grep dir_epik00 "$HOME/".bashrc 2>/dev/null | cut -c12-)
-cd comandos || cd $Dir_principal/comandos || exit
+cd comandos || cd "$Dir_principal"/comandos || exit
 chmod +x bsh.sh 2>/dev/null
 ./bsh.sh &
 sleep 5
