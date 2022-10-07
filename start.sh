@@ -49,7 +49,7 @@ else
 fi
 
 echo
-mkdir "$HOME"/.config/autostart/
+mkdir "$HOME"/.config/autostart/ 2>/dev/null
 echo -n "
 [Desktop Entry]
 Comment[es_ES]=
