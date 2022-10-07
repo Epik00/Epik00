@@ -12,7 +12,7 @@ display=$(grep epopdisplay= "$Config" | awk '{print $2}')
 #Loop
 while [[ $bucle == bucle ]]; do
   #Scanear thumbshot.py
-  python3=$(pgrep thumbshot.py | grep -v grep | grep -o python3 | tail -1)
+  python3=$(ps aux | grep thumbshot.py | grep -v grep | grep -o python3 | tail -1)
 
   #Si es detectado entonces:
   if [[ $python3 = python3 ]]; then
@@ -33,7 +33,7 @@ while [[ $bucle == bucle ]]; do
     #Loop
     while [[ $epon == true ]]; do
       #Scanear thumbshot.py
-      p=$(pgrep thumbshot.py | grep -v grep | grep -o python3 | tail -1)
+      p=$(ps aux | grep thumbshot.py | grep -v grep | grep -o python3 | tail -1)
       # Si es detectado entonces:
       if [[ $p = python3 ]]; then
         #Reiniciar cuenta atras
