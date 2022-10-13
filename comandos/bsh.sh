@@ -8,6 +8,7 @@ dir_act00="$dir_epik00/servicios/act.sh"
 dir_epop="$dir_epik00/servicios/epop.sh"
 dir_hist="$dir_epik00/servicios/hist.sh"
 dir_epik00sh="$dir_epik00/comandos/epik00.sh"
+dir_epck="$dir_epik00/comandos/epck.sh"
 existe_bashrc=$(find ~/.bashrc 2>/dev/null)
 #Si no existe .bashrc se crea
 if [[ $existe_bashrc != ".bashrc" ]]; then
@@ -27,6 +28,8 @@ sed -i '/act00/d' "$dir_bashrc"
 sed -i '/epop/d' "$dir_bashrc"
 sed -i '/hist/d' "$dir_bashrc"
 sed -i '/epik00/d' "$dir_bashrc"
+sed -i '/epck/d' "$dir_bashrc"
+
 #Añadir aqui cada variable
 {
     echo
@@ -37,6 +40,7 @@ sed -i '/epik00/d' "$dir_bashrc"
     echo "alias epop='pkill epop.sh; $dir_epop &'"
     echo "alias hist='pkill hist.sh; $dir_hist &'"
     echo "alias epik00='$dir_epik00sh'"
+    echo "alias epck='$dir_epck'"
 } >>"$dir_bashrc"
 exec bash
 
