@@ -110,14 +110,15 @@ while [[ $x = x ]]; do
    printf %s\ "$status_act  "
    printf %s\ "$start_act_h "
    printf %s\ "$pid_act"
+   echo
    echo "  0)   Salir"
    echo
    echo
-   echo "Comandos de 1 Uso:"
+   echo "Comandos:"
    echo
    echo  "Num   Procesos    Inicio"
    echo
-   printf "  4)   epoff.sh  "
+   printf "  4)   epoff.sh "
    printf %s\ "$start_epoff_h "
    echo
    printf "  0)   Salir"

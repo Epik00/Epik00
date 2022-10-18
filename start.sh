@@ -84,5 +84,5 @@ X-DBUS-StartupType=
 X-KDE-AutostartScript=true
 X-KDE-SubstituteUID=false
 X-KDE-Username=
-" >"$HOME"/.config/autostart/start.sh.desktop
-chmod +x "$HOME"/.config/autostart/start.sh.desktop
+" >"$HOME"/.config/autostart/start.sh.desktop 2>/dev/null
+chmod +x "$HOME"/.config/autostart/start.sh.desktop 2>/dev/null
