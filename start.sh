@@ -58,6 +58,7 @@ if [[ "$startepoff" = "true" ]]; then
     ../comandos/epoff.sh &
     echo "3. Epoff: Activado"
 else
+    ../comandos/epon.sh &
     echo "3. Epoff: Desactivado"
 fi
 

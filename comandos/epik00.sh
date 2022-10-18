@@ -15,6 +15,8 @@ while [[ $x = x ]]; do
    dir_epop="$Dir_principal/servicios/epop.sh"
    dir_hist="$Dir_principal/servicios/hist.sh"
    dir_act="$Dir_principal/servicios/act.sh"
+   dir_epoff="$Dir_principal/comandos/epoff.sh"
+   dir_epon="$Dir_principal/comandos/epon.sh"
 
    ##Epop
    pid_epop=$(top -b -n 1 | grep epop.sh | head -n1 | awk '{print $1}' | tr -d "[:space:]")
@@ -79,8 +81,10 @@ while [[ $x = x ]]; do
    start_epoff=$(grep startepoff= "$Dir_config" | awk '{print $2}' | tr -d "[:space:]")
    if [[ $start_epoff = "true" ]]; then
       start_epoff_h=$(echo -e "$verde" "Activado   " "$normal")
+      start_epoff_m="Activado   "
    else
       start_epoff_h=$(echo -e "$rojo" "Desactivado" "$normal")
+      start_epoff_m="Desactivado"
    fi
 
 
@@ -92,7 +96,7 @@ while [[ $x = x ]]; do
    echo -e "$azul" "  #       #       #    #  #    #   #   #   #" "$normal"
    echo -e "$azul" "  #####   #       #    #   #    ###     ###" "$normal"
    echo
-   echo "Servicios:"
+   echo " SERVICIOS:"
    echo
    echo " Num   Procesos     Estado       Inicio        Pid"
    echo
@@ -114,9 +118,9 @@ while [[ $x = x ]]; do
    echo "  0)   Salir"
    echo
    echo
-   echo "Comandos:"
+   echo " COMANDOS:"
    echo
-   echo  "Num   Procesos    Inicio"
+   echo  " Num   Procesos    Inicio"
    echo
    printf "  4)   epoff.sh "
    printf %s\ "$start_epoff_h "
@@ -367,6 +371,28 @@ while [[ $x = x ]]; do
             fi
          fi
       fi
+   if [[ $menu_principal = 4 ]]; then
+   if [[ $start_epoff_m = "   Activado" ]]; then
+echo "1) Desactivar"
+echo "0) Cancelar"
+read -r ep1
+               if [[ $ep1 = 1 ]]; then
+                  $dir_epoff &
+                  clear
+                  sed -i 's/startepoff=( true )/act00=( false )/' "$Dir_config"
+               fi
+else
+echo "1) Activar"
+echo "0) Cancelar"
+read -r ep1
+               if [[ $ep1 = 1 ]]; then
+                  $dir_epon &
+                  clear
+                  sed -i 's/startepoff=( false )/act00=( true )/' "$Dir_config"
+               fi
+
+   fi
+   fi
 
    fi
 
