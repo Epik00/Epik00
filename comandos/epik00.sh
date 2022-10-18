@@ -379,7 +379,7 @@ echo "0) Cancelar"
 read -r ep1
                if [[ $ep1 = 1 ]]; then
                   $dir_epoff &
-                  sed -i 's/startepoff=( true )/act00=( false )/' "$Dir_config"
+                  sed -i 's/startepoff=( true )/startepoff=( false )/' "$Dir_config"
                fi
 else
 echo "1) Activar"
@@ -387,7 +387,7 @@ echo "0) Cancelar"
 read -r ep1
                if [[ $ep1 = 1 ]]; then
                   $dir_epon &
-                  sed -i 's/startepoff=( false )/act00=( true )/' "$Dir_config"
+                  sed -i 's/startepoff=( false )/startepoff=( true )/' "$Dir_config"
                fi
 
    fi
