@@ -378,7 +378,6 @@ echo "0) Cancelar"
 read -r ep1
                if [[ $ep1 = 1 ]]; then
                   $dir_epoff &
-                  clear
                   sed -i 's/startepoff=( true )/act00=( false )/' "$Dir_config"
                fi
 else
@@ -387,7 +386,6 @@ echo "0) Cancelar"
 read -r ep1
                if [[ $ep1 = 1 ]]; then
                   $dir_epon &
-                  clear
                   sed -i 's/startepoff=( false )/act00=( true )/' "$Dir_config"
                fi
 
