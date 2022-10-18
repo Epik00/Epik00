@@ -92,6 +92,8 @@ while [[ $x = x ]]; do
    echo -e "$azul" "  #       #       #    #  #    #   #   #   #" "$normal"
    echo -e "$azul" "  #####   #       #    #   #    ###     ###" "$normal"
    echo
+   echo "Servicios:"
+   echo
    echo " Num   Procesos     Estado       Inicio        Pid"
    echo
    printf "  1)   epop.sh   "
@@ -108,6 +110,8 @@ while [[ $x = x ]]; do
    printf %s\ "$status_act  "
    printf %s\ "$start_act_h "
    printf %s\ "$pid_act"
+   echo
+   echo "Comandos de 1 Uso:"
    echo
    printf "  3)   epoff.sh    "
    printf "             "
