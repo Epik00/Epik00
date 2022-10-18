@@ -55,7 +55,7 @@ fi
 #Iniciar epoff.sh
 startepoff=$(grep startepoff= "$Dir_principal"/config.txt 2>/dev/null | awk '{print $2}')
 if [[ "$startepoff" = "true" ]]; then
-    ./servicios/notep.sh &
+    ./notep.sh &
     echo "3. Epoff: Activado"
 else
     echo "3. Epoff: Desactivado"
