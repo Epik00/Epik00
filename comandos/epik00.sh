@@ -75,6 +75,15 @@ while [[ $x = x ]]; do
       pid_act="   "
    fi
 
+   ##Epoff
+   start_epoff=$(grep epoff= "$Dir_config" | awk '{print $2}' | tr -d "[:space:]")
+   if [[ $start_epoff = "true" ]]; then
+      start_epoff_h=$(echo -e "$verde" "Activado   " "$normal")
+   else
+      start_epoff_h=$(echo -e "$rojo" "Desactivado" "$normal")
+   fi
+
+
    ##Lista
    echo
    echo -e "$azul" "  #####   #####   #    #   #    ###     ###" "$normal"
@@ -99,6 +108,11 @@ while [[ $x = x ]]; do
    printf %s\ "$status_act  "
    printf %s\ "$start_act_h "
    printf %s\ "$pid_act"
+   echo
+   printf "  3)   epoff.sh    "
+   printf "             "
+   printf %s\ "$start_epoff_h "
+   printf "             "
    echo
    printf "  0)   Salir"
    #Input

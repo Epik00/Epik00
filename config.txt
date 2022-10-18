@@ -25,3 +25,5 @@
  #Inicio de Epop.sh
  startepop=( true )         // Por defecto: true
  
+ #Inicio de epoff.sh
+ epoff=( false )         // Por defecto: false
