@@ -369,7 +369,9 @@ while [[ $x = x ]]; do
                fi
 
             fi
-                  fi
+         fi
+      fi
+   fi
    if [[ $menu_principal = 4 ]]; then
    if [[ $start_epoff_m = "   Activado" ]]; then
 echo "1) Desactivar"
@@ -391,9 +393,5 @@ read -r ep1
    fi
    fi
 
-         fi
-
-   fi
-
-   clear
+clear
 done
