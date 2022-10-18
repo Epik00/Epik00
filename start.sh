@@ -20,7 +20,7 @@ chmod +x ./comandos/epoff.sh 2>/dev/null
 chmod +x ./servicios/epop.sh 2>/dev/null
 chmod +x ./servicios/act.sh 2>/dev/null
 chmod +x ./servicios/hist.sh 2>/dev/null
-
+chmod +x ./servicios/notep.sh 2>/dev/null
 
 #Actualizacion Completa desde github
 cd ./servicios/ || exit
@@ -55,10 +55,9 @@ fi
 #Iniciar epoff.sh
 startepoff=$(grep startepoff= "$Dir_principal"/config.txt 2>/dev/null | awk '{print $2}')
 if [[ "$startepoff" = "true" ]]; then
-    ../comandos/epoff.sh &
+    ./servicios/notep.sh &
     echo "3. Epoff: Activado"
 else
-    ../comandos/epon.sh &
     echo "3. Epoff: Desactivado"
 fi
 
