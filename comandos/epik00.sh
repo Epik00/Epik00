@@ -114,9 +114,10 @@ while [[ $x = x ]]; do
    echo
    echo
    echo "Comandos de 1 Uso:"
-   echo  "Num   Procesos     Inicio"
    echo
-   printf "  4)   epoff.sh    "
+   echo  "Num   Procesos    Inicio"
+   echo
+   printf "  4)   epoff.sh  "
    printf %s\ "$start_epoff_h "
    echo
    printf "  0)   Salir"
