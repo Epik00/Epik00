@@ -15,8 +15,6 @@ while [[ $x = x ]]; do
    dir_epop="$Dir_principal/servicios/epop.sh"
    dir_hist="$Dir_principal/servicios/hist.sh"
    dir_act="$Dir_principal/servicios/act.sh"
-   dir_epoff="$Dir_principal/comandos/epoff.sh"
-   dir_epon="$Dir_principal/comandos/epon.sh"
 
    ##Epop
    pid_epop=$(top -b -n 1 | grep epop.sh | head -n1 | awk '{print $1}' | tr -d "[:space:]")
@@ -378,7 +376,6 @@ echo "1) Desactivar"
 echo "0) Cancelar"
 read -r ep1
                if [[ $ep1 = 1 ]]; then
-                  $dir_epoff &
                   sed -i 's/startepoff=( true )/startepoff=( false )/' "$Dir_config"
                fi
 else
@@ -386,7 +383,6 @@ echo "1) Activar"
 echo "0) Cancelar"
 read -r ep1
                if [[ $ep1 = 1 ]]; then
-                  $dir_epon &
                   sed -i 's/startepoff=( false )/startepoff=( true )/' "$Dir_config"
                fi
 
