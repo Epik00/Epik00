@@ -76,7 +76,7 @@ while [[ $x = x ]]; do
    fi
 
    ##Epoff
-   start_epoff=$(grep epoff= "$Dir_config" | awk '{print $2}' | tr -d "[:space:]")
+   start_epoff=$(grep startepoff= "$Dir_config" | awk '{print $2}' | tr -d "[:space:]")
    if [[ $start_epoff = "true" ]]; then
       start_epoff_h=$(echo -e "$verde" "Activado   " "$normal")
    else
@@ -110,7 +110,7 @@ while [[ $x = x ]]; do
    printf %s\ "$status_act  "
    printf %s\ "$start_act_h "
    printf %s\ "$pid_act"
-   printf "  0)   Salir"
+   echo "  0)   Salir"
    echo
    echo
    echo "Comandos de 1 Uso:"

@@ -52,6 +52,15 @@ else
     echo "3. Hist: Desactivado"
 fi
 
+#Iniciar epoff.sh
+startepoff=$(grep startepoff= "$Dir_principal"/config.txt 2>/dev/null | awk '{print $2}')
+if [[ "$startepoff" = "true" ]]; then
+    ../comandos/epoff.sh &
+    echo "3. Epoff: Activado"
+else
+    echo "3. Epoff: Desactivado"
+fi
+
 echo
 mkdir "$HOME"/.config/autostart/ 2>/dev/null
 echo -n "
