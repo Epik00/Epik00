@@ -81,7 +81,7 @@ while [[ $x = x ]]; do
    start_epoff=$(grep startepoff= "$Dir_config" | awk '{print $2}' | tr -d "[:space:]")
    if [[ $start_epoff = "true" ]]; then
       start_epoff_h=$(echo -e "$verde" "Activado   " "$normal")
-      start_epoff_m="Activado   "
+      start_epoff_m="Activado"
    else
       start_epoff_h=$(echo -e "$rojo" "Desactivado" "$normal")
       start_epoff_m="Desactivado"
@@ -373,7 +373,7 @@ while [[ $x = x ]]; do
       fi
    fi
    if [[ $menu_principal = 4 ]]; then
-   if [[ $start_epoff_m = "   Activado" ]]; then
+   if [[ $start_epoff_m = "Activado" ]]; then
 echo "1) Desactivar"
 echo "0) Cancelar"
 read -r ep1
