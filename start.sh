@@ -17,6 +17,7 @@ chmod +x ./comandos/pass.sh 2>/dev/null
 chmod +x ./comandos/epck.sh 2>/dev/null
 chmod +x ./comandos/epon.sh 2>/dev/null
 chmod +x ./comandos/epoff.sh 2>/dev/null
+chmod +x ./comandos/unlog.sh 2>/dev/null
 chmod +x ./servicios/epop.sh 2>/dev/null
 chmod +x ./servicios/act.sh 2>/dev/null
 chmod +x ./servicios/hist.sh 2>/dev/null
