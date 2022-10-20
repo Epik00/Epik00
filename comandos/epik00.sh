@@ -99,7 +99,7 @@ ver=$(cat $Dir_principal/README.md | head -n2 | tail -1 |awk '{print $3}')
    echo
    echo "$bold" "SERVICIOS:" "$normaltext"
    echo
-   echo " Num   Procesos     Estado       Inicio        Pid"
+   echo " Num   Procesos        Estado       Inicio        Pid"
    echo
    printf "  1)   epop.sh   "
    printf %s\ "$status_epop  "
