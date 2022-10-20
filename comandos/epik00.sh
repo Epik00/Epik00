@@ -8,6 +8,9 @@ while [[ $x = x ]]; do
    normal="\033[0;39m"
    rojo="\033[31m"
    azul='\033[0;34m'
+   bold=$(tput bold)
+   normaltext=$(tput sgr0)
+
 
    #Variables
    Dir_principal=$(grep dir_epik00 "$HOME"/.bashrc | cut -c12-)
@@ -94,7 +97,7 @@ ver=$(cat $Dir_principal/README.md | head -n2 | tail -1 |awk '{print $3}')
    echo -e "$azul" "  #       #       #    #  #    #   #   #   #" "$normal"
    echo -e "$azul" "  #####   #       #    #   #    ###     ###   v$ver" "$normal"
    echo
-   echo  -e "$azul" "SERVICIOS:" "$normal"
+   echo "$bold" "SERVICIOS:" "$normaltext"
    echo
    echo " Num   Procesos     Estado       Inicio        Pid"
    echo
@@ -116,7 +119,7 @@ ver=$(cat $Dir_principal/README.md | head -n2 | tail -1 |awk '{print $3}')
    echo "  0)   Salir"
    echo
    echo
-   echo -e "$azul" " COMANDOS:" "$normal"
+   echo "$bold" "COMANDOS:" "$normaltext"
    echo
    echo  " Num   Procesos    Inicio"
    echo
