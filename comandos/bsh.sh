@@ -12,7 +12,7 @@ dir_epck="$dir_epik00/comandos/epck.sh"
 dir_epon="$dir_epik00/comandos/epon.sh"
 dir_epoff="$dir_epik00/comandos/epoff.sh"
 dir_unlog="$dir_epik00/comandos/unlog.sh"
-dir_unlog="$dir_epik00/comandos/god.sh"
+dir_god="$dir_epik00/comandos/god.sh"
 existe_bashrc=$(find ~/.bashrc 2>/dev/null)
 #Si no existe .bashrc se crea
 if [[ $existe_bashrc != ".bashrc" ]]; then
