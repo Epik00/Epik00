@@ -94,7 +94,7 @@ ver=$(cat $Dir_principal/README.md | head -n2 | tail -1 |awk '{print $3}')
    echo -e "$azul" "  #       #       #    #  #    #   #   #   #" "$normal"
    echo -e "$azul" "  #####   #       #    #   #    ###     ###   v$ver" "$normal"
    echo
-   echo " SERVICIOS:"
+   echo  -e "$azul" "SERVICIOS:" "$normal"
    echo
    echo " Num   Procesos     Estado       Inicio        Pid"
    echo
@@ -116,7 +116,7 @@ ver=$(cat $Dir_principal/README.md | head -n2 | tail -1 |awk '{print $3}')
    echo "  0)   Salir"
    echo
    echo
-   echo " COMANDOS:"
+   echo -e "$azul" " COMANDOS:" "$normal"
    echo
    echo  " Num   Procesos    Inicio"
    echo
