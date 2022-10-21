@@ -19,7 +19,6 @@ while [[ $bucle == bucle ]]; do
   if [[ $python3 = python3 ]]; then
 
     #Cambiar Escritorio
-    echo a
     export DISPLAY=:0
     qdbus org.kde.KWin /KWin setCurrentDesktop "$display" 2>/dev/null
     sleep 0.1
@@ -53,7 +52,7 @@ while [[ $bucle == bucle ]]; do
         #Terminar bucle
         epon=false
       fi
-
+  sleep 0.1
     done
   fi
   #Final del bucle#
