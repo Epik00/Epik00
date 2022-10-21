@@ -23,7 +23,7 @@ while [[ $bucle == bucle ]]; do
     export DISPLAY=:0
     qdbus org.kde.KWin /KWin setCurrentDesktop "$display" 2>/dev/null
     sleep 0.1
-    $epoff ; notify-send "Epoptes esta activo" -t 8500 ; sleep 9 ; $epon
+    $epoff & notify-send "Epoptes esta activo" -t 8500 ; sleep 9 ; $epon &
     #Y cambiar el brillo al configurado
     output=$(xrandr | grep primary | awk '{print $1}' | tr -d "[:space:]")
     xrandr --output "$output" --brightness "$Brillo_Alerta" 2>/dev/null
