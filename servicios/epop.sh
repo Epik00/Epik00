@@ -21,14 +21,14 @@ while [[ $bucle == bucle ]]; do
     echo a
     export DISPLAY=:0
     qdbus org.kde.KWin /KWin setCurrentDesktop "$display" 2>/dev/null
-
+    epoff ; notify-send "Epoptes esta activo" -t 9000 ; sleep 9 ; epon
     #Y cambiar el brillo al configurado
     output=$(xrandr | grep primary | awk '{print $1}' | tr -d "[:space:]")
     xrandr --output "$output" --brightness "$Brillo_Alerta" 2>/dev/null
 
     ####Epon Module####
 
-    timer=195
+    timer=200
     epon=true
     #Loop
     while [[ $epon == true ]]; do
@@ -37,7 +37,7 @@ while [[ $bucle == bucle ]]; do
       # Si es detectado entonces:
       if [[ $p = python3 ]]; then
         #Reiniciar cuenta atras
-        timer=195
+        timer=200
       #Sino quitar 1 punto al contador
       else
         timer=$(("$timer" - 1))
@@ -47,6 +47,7 @@ while [[ $bucle == bucle ]]; do
         #Cambiar el brillo al Normal
         export DISPLAY=:0
         xrandr --output "$output" --brightness "$Brillo_Normal" 2>/dev/null
+        notify-send "Epoptes ya no esta activo" -t 20000
         #Terminar bucle
         epon=false
       fi
@@ -57,5 +58,5 @@ while [[ $bucle == bucle ]]; do
   fi
   #Final del bucle#
   #Tiempo Entre bucle (para ahorrar cpu)
-  sleep 0.05
+  sleep 0.1
 done
