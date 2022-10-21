@@ -6,7 +6,7 @@ clear
 echo -e
 echo -e $azul "MANUAL DE EPIK00" $normal
 echo
-echo -e $azul "EPIK00 es un conjunto de comandos y servicios para mejorar la experiencia e clase" $normal
+echo -e $azul "EPIK00 es un conjunto de comandos y servicios para mejorar la experiencia de clase" $normal
 echo
 echo
 echo
@@ -42,11 +42,11 @@ echo
 echo "    Suspende o reanuda el Proceso Socat, cortando o reanudando la comunicacion con el servidor de epoptes"
 echo
 echo
-echo -e $azul "// Notep (Comando de autoinicio)" $normal
+echo -e $azul "// notep (Servicio de autoinicio)" $normal
 echo
-echo "    Suspende el proceso Socat desde el inicio del ordenador automaticamente "
+echo "    Suspende el proceso Socat desde el inicio del ordenador automaticamente"
 echo "    Cortando la comunicacion con el servidor de epoptes"
-echo "    Puede ser configurado como proceso en el menu epik00"
+echo "    Solo puede ser configurado en el menu epik00"
 echo
 echo
 echo -e $azul "// act00 (SERVICIO) (COMANDO)" $normal
