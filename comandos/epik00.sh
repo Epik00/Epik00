@@ -88,7 +88,7 @@ while [[ $x = x ]]; do
       start_epoff_m="Desactivado"
    fi
 
-ver=$(cat $Dir_principal/README.md | head -n2 | tail -1 |awk '{print $3}')
+ver=$(cat "$Dir_principal"/README.md | head -n2 | tail -1 |awk '{print $3}')
    ##Lista
    echo
    echo -e "$azul" "  #####   #####   #    #   #    ###     ###" "$normal"
