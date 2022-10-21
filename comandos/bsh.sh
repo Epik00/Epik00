@@ -13,6 +13,7 @@ dir_epon="$dir_epik00/comandos/epon.sh"
 dir_epoff="$dir_epik00/comandos/epoff.sh"
 dir_unlog="$dir_epik00/comandos/unlog.sh"
 dir_god="$dir_epik00/comandos/god.sh"
+dir_man="clear ; cat $dir_epik00/manual.md"
 existe_bashrc=$(find ~/.bashrc 2>/dev/null)
 #Si no existe .bashrc se crea
 if [[ $existe_bashrc != ".bashrc" ]]; then
@@ -36,6 +37,7 @@ sed -i '/epck/d' "$dir_bashrc"
 sed -i '/epon/d' "$dir_bashrc"
 sed -i '/epoff/d' "$dir_bashrc"
 sed -i '/unlog/d' "$dir_bashrc"
+sed -i '/manual/d' "$dir_bashrc"
 
 #Añadir aqui cada variable
 {
@@ -52,6 +54,7 @@ sed -i '/unlog/d' "$dir_bashrc"
     echo "alias epoff='$dir_epoff'"
     echo "alias unlog='$dir_unlog'"
     echo "alias god='$dir_god'"
+    echo "alias manual='$dir_man'"
 
 } >>"$dir_bashrc"
 exec bash
