@@ -4,9 +4,11 @@ normal="\033[0;39m"
 azul='\033[0;34m'
 clear
 echo -e
-echo -e $azul "MANUAL EPIK00" $normal
+echo -e $azul "MANUAL DE EPIK00" $normal
 echo
 echo -e $azul "EPIK00 es un conjunto de comandos y servicios para mejorar la experiencia e clase" $normal
+echo
+echo
 echo
 echo -e $azul "// epik00 (COMANDO)" $normal
 echo
@@ -23,7 +25,7 @@ echo
 echo "    Borra los logs importantes del ordenador"
 echo
 echo
-echo -e $azul "pass (COMANDO)" $normal
+echo -e $azul "// pass (COMANDO)" $normal
 echo
 echo "    Buscador de contraseñas extraido de un .html"
 echo "    Previamente debe ser extraido el .html desde llum"
