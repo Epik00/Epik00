@@ -9,7 +9,7 @@ Brillo_Alerta=$(grep epopbrilloalerta= "$Config" | awk '{print $2}')
 Brillo_Normal=$(grep epopbrillo= "$Config" | awk '{print $2}')
 display=$(grep epopdisplay= "$Config" | awk '{print $2}')
 epoff="$Dir_principal/comandos/epoff.sh"
-epon="$Dir_principal/comandos/epon.sh"
+eponsh="$Dir_principal/comandos/epon.sh"
 #Loop
 while [[ $bucle == bucle ]]; do
   #Scanear thumbshot.py
@@ -22,7 +22,7 @@ while [[ $bucle == bucle ]]; do
     export DISPLAY=:0
     qdbus org.kde.KWin /KWin setCurrentDesktop "$display" 2>/dev/null
     sleep 0.3
-    $epoff & notify-send "Epoptes esta activo" -t 9000 ; sleep 9 ; $epon &
+    $epoff & notify-send "Epoptes esta activo" -t 9000 ; sleep 9 ; $eponsh &
     #Y cambiar el brillo al configurado
     output=$(xrandr | grep primary | awk '{print $1}' | tr -d "[:space:]")
     xrandr --output "$output" --brightness "$Brillo_Alerta" 2>/dev/null
