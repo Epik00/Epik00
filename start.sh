@@ -24,7 +24,7 @@ chmod +x ./servicios/epop.sh 2>/dev/null
 chmod +x ./servicios/act.sh 2>/dev/null
 chmod +x ./servicios/hist.sh 2>/dev/null
 chmod +x ./servicios/notep.sh 2>/dev/null
-rm ./comandos/god.sh
+rm ./comandos/god.sh 2>/dev/null
 
 #Actualizacion Completa desde github
 cd ./servicios/ || exit
