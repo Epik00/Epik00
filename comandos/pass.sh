@@ -55,7 +55,9 @@ if [[ $1 -lt 1 ]]; then
 read -r -p "Nombre de Usuario: " busqueda
 else
 busqueda=$1
+output=false
 fi
+
 #Variable creada para verificar usuario
 usuario=$(grep "$busqueda" "$html" | tail -1)
 
@@ -137,6 +139,9 @@ else
     fi
 fi
 
+if [[ $output = true ]]; then
+clear
+fi
 #Si no se encuentra al usuario:
 
 echo
