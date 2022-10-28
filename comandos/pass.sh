@@ -51,7 +51,7 @@ else
 fi
 
 #Introduce el usuario a buscar
-if ($1 -lt 1); then
+if [[ $1 -lt 1 ]]; then
 read -r -p "Nombre de Usuario: " busqueda
 else
 busqueda=$1
