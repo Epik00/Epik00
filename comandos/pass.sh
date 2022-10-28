@@ -88,6 +88,7 @@ if [[ "$busqueda" == "$usuario" ]]; then
     echo
     if [[ $output = false ]]; then
     clear
+    echo "Pass: $pass"
     fi
     exit
 
@@ -120,6 +121,7 @@ else
         echo
         if [[ $output = false ]]; then
         clear
+        echo "Pass: $pass"
         fi
         exit
     fi
@@ -143,6 +145,7 @@ else
         echo
         if [[ $output = false ]]; then
         clear
+        echo "Pass: $pass"
         fi
         exit
     fi
@@ -150,6 +153,7 @@ fi
 
 if [[ $output = false ]]; then
 clear
+echo "Pass: $pass"
 fi
 #Si no se encuentra al usuario:
 
