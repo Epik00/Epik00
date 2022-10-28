@@ -86,6 +86,9 @@ if [[ "$busqueda" == "$usuario" ]]; then
     #Copia la contraseña al portapapeles
     echo "$pass" | xclip -sel c
     echo
+    if [[ $output = true ]]; then
+    clear
+    fi
     exit
 
 else
@@ -115,6 +118,9 @@ else
         echo La contraseña es "$pass"
         echo "$pass" | xclip -sel c
         echo
+        if [[ $output = true ]]; then
+        clear
+        fi
         exit
     fi
 
