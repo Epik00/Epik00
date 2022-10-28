@@ -135,6 +135,9 @@ else
         echo -e La contraseña es "$pass"
         echo "$pass" | xclip -sel c
         echo
+        if [[ $output = true ]]; then
+        clear
+        fi
         exit
     fi
 fi
