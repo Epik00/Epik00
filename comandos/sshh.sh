@@ -42,7 +42,7 @@ if [[ "$busqueda" == "$usuario" ]]; then
 fi
 
 if [[ $ip -gt 1 ]]; then
-sshpass -p "$pass" ssh "$busqueda"@10.2.1."$ip" || echo error
+sshpass -p "$pass" ssh "$busqueda"@10.2.1."$ip"
 else
 echo No se ha encontrado ninguna ip
 fi
