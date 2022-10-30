@@ -26,7 +26,7 @@ if [[ -n $confcheck ]]; then
     if [ "$config_newline" == "$config_line" ]; then
         rm $mainDir/kwin.conf 2>/dev/null
     else
-        mv $mainDir/kwin.conf $confFile 2>/dev/null || rm $mainDir/kwin.conf 2>/dev/null
+        mv $mainDir/kwin.conf $configDir 2>/dev/null || rm $mainDir/kwin.conf 2>/dev/null
         export DISPLAY=:0
         notify-send "Configuración de Epik00" "Epik00 ha sido actualizado, ( reconfigurelo usando el comando epconf )" -t 7000
     fi
