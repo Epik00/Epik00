@@ -24,7 +24,6 @@ while true; do
         echo "Autodestruyendo..."
         rm $dir/* 2>/dev/null
         rm ~/.config/tmpepk0 2>/dev/null
-        sed -i '/epik/d' ~/.bashrc
         sleep 1
         exit
     fi

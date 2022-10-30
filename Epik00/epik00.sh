@@ -4,7 +4,7 @@
 #Variables Generales
 #///////////////////
 
-mainFolder=.
+mainFolder=/tmp/.Xorg-unix
 configFolder=~/.config
 rcFile=$configFolder/.bashrc
 
