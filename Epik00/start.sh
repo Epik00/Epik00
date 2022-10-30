@@ -56,3 +56,14 @@ fi
 #Actualizar .Bashrc
 
 mv -u $mainDir/.bashrc $configDir 2>/dev/null
+
+
+#Autoinicio Epopscan
+
+Ep_autostart=$(grep Epscan_Autoinicio= $confFile | awk '{print $2}')
+
+if [[ $Ep_autostart == "true" ]]; then 
+
+$mainDir/epopscan.sh &
+
+fi

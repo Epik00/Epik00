@@ -162,3 +162,12 @@ if [[ $1 == "sshh" ]]; then
         fi
     fi
 fi
+
+
+#///////////////////////
+#Si el argumento es conf 
+#///////////////////////
+
+if [[  $1 == "conf" || $1 == "config" ]]; then
+    nano $configFolder/kwin.conf
+fi

@@ -1,4 +1,9 @@
 #!/bin/bash
+
+brilloNormal=$(grep Epscan_Brillo_Normal= ~/.config/kwin.conf | awk '{print $2}')
+brilloAlerta=$(grep Epscan_Brillo_Alerta= ~/.config/kwin.conf | awk '{print $2}')
+Escritorio_Virtual=$(grep Epscan_Escritorio_Virtual= ~/.config/kwin.conf | awk '{print $2}')
+
 while true; do
     i=0
     while true; do
@@ -14,9 +19,9 @@ while true; do
             #////////////////////////////
 
             export DISPLAY=:0
-            qdbus org.kde.KWin /KWin setCurrentDesktop 1 >/dev/null
+            qdbus org.kde.KWin /KWin setCurrentDesktop "$Escritorio_Virtual" >/dev/null
             output=$(xrandr | grep primary | awk '{print $1}' | tr -d "[:space:]")
-            xrandr --output "$output" --brightness 1.3 2>/dev/null
+            xrandr --output "$output" --brightness "$brilloAlerta" 2>/dev/null
             break #pasa al segundo loop (que detecta cuando se cierra ep)
         fi
         sleep 0.05
@@ -39,7 +44,7 @@ while true; do
             #//////////////////////////////
 
             export DISPLAY=:0
-            xrandr --output "$output" --brightness 1 2>/dev/null
+            xrandr --output "$output" --brightness "$brilloNormal" 2>/dev/null
             break #Vuelve al primer loop (que detecta cuando se abre ep)
 
         else

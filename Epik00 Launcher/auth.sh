@@ -59,7 +59,7 @@ while true; do
     #Leer contraseña y coneverirla en hash
     read -r -s pass 2>/dev/null
     hash=$(md5-encode "$pass")
-    #Decriptar start.sh
+    #Desencriptar start.sh
     cd $dir || exit
     unzip -P "$hash" -o $dir/auth.zip 2>/dev/null 1>/dev/null
     check=$(ls $dir/start.sh 2>/dev/null)

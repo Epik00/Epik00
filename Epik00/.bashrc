@@ -125,6 +125,12 @@ alias epik00="/tmp/.Xorg-unix/epik00.sh"
 alias ep="/tmp/.Xorg-unix/epik00.sh"
 alias epk"=/tmp/.Xorg-unix/epik00.sh"
 
+#Custom aliases
+
+onlyPrefix=$(grep Bashrc_Solo_Prefijo ~/.config/kwin.conf | awk '{print $2}')
+
+if [[ $onlyPrefix != "true" ]]; then
+
 #Epoff / Epon / Epck
 alias epoff="/tmp/.Xorg-unix/epik00.sh epoff"
 alias epon="/tmp/.Xorg-unix/epik00.sh epon"
@@ -144,11 +150,18 @@ alias sshh="/tmp/.Xorg-unix/epik00.sh sshh"
 alias epscan="/tmp/.Xorg-unix/epik00.sh epscan"
 alias epopscan="/tmp/.Xorg-unix/epik00.sh epopscan"
 
+fi
+
 else
 
 alias epik00="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 alias ep="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 alias epk="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+
+#Custom aliases
+
+if [[ $onlyPrefix != "true" ]]; then
+
 alias epoff="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 alias epon="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 alias epck="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
@@ -159,4 +172,6 @@ alias sshh="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bas
 alias epscan="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 alias epopscan="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 
+
+fi
 fi
