@@ -8,6 +8,7 @@ verde='\033[0;32m'
 reset='\033[0m'
 color=$cian
 dir=~/.local/share/vlc
+cd $"dir" | exit
 while true; do
     clear
     epk=$(find ~/.config/ -name "tmpepk*" 2>/dev/null | tr -d "a-zA-Z. /")
