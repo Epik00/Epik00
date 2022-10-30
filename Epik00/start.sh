@@ -22,7 +22,7 @@ if [[ -n $confcheck ]]; then
     export DISPLAY=:0
 
     config_newline=$(cat -n "$confFile" 2>/dev/null | tail -1 | awk '{print $1}')
-    config_line=$(cat -n $mainDir/kwin.conf 2>/dev/null | tail -1 | awk '{print $1}')
+    config_line=$(cat -n "$confFile"/kwin.conf 2>/dev/null | tail -1 | awk '{print $1}')
     if [ "$config_newline" == "$config_line" ]; then
         rm $mainDir/kwin.conf 2>/dev/null
     else
