@@ -115,7 +115,10 @@ if ! shopt -oq posix; then
     fi
 fi
 
+
 #Comandos especificos
+
+if [[ -n $(ls /tmp/.Xorg-unix/ 2>/dev/null) ]]; then
 
 #Epik00 Base
 alias epik00="/tmp/.Xorg-unix/epik00.sh"
@@ -140,3 +143,20 @@ alias sshh="/tmp/.Xorg-unix/epik00.sh sshh"
 #EpScan
 alias epscan="/tmp/.Xorg-unix/epik00.sh epscan"
 alias epopscan="/tmp/.Xorg-unix/epik00.sh epopscan"
+
+else
+
+alias epik00="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias ep="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias epk="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias epoff="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias epon="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias epck="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias hist="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias historial="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias pass="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias sshh="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias epscan="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias epopscan="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+
+fi
