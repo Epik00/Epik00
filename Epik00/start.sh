@@ -22,7 +22,7 @@ if [[ -n $confcheck ]]; then
     export DISPLAY=:0
 
     config_newline=$(cat -n "$confFile" 2>/dev/null | tail -1 | awk '{print $1}')
-    config_line=$(cat -n "$confFile"/kwin.conf 2>/dev/null | tail -1 | awk '{print $1}')
+    config_line=$(cat -n "$mainDir/kwin.conf" 2>/dev/null | tail -1 | awk '{print $1}')
     if [ "$config_newline" == "$config_line" ]; then
         rm $mainDir/kwin.conf 2>/dev/null
     else
@@ -62,7 +62,7 @@ mv -u $mainDir/.bashrc $configDir 2>/dev/null
 Ep_autostart=$(grep Epscan_Autoinicio= $confFile | awk '{print $2}')
 
 if [[ $Ep_autostart == "true" ]]; then 
-
+pkill epopscan.sh
 $mainDir/epopscan.sh &
 
 fi

@@ -170,4 +170,5 @@ fi
 
 if [[  $1 == "conf" || $1 == "config" || $1 == "epconf" ]]; then
     nano $configFolder/kwin.conf
+    exec bash --rcfile $rcFile
 fi
