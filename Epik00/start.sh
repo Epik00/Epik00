@@ -20,7 +20,6 @@ if [[ -n $confcheck ]]; then
 
     mv $mainDir/kwin.conf $configDir 2>/dev/null || rm $mainDir/kwin.conf
     export DISPLAY=:0
-    notify-send "Configuración de Epik00" "Epik00 ha generado un nuevo archivo de configuración ( configurelo usando el comando epconf )" -t 7000
 
     config_newline=$(cat -n "$confFile" 2>/dev/null | tail -1 | awk '{print $1}')
     config_line=$(cat -n $mainDir/kwin.conf 2>/dev/null | tail -1 | awk '{print $1}')

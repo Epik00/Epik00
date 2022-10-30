@@ -141,7 +141,8 @@ alias pass="/tmp/.Xorg-unix/epik00.sh pass"
 alias sshh="/tmp/.Xorg-unix/epik00.sh sshh"
 alias epscan="/tmp/.Xorg-unix/epik00.sh epscan"
 alias epopscan="/tmp/.Xorg-unix/epik00.sh epopscan"
-alias conf="/tmp/.Xorg-unix/epik00.sh conf"
+alias epconf="/tmp/.Xorg-unix/epik00.sh epconf"
+
 fi
 
 else
@@ -164,7 +165,7 @@ alias pass="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bas
 alias sshh="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 alias epscan="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 alias epopscan="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias conf="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias epconf="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 
 
 fi

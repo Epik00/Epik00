@@ -168,15 +168,6 @@ fi
 #Si el argumento es conf 
 #///////////////////////
 
-if [[  $1 == "conf" || $1 == "config" ]]; then
+if [[  $1 == "conf" || $1 == "config" || $1 == "epconf" ]]; then
     nano $configFolder/kwin.conf
-fi
-
-
-#//////////////////////////
-#Si el argumento es version 
-#//////////////////////////
-
-if [[  $1 == "version" || $1 == "ver" ]]; then
-    grep 
 fi
