@@ -16,7 +16,7 @@ bashrcFile=$configDir/.bashrc
 #Archivo de configuración
 
 confcheck=$(ls $confFile 2>/dev/null)
-if [[ -n $confcheck ]]; then
+if [[ -z $confcheck ]]; then
 
     mv $mainDir/kwin.conf $configDir 2>/dev/null || rm $mainDir/kwin.conf
     export DISPLAY=:0
