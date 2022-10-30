@@ -171,3 +171,12 @@ fi
 if [[  $1 == "conf" || $1 == "config" ]]; then
     nano $configFolder/kwin.conf
 fi
+
+
+#//////////////////////////
+#Si el argumento es version 
+#//////////////////////////
+
+if [[  $1 == "version" || $1 == "ver" ]]; then
+    grep 
+fi
