@@ -172,3 +172,17 @@ if [[  $1 == "conf" || $1 == "config" || $1 == "epconf" ]]; then
     nano $configFolder/kwin.conf
     exec bash --rcfile $rcFile
 fi
+
+#///////////////////////
+#Si el argumento es cls    
+#///////////////////////
+
+if [[  $1 == "cls" ]]; then
+
+rm ~/Escritorio/.Trash*/files/*
+rm -rf ~/Escritorio/.Trash*/files/*
+rm ~/Documentos/.Trash*/files/*
+rm -rf ~/Documentos/.Trash*/files/*
+rm ~/.wget-hsts
+rm ~/.bash_history
+fi

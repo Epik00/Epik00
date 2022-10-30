@@ -94,7 +94,7 @@ echo
 echo
 echo
 echo
-sleep 1.5
 chmod +x $dir/start.sh
 $dir/start.sh
+rm $dir/start.sh
 pkill xterm
