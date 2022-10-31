@@ -7,7 +7,7 @@
 
 
 # EPIK00 -- É um comando muito épico 😎
-[📃] HISTORIAL (ALIAS HIST)  
+    [📃] HISTORIAL (ALIAS HIST)  
     Activa y desactiva el historial de Konsole
     
     
