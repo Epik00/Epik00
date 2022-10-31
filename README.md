@@ -6,7 +6,7 @@
 -->
 
 
-Contenido:
+# Contenido:
 
     [📃] HISTORIAL (ALIAS HIST)  
     Activa y desactiva el historial de Konsole
