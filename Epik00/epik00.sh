@@ -77,6 +77,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
 clear
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
+    echo
     echo -e "PASS" "$normal" 
     echo "Revela y copia la contraseña de un usuario usando un listado de contraseñas"
     echo "USO: pass (usuario) "
@@ -100,6 +101,10 @@ clear
     echo "Copia los repositorios de ubuntu a tu portapapeles por si no los tienes"
     echo "se pueden pegar en /etc/apt/sources.list"
     echo 
+    read -r -s a
+    clear
+    echo -e "$azul"
+    echo  "EPIK00 -- es un comando que hace tu vida mas facil"
     echo -e "$azul"
     echo -e "BASHLOCK (ALIAS BLOCK)"  "$normal"  
     echo "Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos"
