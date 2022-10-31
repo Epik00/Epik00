@@ -113,6 +113,7 @@ clear
     echo -e "$azul"
     echo -e "[🔒] BASHLOCK (ALIAS BLOCK)"  "$normal"  
     echo "Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos"
+    echo
     echo "USO: (block) para bloquear y desbloquear la terminal" 
     echo "     (block pass) para poner o cambiar la contraseña "
     echo
