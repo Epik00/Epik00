@@ -1,5 +1,9 @@
 # EPIK00
 ### version 1.00
+
+Epik00 es un conjunto de comandos y servicios que hacen varias funciones para hacer las clases mas amenas 
+y varias herramientas que te hacen la vida mas facil.
+
 # Contenido:
 <!--
 **Epik00/Epik00** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
