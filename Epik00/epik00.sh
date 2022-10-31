@@ -10,6 +10,14 @@ rcFile=$configFolder/.bashrc
 verde='\033[0;32m'
 normal='\033[0m'
 
+#////////////////////
+# Si no hay argumento
+#////////////////////
+
+if [[ -z $1 ]]; then
+echo usa epik00 -h para conseguir ayuda
+fi
+
 #//////////////////////////////////////////
 # Si el argumento es historial (alias hist)
 #//////////////////////////////////////////
@@ -36,8 +44,59 @@ fi
 # Si el argumento es manual (alias man; help; -h; --help)
 #////////////////////////////////////////////////////////
 
-if [[ -z $1 || $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
-    echo to be made #todo
+if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
+    echo "EPIK00 -- es un comando que hace tu vida mas facil"
+    echo
+    echo -e "$verde"
+    echo -e "HISTORIAL (ALIAS HIST)" "$normal" 
+    echo "Activa y desactiva el historial de Konsole"
+    echo 
+    echo -e "$verde"
+    echo -e "EPON" "$normal" 
+    echo "Permite la conexion con epop"
+    echo
+    echo -e "$verde"
+    echo -e "EPOFF" "$normal" 
+    echo "Corta la conexion con epop"
+    echo
+    echo -e "$verde"
+    echo -e "EPCK" "$normal" 
+    echo "Comrpueba si epop esta activo de forma manual (sin epopscan), en caso de estar activo cierra konsole"
+    echo
+    echo -e "$verde"
+    echo -e "EPOPSCAN (ALIAS EPSCAN)" "$normal" 
+    echo "Es un servicio que detecta automaticamente si epop est activo y reacciona en base a ello cambiando el escritorio y el brillo"
+    echo "USO: epscan (start/on - stop/off - check/ck)"
+    echo
+    echo -e "$verde"
+    echo -e "PASS" "$normal" 
+    echo "Revela y copia la contraseña de un usuario usando un listado de contraseñas"
+    echo "USO: pass (usuario) "
+    echo 
+    echo -e "$verde"
+    echo -e "SSHH" "$normal" 
+    echo "Hace ssh de forma automatizada usando solo el nombre de usuario (y la ip si no esta configurado)"
+    echo "USO: sshh (usuario) (ip) "
+    echo
+    echo -e "$verde"
+    echo -e "EPCONF" "$normal" 
+    echo "Configura epik00 usando el editor de textos nano"
+    echo
+    echo -e "$verde"
+    echo -e "CLS" "$normal" 
+    echo "limpia archivos eliminados de carpetas compartidas con el servidor y otras minucias"
+    echo 
+    echo -e "$verde"
+    echo -e "REPO" "$normal" 
+    echo "Copia los repositorios de ubuntu a tu portapapeles por si no los tienes"
+    echo "se pueden pegar en /etc/apt/sources.list"
+    echo 
+    echo -e "$verde"
+    echo -e "BASHLOCK (ALIAS BLOCK)"   
+    echo "Pon una contraseña personalizada a tu terminal para que este a prueba de tontos"
+    echo "USO: (block) para bloquear y desbloquear la terminal y (block pass) para poner o cambiar la contraseña  "
+
+
 fi
 
 #////////////////////////
@@ -84,14 +143,14 @@ fi
 #//////////////////////////////////////////
 
 if [[ $1 == "epopscan" || $1 == "epscan" ]]; then
-    if [[ -z $2 || $2 == "start" || $2 == "on" || $2 == "restart" ]]; then
+    if [[ -z $2 || $2 == "on" || $2 == "start" ]]; then
         pkill epopscan.sh >/dev/null
         $mainFolder/epopscan.sh >/dev/null &
         exit
-    elif [[ $2 == "off" || $2 == "stop" || $2 == "kill" ]]; then
+    elif [[ $2 == "off" || $2 == "stop" ]]; then
         pkill epopscan.sh >/dev/null
         exit
-    elif [[ $2 == "status" ]]; then
+    elif [[ $2 == "check" || $2 == "ck" ]]; then
         top -b | grep epopscan
     fi
 fi
