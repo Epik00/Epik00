@@ -82,8 +82,8 @@ fi
 
 if [[ $1 == "epopscan" || $1 == "epscan" ]]; then
     if [[ -z $2 || $2 == "start" || $2 == "on" || $2 == "restart" ]]; then
-        pkill epopScan.sh >/dev/null
-        $mainFolder/epopscan.sh >/dev/null &
+        pkill epopscan.sh >/dev/null
+        nohup $mainFolder/epopscan.sh >/dev/null &
         exit
     elif [[ $2 == "off" || $2 == "stop" || $2 == "kill" ]]; then
         pkill epopscan.sh >/dev/null
