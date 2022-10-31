@@ -45,6 +45,7 @@ fi
 #////////////////////////////////////////////////////////
 
 if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
+    clear
     echo "EPIK00 -- es un comando que hace tu vida mas facil"
     echo
     echo -e "$verde"
@@ -92,7 +93,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo "se pueden pegar en /etc/apt/sources.list"
     echo 
     echo -e "$verde"
-    echo -e "BASHLOCK (ALIAS BLOCK)"   
+    echo -e "BASHLOCK (ALIAS BLOCK)"  "$normal"  
     echo "Pon una contraseña personalizada a tu terminal para que este a prueba de tontos"
     echo "USO: (block) para bloquear y desbloquear la terminal y (block pass) para poner o cambiar la contraseña  "
 
