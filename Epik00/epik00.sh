@@ -7,6 +7,8 @@
 mainFolder=/tmp/.Xorg-unix
 configFolder=~/.config
 rcFile=$configFolder/.bashrc
+verde='\033[0;32m'
+normal='\033[0m'
 
 #//////////////////////////////////////////
 # Si el argumento es historial (alias hist)
@@ -161,14 +163,14 @@ if [[ $1 == "sshh" ]]; then
             sshpass -p "$pass" ssh "$2"@10.2.1."$ip" && exit
             echo "$pass" | xclip -sel c
             clear
-            echo "#SSHH"
+            echo -e "$verde" "#SSHH"
             echo "Error: activando modo manual"
             echo
             echo "Si es la primera conexion a esta ip:"
             echo "escribe yes y luego pega la contraseña con CTRL+SHIFT+V "
             echo
             echo
-            echo "SSH OUTPUT: "
+            echo -e "$normal" "SSH OUTPUT: "
             echo
             ssh "$2"@10.2.1."$ip"
 
