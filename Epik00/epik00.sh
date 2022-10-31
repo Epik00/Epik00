@@ -96,8 +96,8 @@ clear
     echo 
     echo -e "$azul"
     echo -e "[📋] EPREPO" "$normal" 
-    echo "Actualiza los repositorios de ubuntu"
-    echo "USO: eprepo (usuario con privilegios)"
+    echo "Copia al portapapeles los repositorios de ubuntu"
+    echo "Debes pegarlos en /etc/apt/sources.list (requiere permisos)"
     echo 
     echo
     echo
@@ -292,7 +292,7 @@ fi
 #///////////////////////
 
 if [[ $1 == "repo" || $1 == "eprepo" ]]; then
-su  "$2" -c sudo echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
+echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy universe
 deb http://es.archive.ubuntu.com/ubuntu jammy-updates universe
@@ -301,7 +301,7 @@ deb http://es.archive.ubuntu.com/ubuntu jammy-updates multiverse
 deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
 deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
-deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" > /etc/apt/sources.list
+deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | xclip -sel c
 fi
 
 #/////////////////////////////////////////
