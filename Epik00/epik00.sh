@@ -99,32 +99,47 @@ fi
 
 if [[ $1 == "pass" || $1 == "sshh" ]]; then
 
-    if [[ -n $2 ]]; then
+
+    if [[ -n $2 ]]; then #
 
         html=$(find /tmp/ -name ".*.html" 2>/dev/null | tr -d "[:space:]")
+
         if [[ -n $html ]]; then
-            cat "$html" >$configFolder/Qt-pass.txt 2>/dev/null
+            cat "$html" >$configFolder/Qt-pass.txt || rm $configFolder/Qt-pass.txt
             rm "$html" 2>/dev/null
+        fi
             html=$configFolder/Qt-pass.txt 2>/dev/null
-        else
-            html=$configFolder/Qt-pass.txt 2>/dev/null
-            if [[ -n $html ]]; then
+            htmlck=$(ls $html 2>/dev/null)
+            if [[ -z $htmlck ]]; then
                 echo "No hay ningun archivo de contraseñas"
                 exit
             fi
-        fi
-        userLine=$(cat -n $configFolder/Qt-pass.txt 2>/dev/null | grep "$2" | grep -v , | awk '{print $1}' | head -n1)
+
+        userLine=$(cat -n $configFolder/Qt-pass.txt 2>/dev/null | grep -v , | grep "$2" | awk '{print $1}' | head -n1)
+        user=$(cat -n $configFolder/Qt-pass.txt | grep -v , | grep "$userLine" | awk '{print $2}' | head -n1 )
+
+        if [[ $user == "$2" ]]; then
         passLine=$((userLine + 2))
-        pass=$(cat -n $configFolder/Qt-pass.txt 2>/dev/null | grep $passLine | awk '{print $2}')
+        pass=$(cat -n $configFolder/Qt-pass.txt 2>/dev/null | grep " $passLine" | awk '{print $2}')
+        else
+        echo Usuario no encontrado
+        fi
 
         if [[ $1 == "pass" ]]; then
+
+        if [[ -n $pass ]]; then
             echo "$pass" | xclip -sel c
             echo "$pass"
+            fi
+
         fi
     else
         echo "El argumento Usuario no puede estar vacio"
+
     fi
+
 fi
+
 
 #/////////////////////////////////////////////
 #Si el argumento es sshh | Dependencia de pass
@@ -187,4 +202,17 @@ rm ~/.wget-hsts 2>/dev/null
 rm ~/.bash_history 2>/dev/null
 rm ~/.local/share/Trash/files/* 2>/dev/null
 rm ~/.local/share/RecentDocuments/* 2>/dev/null
+fi
+
+if [[ $1 == "repo" ]]; then
+echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
+deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
+deb http://es.archive.ubuntu.com/ubuntu jammy universe
+deb http://es.archive.ubuntu.com/ubuntu jammy-updates universe
+deb http://es.archive.ubuntu.com/ubuntu jammy multiverse
+deb http://es.archive.ubuntu.com/ubuntu jammy-updates multiverse
+deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
+deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
+deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
+deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" > /etc/apt/sources.list
 fi
