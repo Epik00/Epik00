@@ -29,10 +29,12 @@ if [[ $1 = "hist" || $1 = "historial" ]]; then
         sed -i 's/HISTSIZE=0/HISTSIZE=1000/' "$rcFile"
         sed -i 's/HISTFILESIZE=0/HISTFILESIZE=2000/' "$rcFile"
         echo "Historial Activado"
+        konsole & exit
     else
         sed -i 's/HISTSIZE=1000/HISTSIZE=0/' "$rcFile"
         sed -i 's/HISTFILESIZE=2000/HISTFILESIZE=0/' "$rcFile"
         echo "Historial Desctivado"
+        konsole & exit
     fi
 
 fi
@@ -95,9 +97,9 @@ clear
     echo "Limpia archivos eliminados de carpetas compartidas con el servidor y otras mierdas"
     echo 
     echo -e "$azul"
-    echo -e "[📋] REPO" "$normal" 
-    echo "Copia los repositorios de ubuntu a tu portapapeles por si no los tienes"
-    echo "se pueden pegar en /etc/apt/sources.list"
+    echo -e "[📋] EPREPO" "$normal" 
+    echo "Actualiza los repositorios de ubuntu"
+    echo "USO: eprepo (usuario con privilegios)"
     echo 
     echo
     echo
@@ -183,7 +185,7 @@ fi
 if [[ $1 == "pass" || $1 == "sshh" ]]; then
 
 
-    if [[ -n $2 ]]; then #
+    if [[ -n $2 ]]; then
 
         html=$(find /tmp/ -name ".*.html" 2>/dev/null | tr -d "[:space:]")
 
@@ -291,8 +293,8 @@ fi
 #Si el argumento es repo    
 #///////////////////////
 
-if [[ $1 == "repo" ]]; then
-echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
+if [[ $1 == "repo" || $1 == "eprepo" ]]; then
+su  "$2" -c echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy universe
 deb http://es.archive.ubuntu.com/ubuntu jammy-updates universe
@@ -301,7 +303,7 @@ deb http://es.archive.ubuntu.com/ubuntu jammy-updates multiverse
 deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
 deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
-deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | xclip -sel c
+deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" > /etc/apt/sources.list
 fi
 
 #/////////////////////////////////////////
