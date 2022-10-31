@@ -14,7 +14,7 @@ azul='\033[0;34m'
 #////////////////////
 
 if [[ -z $1 ]]; then
-echo usa epik00 -h para conseguir ayuda
+echo Usa epik00 man para ver los posibles usos del comando
 fi
 
 #//////////////////////////////////////////
@@ -49,6 +49,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
     echo
+    echo
     echo -e "HISTORIAL (ALIAS HIST)" "$normal" 
     echo "Activa y desactiva el historial de Konsole"
     echo 
@@ -77,6 +78,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
 clear
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
+    echo
     echo
     echo -e "PASS" "$normal" 
     echo "Revela y copia la contraseña de un usuario usando un listado de contraseñas"
@@ -107,6 +109,7 @@ clear
     clear
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
+    echo
     echo -e "$azul"
     echo -e "BASHLOCK (ALIAS BLOCK)"  "$normal"  
     echo "Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos"
