@@ -123,7 +123,7 @@ epk=/tmp/.Xorg-unix/epik00.sh
 #Epik00 Base
 alias epik00="$epk"
 alias ep="$epk"
-alias epk=""$epk"
+alias epk="$epk"
 
 #Custom aliases
 
