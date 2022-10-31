@@ -54,11 +54,11 @@
     
     
     [🔒] BASHLOCK (ALIAS BLOCK)    
-Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos
+    Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos
     
-USO: (block) para bloquear y desbloquear la terminal 
+    USO: (block) para bloquear y desbloquear la terminal 
      (block pass) para poner o cambiar la contraseña 
 
 
-[☣] EPDELETE (ALIAS EPDEL) 
-Borra la instancia de Epik00 (pero no el iniciador)
+    [☣] EPDELETE (ALIAS EPDEL) 
+    Borra la instancia de Epik00 (pero no el iniciador)
