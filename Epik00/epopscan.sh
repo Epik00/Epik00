@@ -10,9 +10,9 @@ while true; do
         #////////////////////////////////////////////////
         #Si epop esta apagado: detecta cuando se enciende
         #////////////////////////////////////////////////
-
+        vnc=$(top -b -n1 | grep -o x11vnc)
         python3=$(pgrep thumbshot.py 2>/dev/null)
-        if [[ -n $python3 ]]; then
+        if [[ -n $python3 ||-n $vnc ]]; then
 
             #////////////////////////////
             #Acciones cuando epop se abre
