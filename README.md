@@ -1,8 +1,8 @@
 # EPIK00
 ### version 1.00
 
-Epik00 es un conjunto de comandos y servicios que hacen varias funciones para hacer las clases mas amenas 
-y varias herramientas que te hacen la vida mas facil.
+Epik00 es un conjunto de comandos y servicios que te permiten estar mas tranquilo en clase y sentirte menos observado
+ademas incluye herramientas y utilidades desde proteccion por contraseña de tu terminal hasta ssh automatizado
 
 # Contenido:
 <!--
