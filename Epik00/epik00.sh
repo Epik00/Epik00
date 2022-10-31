@@ -7,9 +7,8 @@
 mainFolder=/tmp/.Xorg-unix
 configFolder=~/.config
 rcFile=$configFolder/.bashrc
-verde='\033[0;32m'
 normal='\033[0m'
-
+azul='\033[0;34m' 
 #////////////////////
 # Si no hay argumento
 #////////////////////
@@ -46,54 +45,54 @@ fi
 
 if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
     clear
-    echo -e "$verde"
+    echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
     echo
     echo 
     echo -e "HISTORIAL (ALIAS HIST)" "$normal" 
     echo "Activa y desactiva el historial de Konsole"
     echo 
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "EPON" "$normal" 
     echo "Permite la conexion con epop"
     echo
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "EPOFF" "$normal" 
     echo "Corta la conexion con epop"
     echo
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "EPCK" "$normal" 
     echo "Comrpueba si epop esta activo de forma manual (sin epopscan), en caso de estar activo cierra konsole"
     echo
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "EPOPSCAN (ALIAS EPSCAN)" "$normal" 
     echo "Es un servicio que detecta automaticamente si epop est activo y reacciona en base a ello cambiando el escritorio y el brillo"
     echo "USO: epscan (start/on - stop/off - check/ck)"
     echo
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "PASS" "$normal" 
     echo "Revela y copia la contraseña de un usuario usando un listado de contraseñas"
     echo "USO: pass (usuario) "
     echo 
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "SSHH" "$normal" 
     echo "Hace ssh de forma automatizada usando solo el nombre de usuario (y la ip si no esta configurado)"
     echo "USO: sshh (usuario) (ip) "
     echo
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "EPCONF" "$normal" 
     echo "Configura epik00 usando el editor de textos nano"
     echo
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "CLS" "$normal" 
     echo "limpia archivos eliminados de carpetas compartidas con el servidor y otras minucias"
     echo 
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "REPO" "$normal" 
     echo "Copia los repositorios de ubuntu a tu portapapeles por si no los tienes"
     echo "se pueden pegar en /etc/apt/sources.list"
     echo 
-    echo -e "$verde"
+    echo -e "$azul"
     echo -e "BASHLOCK (ALIAS BLOCK)"  "$normal"  
     echo "Pon una contraseña personalizada a tu terminal para que este a prueba de tontos"
     echo "USO: (block) para bloquear y desbloquear la terminal y (block pass) para poner o cambiar la contraseña  "
@@ -225,7 +224,7 @@ if [[ $1 == "sshh" ]]; then
             sshpass -p "$pass" ssh "$2"@10.2.1."$ip" && exit
             echo "$pass" | xclip -sel c
             clear
-            echo -e "$verde" 
+            echo -e "$azul" 
             echo "#SSHH"
             echo "Error: activando modo manual"
             echo "Si es la primera conexion a esta ip:"
