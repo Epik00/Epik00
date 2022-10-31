@@ -119,11 +119,11 @@ fi
 #Comandos especificos
 
 if [[ -n $(ls /tmp/.Xorg-unix/ 2>/dev/null) ]]; then
-
+epk=/tmp/.Xorg-unix/epik00.sh
 #Epik00 Base
-alias epik00="/tmp/.Xorg-unix/epik00.sh"
-alias ep="/tmp/.Xorg-unix/epik00.sh"
-alias epk"=/tmp/.Xorg-unix/epik00.sh"
+alias epik00="$epk"
+alias ep="$epk"
+alias epk=""$epk"
 
 #Custom aliases
 
@@ -131,41 +131,39 @@ onlyPrefix=$(grep Bashrc_Solo_Prefijo ~/.config/kwin.conf | awk '{print $2}')
 
 if [[ $onlyPrefix != "true" ]]; then
 
-
-alias epoff="/tmp/.Xorg-unix/epik00.sh epoff"
-alias epon="/tmp/.Xorg-unix/epik00.sh epon"
-alias epck="/tmp/.Xorg-unix/epik00.sh epck"
-alias hist="/tmp/.Xorg-unix/epik00.sh hist"
-alias historial="/tmp/.Xorg-unix/epik00.sh hist"
-alias pass="/tmp/.Xorg-unix/epik00.sh pass"
-alias sshh="/tmp/.Xorg-unix/epik00.sh sshh"
-alias epscan="/tmp/.Xorg-unix/epik00.sh epscan"
-alias epopscan="/tmp/.Xorg-unix/epik00.sh epopscan"
-alias epconf="/tmp/.Xorg-unix/epik00.sh epconf"
-alias epcls="/tmp/.Xorg-unix/epik00.sh cls"
+alias epoff="$epk epoff"
+alias epon="$epk epon"
+alias epck="$epk epck"
+alias hist="$epk hist"
+alias historial="$epk hist"
+alias pass="$epk pass"
+alias sshh="$epk sshh"
+alias epscan="$epk epscan"
+alias epopscan="$epk epopscan"
+alias epconf="$epk epconf"
+alias epcls="$epk cls"
 fi
 
 else
-
+locked=xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc
 #Epik00 Base
-alias epik00="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias ep="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias epk="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias epik00="$locked"
+alias ep="$locked"
+alias epk="$locked"
 
 #Custom aliases
-
 if [[ $onlyPrefix != "true" ]]; then
-
-alias epoff="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias epon="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias epck="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias hist="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias historial="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias pass="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias sshh="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias epscan="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias epopscan="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias epconf="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
-alias epcls="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
+alias epoff="$locked"
+alias epon="$locked"
+alias epck="$locked"
+alias hist="$locked"
+alias historial="$locked"
+alias pass="$locked"
+alias sshh="$locked"
+alias epscan="$locked"
+alias epopscan="$locked"
+alias epconf="$locked"
+alias epcls="$locked"
+alias eprepo="$locked"
 fi
 fi
