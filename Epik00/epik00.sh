@@ -117,7 +117,7 @@ clear
     echo "     (block pass) para poner o cambiar la contraseña "
     echo
     echo
-    printf "Enter para continuar..."
+    echo "Enter para continuar..."
     read -r
     clear
 fi
