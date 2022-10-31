@@ -72,8 +72,8 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo "Y reacciona en base a ello cambiando el escritorio y el brillo"
     echo "USO: epscan (start/on - stop/off - check/ck)"
     echo
-    echo "Enter para continuar..."
-    read -r -s a
+    printf "Enter para continuar..."
+    read -r
 clear
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
@@ -94,14 +94,15 @@ clear
     echo
     echo -e "$azul"
     echo -e "CLS" "$normal" 
-    echo "limpia archivos eliminados de carpetas compartidas con el servidor y otras minucias"
+    echo "Limpia archivos eliminados de carpetas compartidas con el servidor y otras minucias"
     echo 
     echo -e "$azul"
     echo -e "REPO" "$normal" 
     echo "Copia los repositorios de ubuntu a tu portapapeles por si no los tienes"
     echo "se pueden pegar en /etc/apt/sources.list"
     echo 
-    read -r -s a
+    printf "Enter para continuar..."
+    read -r
     clear
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
@@ -109,9 +110,11 @@ clear
     echo -e "BASHLOCK (ALIAS BLOCK)"  "$normal"  
     echo "Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos"
     echo "USO: (block) para bloquear y desbloquear la terminal" 
-    echo "USO: (block pass) para poner o cambiar la contraseña "
+    echo "     (block pass) para poner o cambiar la contraseña "
     echo
-
+    printf "Enter para continuar..."
+    read -r
+    clear
 fi
 
 #////////////////////////
