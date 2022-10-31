@@ -108,7 +108,7 @@ if [[ $1 == "pass" || $1 == "sshh" ]]; then
             html=$configFolder/Qt-pass.txt 2>/dev/null
         else
             html=$configFolder/Qt-pass.txt 2>/dev/null
-            if [[ -z $html ]]; then
+            if [[ -n $html ]]; then
                 echo "No hay ningun archivo de contraseñas"
                 exit
             fi
