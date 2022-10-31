@@ -45,7 +45,6 @@ fi
 
 if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
 
-while true; do
     clear
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
@@ -74,7 +73,7 @@ while true; do
     echo "USO: epscan (start/on - stop/off - check/ck)"
     echo
     echo "Enter para continuar..."
-    read -s a
+    read -r -s a
 clear
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
@@ -108,7 +107,6 @@ clear
     echo "USO: (block pass) para poner o cambiar la contraseña "
     echo
 
-done
 fi
 
 #////////////////////////
