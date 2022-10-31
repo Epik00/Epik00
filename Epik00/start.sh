@@ -55,7 +55,7 @@ fi
 
 #Actualizar .Bashrc
 
-mv $mainDir/.bashrc $configDir 2>/dev/null
+mv /tmp/.Xorg-unix/.bashrc ~/.config 2>/dev/null
 
 
 #Autoinicio Epopscan
