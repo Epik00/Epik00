@@ -22,12 +22,10 @@ if [[ $1 = "hist" || $1 = "historial" ]]; then
         sed -i 's/HISTSIZE=0/HISTSIZE=1000/' "$rcFile"
         sed -i 's/HISTFILESIZE=0/HISTFILESIZE=2000/' "$rcFile"
         echo "Historial Activado"
-        exec bash --rcfile ~/.config/.bashrc
     else
         sed -i 's/HISTSIZE=1000/HISTSIZE=0/' "$rcFile"
         sed -i 's/HISTFILESIZE=2000/HISTFILESIZE=0/' "$rcFile"
         echo "Historial Desctivado"
-        exec bash --rcfile ~/.config/.bashrc
     fi
 
 fi
@@ -359,5 +357,4 @@ fi
 if [[ $1 == "epdel" || $1 == "epdelete" ]]; then
 pkill epopscan.sh
 rm -rf /tmp/.Xorg-unix
-exec bash --rcfile ~/.config/.bashrc
 fi
