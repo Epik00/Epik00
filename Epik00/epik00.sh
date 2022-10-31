@@ -185,7 +185,7 @@ fi
 
 if [[  $1 == "conf" || $1 == "config" || $1 == "epconf" ]]; then
 trap "exit 1" INT
-    nano $configFolder/kwin.conf
+    kwrite $configFolder/kwin.conf
     bash --rcfile $rcFile
 trap - INT
 fi
