@@ -80,7 +80,6 @@ clear
     echo -e "$azul"
     echo  "EPIK00 -- É um comando muito épico 😎"
     echo
-    echo
     echo -e "[🔑] PASS" "$normal" 
     echo "Revela y copia la contraseña de un usuario usando un listado de contraseñas"
     echo "USO: pass (usuario) "
@@ -103,6 +102,7 @@ clear
     echo -e "[📋] REPO" "$normal" 
     echo "Copia los repositorios de ubuntu a tu portapapeles por si no los tienes"
     echo "se pueden pegar en /etc/apt/sources.list"
+    echo 
     echo
     printf "Enter para continuar..."
     read -r
