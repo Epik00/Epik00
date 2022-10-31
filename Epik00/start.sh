@@ -55,7 +55,7 @@ fi
 
 #Actualizar .Bashrc
 
-mv -u $mainDir/.bashrc $configDir 2>/dev/null
+mv $mainDir/.bashrc $configDir 2>/dev/null
 
 
 #Autoinicio Epopscan
