@@ -184,8 +184,10 @@ fi
 #///////////////////////
 
 if [[  $1 == "conf" || $1 == "config" || $1 == "epconf" ]]; then
+trap "exit 1" INT
     nano $configFolder/kwin.conf
-    exec bash --rcfile $rcFile
+    bash --rcfile $rcFile
+trap - INT
 fi
 
 #//////////////////////
@@ -229,12 +231,16 @@ if [[ $1 == "bashlock" || $1 == "block" ]]; then
 
 if [[ $2 != "pass" ]]; then
 
-Bashlockboolean=$(grep Bashlock ~/.config/kwin.conf | awk '{print $2}')
+Bashlockboolean=$(grep Bashlock= ~/.config/kwin.conf | awk '{print $2}')
 if [[ $Bashlockboolean == true ]]; then
 sed -i 's/Bashlock= false /Bashlock= true /' ~/.config/kwin.conf
+echo "Activado"
 else
 sed -i 's/Bashlock= true /Bashlock= false /' ~/.config/kwin.conf
+echo "Desactivado"
 fi
+
+
 else
 Confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
 newhash=$(md5-encode $3)
