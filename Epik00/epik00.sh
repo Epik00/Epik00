@@ -242,10 +242,20 @@ fi
 
 
 else
+
 Confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
-newhash=$(md5-encode $3)
-sed -i "'s/Confhash= $Confhash /Confhash= $newhash /'" ~/.config/kwin.conf
+printf "Contraseña Antigua"
+read -r -s oldBpass
+oldBhash=$(md5-encode $oldBpass)
 
+if [[ $Confhash == "$oldBhash" ]]; then
+echo
+printf "Contraseña Antigua"
+read -r -s newBpass
+newhash=$(md5-encode "$newBpass")
+sed -i "s/Confhash= $Confhash /Confhash= $newhash /" ~/.config/kwin.conf
+echo "Contraseña actualizada"
 
+fi
 fi
 fi
