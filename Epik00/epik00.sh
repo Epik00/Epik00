@@ -74,7 +74,7 @@ while true; do
     echo "USO: epscan (start/on - stop/off - check/ck)"
     echo
     echo "Enter para continuar..."
-    read -s ""
+    read -s a
 clear
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
