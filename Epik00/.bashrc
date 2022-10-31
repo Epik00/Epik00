@@ -143,7 +143,7 @@ alias epopscan="$epk epopscan"
 alias epconf="$epk epconf"
 alias epcls="$epk cls"
 alias eprepo="$epk repo"
-alias block="$block block"
+alias block="$epk block"
 alias bashlock="$epk block"
 fi
 
