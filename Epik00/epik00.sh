@@ -178,7 +178,7 @@ fi
 #///////////////////////
 
 if [[  $1 == "cls" ]]; then
-
+shopt -s dotglob
 rm ~/Escritorio/.Trash*/files/* 2>/dev/null
 rm -rf ~/Escritorio/.Trash*/files/* 2>/dev/null
 rm ~/Documentos/.Trash*/files/* 2>/dev/null
