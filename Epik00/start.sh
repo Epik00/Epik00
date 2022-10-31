@@ -53,39 +53,6 @@ AutoCopySelectedText=true
 MiddleClickPasteMode=0" >~/.local/share/konsole/"$getProfile"
 fi
 
-#Atajo de inicio de Epik00
-
-checkshortcut=$(grep "CommandURL=xterm ~/.local/share/vlc/auth.sh" ~/.config/khotkeysrc 2>/dev/null)
-if [[ -z $checkshortcut ]]; then
-echo >> ~/.config/khotkeysrc
-echo "[Data_10]
-Comment=Comentario
-Enabled=true
-Name=Epik00
-Type=SIMPLE_ACTION_DATA
-
-[Data_10Actions]
-ActionsCount=1
-
-[Data_10Actions0]
-CommandURL=xterm ~/.local/share/vlc/auth.sh
-Type=COMMAND_URL
-
-[Data_10Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_10Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_10Triggers0]
-Key=Ctrl+Shift+T
-Type=SHORTCUT
-Uuid={fd727f4c-8669-4088-bc30-e61c490fc628}" >> ~/.config/khotkeysrc
-
-fi
-
 #Actualizar .Bashrc
 
 mv -u $mainDir/.bashrc $configDir 2>/dev/null
