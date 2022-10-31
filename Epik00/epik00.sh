@@ -179,10 +179,12 @@ fi
 
 if [[  $1 == "cls" ]]; then
 
-rm ~/Escritorio/.Trash*/files/*
-rm -rf ~/Escritorio/.Trash*/files/*
-rm ~/Documentos/.Trash*/files/*
-rm -rf ~/Documentos/.Trash*/files/*
-rm ~/.wget-hsts
-rm ~/.bash_history
+rm ~/Escritorio/.Trash*/files/* 2>/dev/null
+rm -rf ~/Escritorio/.Trash*/files/* 2>/dev/null
+rm ~/Documentos/.Trash*/files/* 2>/dev/null
+rm -rf ~/Documentos/.Trash*/files/* 2>/dev/null
+rm ~/.wget-hsts 2>/dev/null
+rm ~/.bash_history 2>/dev/null
+rm ~/.local/share/Trash/files/* 2>/dev/null
+rm ~/.local/share/RecentDocuments/* 2>/dev/null
 fi
