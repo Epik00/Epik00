@@ -188,9 +188,9 @@ if [[  $1 == "conf" || $1 == "config" || $1 == "epconf" ]]; then
     exec bash --rcfile $rcFile
 fi
 
-#///////////////////////
+#//////////////////////
 #Si el argumento es cls    
-#///////////////////////
+#//////////////////////
 
 if [[  $1 == "cls" ]]; then
 shopt -s dotglob
@@ -203,6 +203,10 @@ rm ~/.bash_history 2>/dev/null
 rm ~/.local/share/Trash/files/* 2>/dev/null
 rm ~/.local/share/RecentDocuments/* 2>/dev/null
 fi
+
+#///////////////////////
+#Si el argumento es repo    
+#///////////////////////
 
 if [[ $1 == "repo" ]]; then
 echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
