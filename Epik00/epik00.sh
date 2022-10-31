@@ -9,13 +9,6 @@ configFolder=~/.config
 rcFile=$configFolder/.bashrc
 normal='\033[0m'
 azul='\033[0;34m' 
-#////////////////////
-# Si no hay argumento
-#////////////////////
-
-if [[ -z $1 ]]; then
-echo Usa epik00 man para ver los posibles usos del comando
-fi
 
 #//////////////////////////////////////////
 # Si el argumento es historial (alias hist)
@@ -41,7 +34,7 @@ fi
 # Si el argumento es manual (alias man; help; -h; --help)
 #////////////////////////////////////////////////////////
 
-if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
+if [[ -z $1 || $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
 
     clear
     echo -e "$azul"
