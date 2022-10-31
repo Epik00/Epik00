@@ -89,6 +89,7 @@ if [[ $1 == "epopscan" || $1 == "epscan" ]]; then
         pkill epopscan.sh >/dev/null
         exit
     elif [[ $2 == "status" ]]; then
+        top -b -n1 | head -n1
         top -b | grep epopscan
     fi
 fi
