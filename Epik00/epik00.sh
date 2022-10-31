@@ -163,15 +163,14 @@ if [[ $1 == "sshh" ]]; then
             sshpass -p "$pass" ssh "$2"@10.2.1."$ip" && exit
             echo "$pass" | xclip -sel c
             clear
-            echo -e "$verde" "#SSHH"
+            echo -e "$verde" 
+            echo "#SSHH"
             echo "Error: activando modo manual"
-            echo
             echo "Si es la primera conexion a esta ip:"
             echo "escribe yes y luego pega la contraseña con CTRL+SHIFT+V "
             echo
-            echo
-            echo -e "$normal" "SSH OUTPUT: "
-            echo
+            echo -e "$normal"
+            echo "SSH OUTPUT: "
             ssh "$2"@10.2.1."$ip"
 
         else
