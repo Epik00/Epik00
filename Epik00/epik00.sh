@@ -44,6 +44,8 @@ fi
 #////////////////////////////////////////////////////////
 
 if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
+
+while true; do
     clear
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
@@ -62,21 +64,28 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo
     echo -e "$azul"
     echo -e "EPCK" "$normal" 
-    echo "Comrpueba si epop esta activo de forma manual (sin epopscan), en caso de estar activo cierra konsole"
+    echo "Comrpueba si epop esta activo de forma manual (sin epopscan)"
+    echo "en caso de estar activo cierra konsole"
     echo
     echo -e "$azul"
     echo -e "EPOPSCAN (ALIAS EPSCAN)" "$normal" 
-    echo "Es un servicio que detecta automaticamente si epop est activo y reacciona en base a ello cambiando el escritorio y el brillo"
+    echo "Es un servicio que detecta automaticamente si epop esta activo"
+    echo "Y reacciona en base a ello cambiando el escritorio y el brillo"
     echo "USO: epscan (start/on - stop/off - check/ck)"
     echo
+    echo "Enter para continuar..."
+    read -s ""
+clear
     echo -e "$azul"
+    echo  "EPIK00 -- es un comando que hace tu vida mas facil"
     echo -e "PASS" "$normal" 
     echo "Revela y copia la contraseña de un usuario usando un listado de contraseñas"
     echo "USO: pass (usuario) "
     echo 
     echo -e "$azul"
     echo -e "SSHH" "$normal" 
-    echo "Hace ssh de forma automatizada usando solo el nombre de usuario (y la ip si no esta configurado)"
+    echo "Hace ssh de forma automatizada usando el nombre de usuario"
+    echo "(y la ip si no esta configurado)"
     echo "USO: sshh (usuario) (ip) "
     echo
     echo -e "$azul"
@@ -94,10 +103,12 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo 
     echo -e "$azul"
     echo -e "BASHLOCK (ALIAS BLOCK)"  "$normal"  
-    echo "Pon una contraseña personalizada a tu terminal para que este a prueba de tontos"
-    echo "USO: (block) para bloquear y desbloquear la terminal y (block pass) para poner o cambiar la contraseña  "
+    echo "Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos"
+    echo "USO: (block) para bloquear y desbloquear la terminal" 
+    echo "USO: (block pass) para poner o cambiar la contraseña "
     echo
 
+done
 fi
 
 #////////////////////////
