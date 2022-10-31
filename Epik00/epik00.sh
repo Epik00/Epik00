@@ -29,12 +29,10 @@ if [[ $1 = "hist" || $1 = "historial" ]]; then
         sed -i 's/HISTSIZE=0/HISTSIZE=1000/' "$rcFile"
         sed -i 's/HISTFILESIZE=0/HISTFILESIZE=2000/' "$rcFile"
         echo "Historial Activado"
-        konsole & exit
     else
         sed -i 's/HISTSIZE=1000/HISTSIZE=0/' "$rcFile"
         sed -i 's/HISTFILESIZE=2000/HISTFILESIZE=0/' "$rcFile"
         echo "Historial Desctivado"
-        konsole & exit
     fi
 
 fi
@@ -294,7 +292,7 @@ fi
 #///////////////////////
 
 if [[ $1 == "repo" || $1 == "eprepo" ]]; then
-su  "$2" -c 'sudo echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
+su  "$2" -c sudo su -c  echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy universe
 deb http://es.archive.ubuntu.com/ubuntu jammy-updates universe
@@ -303,7 +301,7 @@ deb http://es.archive.ubuntu.com/ubuntu jammy-updates multiverse
 deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
 deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
-deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" > /etc/apt/sources.list'
+deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" > /etc/apt/sources.list
 fi
 
 #/////////////////////////////////////////
