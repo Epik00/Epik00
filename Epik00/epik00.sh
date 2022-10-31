@@ -47,7 +47,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
 
     clear
     echo -e "$azul"
-    echo  "EPIK00 -- É um comando muito épico 😎👌🔥"
+    echo  "EPIK00 -- É um comando muito épico 😎"
     echo
     echo
     echo -e "[📃] HISTORIAL (ALIAS HIST)" "$normal" 
@@ -77,7 +77,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     read -r
 clear
     echo -e "$azul"
-    echo  "EPIK00 -- es un comando que hace tu vida mas facil"
+    echo  "EPIK00 -- É um comando muito épico 😎"
     echo
     echo
     echo -e "[🔑] PASS" "$normal" 
@@ -108,7 +108,7 @@ clear
     read -r
     clear
     echo -e "$azul"
-    echo  "EPIK00 -- es un comando que hace tu vida mas facil"
+    echo  "EPIK00 -- É um comando muito épico 😎"
     echo
     echo -e "$azul"
     echo -e "[🔒] BASHLOCK (ALIAS BLOCK)"  "$normal"  
@@ -117,7 +117,7 @@ clear
     echo "     (block pass) para poner o cambiar la contraseña "
     echo
     echo
-    echo "Enter para continuar..."
+    printf "Enter para continuar..."
     read -r
     clear
 fi
