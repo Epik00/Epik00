@@ -218,5 +218,5 @@ deb http://es.archive.ubuntu.com/ubuntu jammy-updates multiverse
 deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
 deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
-deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" > /etc/apt/sources.list
+deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | xclip -sel c
 fi
