@@ -49,7 +49,6 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo -e "$azul"
     echo  "EPIK00 -- es un comando que hace tu vida mas facil"
     echo
-    echo 
     echo -e "HISTORIAL (ALIAS HIST)" "$normal" 
     echo "Activa y desactiva el historial de Konsole"
     echo 
@@ -70,7 +69,8 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo -e "EPOPSCAN (ALIAS EPSCAN)" "$normal" 
     echo "Es un servicio que detecta automaticamente si epop esta activo"
     echo "Y reacciona en base a ello cambiando el escritorio y el brillo"
-    echo "USO: epscan (start/on - stop/off - check/ck)"
+    echo "USO: epscan (start/on - stop/off - check/ck) Por defecto tiene inicio automatico"
+    echo
     echo
     printf "Enter para continuar..."
     read -r
@@ -101,6 +101,7 @@ clear
     echo "Copia los repositorios de ubuntu a tu portapapeles por si no los tienes"
     echo "se pueden pegar en /etc/apt/sources.list"
     echo 
+    echo
     printf "Enter para continuar..."
     read -r
     clear
@@ -111,6 +112,7 @@ clear
     echo "Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos"
     echo "USO: (block) para bloquear y desbloquear la terminal" 
     echo "     (block pass) para poner o cambiar la contraseña "
+    echo
     echo
     printf "Enter para continuar..."
     read -r
