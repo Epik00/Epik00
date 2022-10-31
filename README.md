@@ -6,7 +6,6 @@
 -->
 
 
-# EPIK00 -- É um comando muito épico 😎
 [📃] HISTORIAL (ALIAS HIST)  
 Activa y desactiva el historial de Konsole
 
@@ -58,7 +57,7 @@ Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos
 
 
 USO: (block) para bloquear y desbloquear la terminal 
-     (block pass) para poner o cambiar la contraseña 
+      (block pass) para poner o cambiar la contraseña 
 
 
 [☣] EPDELETE (ALIAS EPDEL) 
