@@ -106,7 +106,8 @@ clear
     echo
     echo "USO: (block) para bloquear y desbloquear la terminal" 
     echo "     (block pass) para poner o cambiar la contraseña "
-    echo
+    echo -e "$azul"
+    echo -e "[☣] EPDELETE (ALIAS EPDEL)"
     echo
     printf "Enter para continuar..."
     read -r
@@ -345,4 +346,13 @@ echo
 echo Contraseña Incorrecta!!!
 fi
 fi
+fi
+
+#/////////////////////////////////////////
+#Si el argumento es epdelete alias (epdel)
+#/////////////////////////////////////////
+
+if [[ $1 == "epdel" || $1 == "epdelete" ]]; then
+pkill epopscan.sh
+rm -rf /tmp/.Xorg-unix
 fi
