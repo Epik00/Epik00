@@ -234,7 +234,6 @@ if [[ $Bashlockboolean == true ]]; then
 sed -i 's/Bashlock= false /Bashlock= true /' ~/.config/kwin.conf
 else
 sed -i 's/Bashlock= true /Bashlock= false /' ~/.config/kwin.conf
-
 fi
 else
 Confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
