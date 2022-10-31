@@ -233,11 +233,11 @@ if [[ $2 != "pass" ]]; then
 
 Bashlockboolean=$(grep Bashlock= ~/.config/kwin.conf | awk '{print $2}')
 if [[ $Bashlockboolean == true ]]; then
-sed -i 's/Bashlock= false /Bashlock= true /' ~/.config/kwin.conf
-echo "Activado"
-else
 sed -i 's/Bashlock= true /Bashlock= false /' ~/.config/kwin.conf
 echo "Desactivado"
+else
+sed -i 's/Bashlock= false /Bashlock= true /' ~/.config/kwin.conf
+echo "Activado"
 fi
 
 
