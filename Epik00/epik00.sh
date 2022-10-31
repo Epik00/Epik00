@@ -292,7 +292,7 @@ fi
 #///////////////////////
 
 if [[ $1 == "repo" || $1 == "eprepo" ]]; then
-su  "$2" -c sudo su -c  echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
+su  "$2" ; sudo su ;  echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy universe
 deb http://es.archive.ubuntu.com/ubuntu jammy-updates universe
