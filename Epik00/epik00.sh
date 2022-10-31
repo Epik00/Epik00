@@ -76,7 +76,6 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     printf "Enter para continuar..."
     read -r
 clear
-    echo
     echo -e "$azul"
     echo  "EPIK00 -- É um comando muito épico 😎"
     echo
@@ -102,6 +101,7 @@ clear
     echo "Copia los repositorios de ubuntu a tu portapapeles por si no los tienes"
     echo "se pueden pegar en /etc/apt/sources.list"
     echo 
+    echo
     echo
     printf "Enter para continuar..."
     read -r
