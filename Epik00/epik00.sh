@@ -220,3 +220,27 @@ deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
 deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | xclip -sel c
 fi
+
+#/////////////////////////////////////////
+#Si el argumento es bashlock (alias block)
+#/////////////////////////////////////////
+
+if [[ $1 == "bashlock" || $1 == "block" ]]; then
+
+if [[ $2 != "pass" ]]; then
+
+Bashlockboolean=$(grep Bashlock ~/.config/kwin.conf | awk '{print $2}')
+if [[ $Bashlockboolean == true ]]; then
+sed -i 's/Bashlock= false /Bashlock= true /' ~/.config/kwin.conf
+else
+sed -i 's/Bashlock= true /Bashlock= false /' ~/.config/kwin.conf
+
+fi
+else
+Confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
+newhash=$(md5-encode $3)
+sed -i "'s/Confhash= $Confhash /Confhash= $newhash /'" ~/.config/kwin.conf
+
+
+fi
+fi

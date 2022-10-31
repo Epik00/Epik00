@@ -168,3 +168,25 @@ alias epcls="$locked"
 alias eprepo="$locked"
 fi
 fi
+
+clear
+#BashLock (block)
+Bashlock=$(grep Bashlock= ~/.config/kwin.conf | awk '{print $2}')
+if [[ $Bashlock == "true" ]]; then
+confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
+if [[ $confhash != "vacio" ]]; then
+printf "Contraseña: "
+trap "exit 1" INT
+while true; do
+read -r -s pass 2>/dev/null
+hash=$(md5-encode "$pass")
+if [[ $hash = "$confhash" ]]; then
+clear
+break
+fi
+done
+trap - INT
+else
+echo "Configura la contraseña con (block pass 'contraseña')"
+fi
+fi
