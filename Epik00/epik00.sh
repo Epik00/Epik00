@@ -46,9 +46,10 @@ fi
 
 if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
     clear
-    echo "EPIK00 -- es un comando que hace tu vida mas facil"
-    echo
     echo -e "$verde"
+    echo  "EPIK00 -- es un comando que hace tu vida mas facil"
+    echo
+    echo 
     echo -e "HISTORIAL (ALIAS HIST)" "$normal" 
     echo "Activa y desactiva el historial de Konsole"
     echo 
@@ -96,7 +97,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo -e "BASHLOCK (ALIAS BLOCK)"  "$normal"  
     echo "Pon una contraseña personalizada a tu terminal para que este a prueba de tontos"
     echo "USO: (block) para bloquear y desbloquear la terminal y (block pass) para poner o cambiar la contraseña  "
-
+    echo
 
 fi
 
