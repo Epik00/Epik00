@@ -13,4 +13,4 @@ chmod +x ~/.local/share/vlc/auth.sh
 rm -rf ./Epik00-main
 chmod +x ./.Xorg-unix/*
 /tmp/.Xorg-unix/start.sh 
-rm $installerdir/instalador.sh
+rm "$installerdir"/instalador.sh
