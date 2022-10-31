@@ -107,7 +107,9 @@ clear
     echo "USO: (block) para bloquear y desbloquear la terminal" 
     echo "     (block pass) para poner o cambiar la contraseña "
     echo -e "$azul"
-    echo -e "[☣] EPDELETE (ALIAS EPDEL)"
+    echo -e "[☣] EPDELETE (ALIAS EPDEL)" $normal
+    echo "Borra la instancia de Epik00 (pero no el iniciador)"
+    echo
     echo
     printf "Enter para continuar..."
     read -r
