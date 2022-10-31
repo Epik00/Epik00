@@ -86,8 +86,7 @@ clear
     echo 
     echo -e "$azul"
     echo -e "[⚡] SSHH" "$normal" 
-    echo "Hace ssh de forma automatizada usando el nombre de usuario"
-    echo "(y la ip si no esta configurado)"
+    echo "Hace ssh de forma automatizada usando el nombre de usuario (y la ip si no esta configurado)"
     echo "USO: sshh (usuario) (ip) "
     echo
     echo -e "$azul"
@@ -95,7 +94,7 @@ clear
     echo "Configura epik00 usando el editor de textos nano"
     echo
     echo -e "$azul"
-    echo -e "[🧹] CLS" "$normal" 
+    echo -e "[🧹] EPCLS" "$normal" 
     echo "Limpia archivos eliminados de carpetas compartidas con el servidor y otras mierdas"
     echo 
     echo -e "$azul"
@@ -278,7 +277,7 @@ fi
 #Si el argumento es cls    
 #//////////////////////
 
-if [[  $1 == "cls" ]]; then
+if [[  $1 == "cls" || $1 == "epcls" ]]; then
 shopt -s dotglob
 rm ~/Escritorio/.Trash*/files/* 2>/dev/null
 rm -rf ~/Escritorio/.Trash*/files/* 2>/dev/null
