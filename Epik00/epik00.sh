@@ -54,20 +54,20 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo "Activa y desactiva el historial de Konsole"
     echo 
     echo -e "$azul"
-    echo -e "[🕵️‍♂️] EPON" "$normal" 
+    echo -e "[🕵️] EPON" "$normal" 
     echo "Permite la conexion con epop"
     echo
     echo -e "$azul"
-    echo -e "[🕵️‍♂️] EPOFF" "$normal" 
+    echo -e "[🕵️] EPOFF" "$normal" 
     echo "Corta la conexion con epop"
     echo
     echo -e "$azul"
-    echo -e "[🕵️‍♂️] EPCK" "$normal" 
+    echo -e "[🕵️] EPCK" "$normal" 
     echo "Comrpueba si epop esta activo de forma manual (sin epopscan)"
     echo "en caso de estar activo cierra konsole"
     echo
     echo -e "$azul"
-    echo -e "[🕵️‍♂️] EPOPSCAN (ALIAS EPSCAN)" "$normal" 
+    echo -e "[🕵️] EPOPSCAN (ALIAS EPSCAN)" "$normal" 
     echo "Es un servicio que detecta automaticamente si epop esta activo"
     echo "Y reacciona en base a ello cambiando el escritorio y el brillo"
     echo "USO: epscan (start/on - stop/off - check/ck) Por defecto tiene inicio automatico"
@@ -76,6 +76,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     printf "Enter para continuar..."
     read -r
 clear
+    echo
     echo -e "$azul"
     echo  "EPIK00 -- É um comando muito épico 😎"
     echo
