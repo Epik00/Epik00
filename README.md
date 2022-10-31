@@ -27,17 +27,14 @@
     [👀] EPOPSCAN (ALIAS EPSCAN)  
     Es un servicio que detecta automaticamente si epop esta activo
     Y reacciona en base a ello cambiando el escritorio y el brillo
-    USO: epscan (start/on - stop/off - check/ck) Por defecto tiene inicio automatico
     
     
     [🔑] PASS  
     Revela y copia la contraseña de un usuario usando un listado de contraseñas
-    USO: pass (usuario) 
     
     
     [⚡] SSHH  
     Hace ssh de forma automatizada usando el nombre de usuario (y la ip si no esta configurado)
-    USO: sshh (usuario) (ip) 
     
     
     [🔧] EPCONF  
@@ -50,15 +47,11 @@
     
     [📋] EPREPO  
     Copia al portapapeles los repositorios de ubuntu
-    Debes pegarlos en /etc/apt/sources.list (requiere permisos)
     
     
     [🔒] BASHLOCK (ALIAS BLOCK)    
     Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos
-    
-    USO: (block) para bloquear y desbloquear la terminal 
-     (block pass) para poner o cambiar la contraseña 
 
 
-    [☣] EPDELETE (ALIAS EPDEL) 
+    [❗] EPDELETE (ALIAS EPDEL) 
     Borra la instancia de Epik00 (pero no el iniciador)
