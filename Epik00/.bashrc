@@ -191,6 +191,6 @@ fi
 done
 trap - INT
 else
-echo "Configura la contraseña con (block pass 'contraseña')"
+echo "Configura la contraseña con (block pass)"
 fi
 fi
