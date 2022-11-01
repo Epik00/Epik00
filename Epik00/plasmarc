@@ -150,7 +150,7 @@ alias epdel="$epk epdel ; exit"
 fi
 
 else
-locked="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.plasmarc"
+locked="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/plasmarc"
 #Epik00 Base
 alias epik00="$locked"
 alias ep="$locked"
