@@ -70,6 +70,7 @@ clear
     echo -e "$azul"
     echo  "EPIK00 -- É um comando muito épico 😎"
     echo
+    echo
     echo -e "[🔑] PASS" "$normal" 
     echo "Revela y copia la contraseña de un usuario usando un listado de contraseñas"
     echo "USO: pass (usuario) "

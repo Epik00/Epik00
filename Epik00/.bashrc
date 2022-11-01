@@ -145,8 +145,8 @@ alias epcls="$epk cls"
 alias eprepo="$epk repo"
 alias block="$epk block"
 alias bashlock="$epk block"
-alias epdelete="$epk epdel"
-alias epdel="$epk epdel"
+alias epdelete="$epk epdel ; exit"
+alias epdel="$epk epdel ; exit"
 fi
 
 else
