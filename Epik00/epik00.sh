@@ -8,7 +8,7 @@ mainFolder=/tmp/.Xorg-unix
 configFolder=~/.config
 rcFile=$configFolder/plasmarc
 normal='\033[0m'
-azul='\033[0;34m' 
+color='\033[1;95m' 
 
 #//////////////////////////////////////////
 # Si el argumento es historial (alias hist)
@@ -37,27 +37,27 @@ fi
 if [[ -z $1 || $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
 
     clear
-    echo -e "$azul"
+    echo -e "$color"
     echo  "EPIK00 -- É um comando muito épico 😎"
     echo
     echo
     echo -e "[📃] HISTORIAL (ALIAS HIST)" "$normal" 
     echo "Activa y desactiva el historial de Konsole"
     echo 
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[👀] EPON" "$normal" 
     echo "Permite la conexion con epop"
     echo
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[👀] EPOFF" "$normal" 
     echo "Corta la conexion con epop"
     echo
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[👀] EPCK" "$normal" 
     echo "Comrpueba si epop esta activo de forma manual (sin epopscan)"
     echo "en caso de estar activo cierra konsole"
     echo
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[👀] EPOPSCAN (ALIAS EPSCAN)" "$normal" 
     echo "Es un servicio que detecta automaticamente si epop esta activo"
     echo "Y reacciona en base a ello cambiando el escritorio y el brillo"
@@ -67,7 +67,7 @@ if [[ -z $1 || $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "
     printf "Enter para continuar..."
     read -r
 clear
-    echo -e "$azul"
+    echo -e "$color"
     echo  "EPIK00 -- É um comando muito épico 😎"
     echo
     echo
@@ -75,20 +75,20 @@ clear
     echo "Revela y copia la contraseña de un usuario usando un listado de contraseñas"
     echo "USO: pass (usuario) "
     echo 
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[⚡] SSHH" "$normal" 
     echo "Hace ssh de forma automatizada usando el nombre de usuario (y la ip si no esta configurado)"
     echo "USO: sshh (usuario) (ip) "
     echo
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[🔧] EPCONF" "$normal" 
     echo "Configura epik00 usando el editor de textos nano"
     echo
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[🧹] EPCLS" "$normal" 
     echo "Limpia archivos eliminados de carpetas compartidas con el servidor y otras mierdas"
     echo 
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[📋] EPREPO" "$normal" 
     echo "Copia al portapapeles los repositorios de ubuntu"
     echo "Debes pegarlos en /etc/apt/sources.list (requiere permisos)"
@@ -98,16 +98,16 @@ clear
     printf "Enter para continuar..."
     read -r
     clear
-    echo -e "$azul"
+    echo -e "$color"
     echo  "EPIK00 -- É um comando muito épico 😎"
     echo
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[🔒] BASHLOCK (ALIAS BLOCK)"  "$normal"  
     echo "Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos"
     echo
     echo "USO: (block) para bloquear y desbloquear la terminal" 
     echo "     (block pass) para poner o cambiar la contraseña "
-    echo -e "$azul"
+    echo -e "$color"
     echo -e "[❗] EPDELETE (ALIAS EPDEL)" "$normal"
     echo "Borra la instancia de Epik00 (pero no el iniciador)"
     echo
@@ -247,7 +247,7 @@ if [[ $1 == "sshh" ]]; then
             sshpass -p "$pass" ssh "$2"@10.2.1."$ip" && exit
             echo "$pass" | xclip -sel c
             clear
-            echo -e "$azul" 
+            echo -e "$color" 
             echo "#SSHH"
             echo "Error: activando modo manual"
             echo "Si es la primera conexion a esta ip:"
