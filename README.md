@@ -3,8 +3,6 @@
 
 Epik00 es un conjunto de comandos y servicios que te permiten estar mas tranquilo en clase y
 ademas incluye herramientas y utilidades desde proteccion por contraseña de tu terminal hasta ssh automatizado
-</br> </br>
-Lineas de codigo de este repositorio +1000
 
 # Instalar:
 
@@ -79,3 +77,6 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
 
     [❗] EPDELETE (ALIAS EPDEL) 
     Borra la instancia de Epik00 (pero no el iniciador)
+
+
+    Lineas totales de Epik00: ~1000
