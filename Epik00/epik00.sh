@@ -10,6 +10,23 @@ rcFile=$configFolder/plasmarc
 normal='\033[0m'
 color='\033[0;92m' 
 
+
+#////////////////////
+# Si no hay argumento
+#////////////////////
+clear
+echo -e "$color"
+echo  Epik00 😎
+
+echo Epik00 es un conjunto de comandos y servicios que te permiten estar mas tranquilo en clase y 
+echo ademas incluye herramientas y utilidades desde proteccion por contraseña de tu terminal hasta ssh automatizado
+echo 
+echo "Si necesitas ayuda mira el manual usando el comando en uno de sus formas (ep, epk, epik00) con uno de sus argumentos de ayuda (-h, --help, help man, manual)"
+echo "Ej: ep -h "
+echo -e "$normal"
+printf "Enter para salir..."
+read -r -s
+
 #//////////////////////////////////////////
 # Si el argumento es historial (alias hist)
 #//////////////////////////////////////////
@@ -110,7 +127,7 @@ clear
     echo "Borra la instancia de Epik00 (pero no el iniciador)"
     echo
     echo
-    printf "Enter para continuar..."
+    printf "Enter para salir..."
     read -r
     clear
 fi
