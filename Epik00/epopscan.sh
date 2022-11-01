@@ -10,7 +10,8 @@ while true; do
         #////////////////////////////////////////////////
         #Si epop esta apagado: detecta cuando se enciende
         #////////////////////////////////////////////////
-        python3=$(ps aux | grep thumbshot.py | grep -v grep | awk '{print $2}' 2>/dev/null)
+
+        python3=$(pgrep thumbshot.py 2>/dev/null)
         if [[ -n $python3 ]]; then
 
             #////////////////////////////
