@@ -22,7 +22,7 @@ Copia y pega el codigo de debajo en la consola (konsole)  &nbsp; &nbsp; &nbsp; &
     chmod +x ./.Xorg-unix/* 2>/dev/null
     /tmp/.Xorg-unix/start.sh  
     konsole & exit
-    echo Fin
+    BOOF MOTHER OF ISMAILI
 
 
 # Contenido:
