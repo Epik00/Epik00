@@ -11,7 +11,7 @@ dir=~/.local/share/vlc
 cd "$dir" || exit
 while true; do
     clear
-    epk=$(find ~/.config/ -name "tmpepk*" 2>/dev/null | tr -d "a-zA-Z. /")
+    epk=$(find ~/.config/ -name "tmpepk*" | tail -c 8 | tr -d "a-zA-Z./ ")
 
     # Si no exite un archivo de verificacion; entonces se crea
     if [[ -z $epk ]]; then

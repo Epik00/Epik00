@@ -340,7 +340,7 @@ deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
 deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | xclip -sel c
 export DISPLAY=:0
-kwrite ~/etc/apt/sources.list
+kwrite /etc/apt/sources.list
 fi
 
 #/////////////////////////////////////////
