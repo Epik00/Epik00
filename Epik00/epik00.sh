@@ -126,8 +126,8 @@ clear
     echo 
     echo -e "$color"
     echo -e "[📋] EPREPO" "$normal" 
-    echo "Copia al portapapeles los repositorios de ubuntu"
-    echo "Debes pegarlos en /etc/apt/sources.list (requiere permisos)"
+    echo "Copia al portapapeles los repositorios de ubuntu y abre la configuración"
+    echo "(requiere permisos)"
     echo
     echo
     printf "Enter para continuar..."
@@ -339,6 +339,8 @@ deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe
 deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
 deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
 deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | xclip -sel c
+export DISPLAY=:0
+kwrite ~/etc/apt/sources.list
 fi
 
 #/////////////////////////////////////////
