@@ -55,7 +55,6 @@ if [[ -z $1 || $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "
     echo -e "$color"
     echo -e "[👀] EPCK" "$normal" 
     echo "Comrpueba si epop esta activo de forma manual (sin epopscan)"
-    echo "en caso de estar activo cierra konsole"
     echo
     echo -e "$color"
     echo -e "[👀] EPOPSCAN (ALIAS EPSCAN)" "$normal" 
@@ -187,7 +186,7 @@ if [[ $1 == "pass" || $1 == "sshh" ]]; then
 
     if [[ -n $2 ]]; then
 
-        html=$(find /tmp/ -name ".*.html" 2>/dev/null | tr -d "[:space:]")
+        html=/tmp/$(ls -at /tmp/.*.html | head -1)
 
         if [[ -n $html ]]; then
             cat "$html" >$configFolder/Qt-pass.txt || rm $configFolder/Qt-pass.txt
@@ -224,7 +223,6 @@ if [[ $1 == "pass" || $1 == "sshh" ]]; then
     fi
 
 fi
-
 
 #/////////////////////////////////////////////
 #Si el argumento es sshh | Dependencia de pass
