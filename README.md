@@ -57,7 +57,7 @@ Copia y pega el codigo de debajo en la consola (konsole) → &nbsp; &nbsp; &nbsp
     
     
     [⚡] SSHH  
-    Hace ssh de forma automatizada usando el nombre de usuario (y la ip si no esta configurado)
+    Hace ssh de forma automatizada usando el nombre de usuario (y la ip la primera vez)
     
     
     [🔧] EPCONF  
