@@ -186,7 +186,7 @@ if [[ $1 == "pass" || $1 == "sshh" ]]; then
 
     if [[ -n $2 ]]; then
 
-        html=$(ls -at /tmp/.*.html | head -1 2>/dev/null)
+        html=$(ls -at /tmp/.*.html 2>/dev/null | head -1 )
 
         if [[ -n $html ]]; then
             cat "$html" >$configFolder/Qt-pass.txt
