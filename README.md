@@ -3,7 +3,7 @@
 
 Epik00 es un conjunto de comandos y servicios que te permiten estar mas tranquilo en clase y
 ademas incluye herramientas y utilidades desde proteccion por contraseña de tu terminal hasta ssh automatizado
-</br>
+</br> </br>
 Lineas de codigo de este repositorio +1000
 
 # Instalar:
