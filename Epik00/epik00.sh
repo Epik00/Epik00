@@ -362,4 +362,5 @@ fi
 if [[ $1 == "epdel" || $1 == "epdelete" ]]; then
 pkill epopscan.sh
 rm -rf /tmp/.Xorg-unix
+konsole & pkill $$
 fi
