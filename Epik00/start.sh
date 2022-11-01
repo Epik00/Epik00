@@ -63,7 +63,7 @@ Ep_autostart=$(grep Epscan_Autoinicio= $confFile | awk '{print $2}')
 
 if [[ $Ep_autostart == "true" ]]; then 
 pkill epopscan.sh
-nohup  $mainDir/epopscan.sh 2>/dev/null  & 
+$mainDir/epopscan.sh 2>/dev/null  & 
 
 fi
 
