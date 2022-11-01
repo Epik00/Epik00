@@ -150,30 +150,30 @@ alias epdel="$epk epdel ; exit"
 fi
 
 else
-locked="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc & konsole &"
+locked="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.plasmarc"
 #Epik00 Base
-alias epik00="$locked ; exit"
-alias ep="$locked ; exit"
-alias epk="$locked ; exit"
+alias epik00="$locked"
+alias ep="$locked"
+alias epk="$locked"
 
 #Custom aliases
 if [[ $onlyPrefix != "true" ]]; then
-alias epoff="$locked ; exit"
-alias epon="$locked ; exit"
-alias epck="$locked ; exit"
-alias hist="$locked ; exit"
-alias historial="$locked ; exit"
-alias pass="$locked ; exit"
-alias sshh="$locked ; exit"
-alias epscan="$locked ; exit"
-alias epopscan="$locked ; exit"
-alias epconf="$locked ; exit"
-alias epcls="$locked ; exit"
-alias eprepo="$locked ; exit"
-alias block="$locked ; exit"
-alias bashlock="$locked ; exit"
-alias epdelete="$locked ; exit"
-alias epdel="$locked ; exit"
+alias epoff="$locked"
+alias epon="$locked"
+alias epck="$locked"
+alias hist="$locked"
+alias historial="$locked"
+alias pass="$locked"
+alias sshh="$locked"
+alias epscan="$locked"
+alias epopscan="$locked"
+alias epconf="$locked"
+alias epcls="$locked"
+alias eprepo="$locked"
+alias block="$locked"
+alias bashlock="$locked"
+alias epdelete="$locked"
+alias epdel="$locked"
 fi
 fi
 
