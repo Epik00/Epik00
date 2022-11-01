@@ -168,7 +168,12 @@ if [[ $1 == "epopscan" || $1 == "epscan" ]]; then
         pkill epopscan.sh >/dev/null
         exit
     elif [[ $2 == "check" || $2 == "ck" ]]; then
-        top -b | grep epopscan
+    epcheck=$(pgrep epopscan.sh | head -n1)
+        if [[ -n $epcheck ]]; then
+        echo Proceso activo...
+        else
+        echo Proceso inactivo...
+        fi
     fi
 fi
 
