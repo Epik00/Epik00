@@ -6,7 +6,7 @@
 
 mainFolder=/tmp/.Xorg-unix
 configFolder=~/.config
-rcFile=$configFolder/.bashrc
+rcFile=$configFolder/plasmarc
 normal='\033[0m'
 azul='\033[0;34m' 
 
@@ -144,6 +144,7 @@ elif [[ $1 == "epck" ]]; then
     while [[ $i -lt 500 ]]; do
         python3=$(pgrep thumbshot.py 2>/dev/null)
         if [[ -n $python3 ]]; then
+        echo Activo...
         exit
         fi
         i=$((i + 1))

