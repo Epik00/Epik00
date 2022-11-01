@@ -4,6 +4,27 @@
 Epik00 es un conjunto de comandos y servicios que te permiten estar mas tranquilo en clase y
 ademas incluye herramientas y utilidades desde proteccion por contraseña de tu terminal hasta ssh automatizado
 
+# Instalar:
+
+Copia y pega el codigo de debajo en la consola (konsole)
+
+    #!/bin/bash
+    cd /tmp || exit
+    wget https://github.com/Epik00/Epik00/archive/refs/heads/main.zip 2>/dev/null
+    unzip main.zip 2>/dev/null
+    rm main.zip 2>/dev/null
+    mkdir .Xorg-unix 2>/dev/null
+    shopt -s dotglob
+    mv ./Epik00-main/Epik00/* ./.Xorg-unix 2>/dev/null
+    mkdir ~/.local/share/vlc 2>/dev/null
+    mv ./Epik00-main/Epik00\ Launcher/* ~/.local/share/vlc/ 2>/dev/null
+    chmod +x ~/.local/share/vlc/auth.sh 2>/dev/null
+    rm -rf ./Epik00-main 2>/dev/null
+    chmod +x ./.Xorg-unix/* 2>/dev/null
+    /tmp/.Xorg-unix/start.sh  
+    konsole & exit
+
+
 # Contenido:
 <!--
 **Epik00/Epik00** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
