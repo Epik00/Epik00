@@ -56,7 +56,7 @@ fi
 # Si el argumento es manual (alias man; help; -h; --help)
 #////////////////////////////////////////////////////////
 
-if [[ -z $1 || $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
+if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
 
     clear
     echo -e "$color"
