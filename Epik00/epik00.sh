@@ -14,6 +14,9 @@ color='\033[0;92m'
 #////////////////////
 # Si no hay argumento
 #////////////////////
+
+if [[ -z $1 ]]; then
+
 clear
 echo -e "$color"
 echo  Epik00 😎
@@ -26,6 +29,8 @@ echo "Ej: ep -h "
 echo -e "$normal"
 printf "Enter para salir..."
 read -r -s
+
+fi
 
 #//////////////////////////////////////////
 # Si el argumento es historial (alias hist)
@@ -51,7 +56,7 @@ fi
 # Si el argumento es manual (alias man; help; -h; --help)
 #////////////////////////////////////////////////////////
 
-if [[ -z $1 || $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
+if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $1 = "--help" ]]; then
 
     clear
     echo -e "$color"
