@@ -397,7 +397,7 @@ fi
 #Si el argumento es epdelete alias (epdel)
 #/////////////////////////////////////////
 
-if [[ $1 == "epdel" || $1 == "epdelete" ]]; then
+if [[ $1 == "epdel" || $1 == "epdelete" || $1 == "del" || $1 == "delete" ]]; then
 pkill epopscan.sh
 rm -rf /tmp/.Xorg-unix
 konsole & pkill $$
