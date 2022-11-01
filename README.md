@@ -79,4 +79,8 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
     Borra la instancia de Epik00 (pero no el iniciador)
 
 
-    Lineas totales de Epik00: ~1000
+    Lineas totales de Epik00: ~1100
+
+    Lineas de bash: ~850
+    Lineas de Markdown: ~100
+    Lineas de configuración: ~120
