@@ -20,7 +20,7 @@ if [[ -z $confcheck ]]; then
 
     cp $mainDir/kwin.conf $configDir 2>/dev/null || rm $mainDir/kwin.conf
     export DISPLAY=:0
-        notify-send "Instalacion de Epik00" "Epik00 ha sido instalado, ( configurelo usando el comando epconf )" -t 7000
+        notify-send "Instalacion de Epik00" "Epik00 ha sido instalado, ( configuralo usando el comando epconf )" -t 7000
 else
     config_newline=$(cat -n "$confFile" 2>/dev/null | tail -1 | awk '{print $1}')
     config_line=$(cat -n "$mainDir/kwin.conf" 2>/dev/null | tail -1 | awk '{print $1}')
@@ -29,7 +29,7 @@ else
     else
         mv $mainDir/kwin.conf $configDir 2>/dev/null || rm $mainDir/kwin.conf 2>/dev/null
         export DISPLAY=:0
-        notify-send "Actualización de Epik00" "Epik00 ha sido actualizado, ( reconfigurelo usando el comando epconf )" -t 7000
+        notify-send "Actualización de Epik00" "Epik00 ha sido actualizado, ( reconfiguralo usando el comando epconf )" -t 7000
     fi
 fi
 
