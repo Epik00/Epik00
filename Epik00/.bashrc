@@ -132,8 +132,8 @@ onlyPrefix=$(grep Bashrc_Solo_Prefijo ~/.config/kwin.conf | awk '{print $2}')
 if [[ $onlyPrefix != "true" ]]; then
 
 alias epoff="$epk epoff"
-alias epon="$epk epon"
-alias epck="$epk epck"
+alias epon="$epk epon ; exit"
+alias epck="$epk epck ; exit"
 alias hist="$epk hist"
 alias historial="$epk hist"
 alias pass="$epk pass"

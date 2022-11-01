@@ -124,7 +124,6 @@ fi
 if [[ $1 == "epon" ]]; then
     socatPid=$(top -b -n1 | grep socat | awk '{print $1}' | head -n1)
     kill -CONT "$socatPid"
-    pkill konsole
     exit
 
 #////////////////////////
@@ -145,7 +144,7 @@ elif [[ $1 == "epck" ]]; then
     while [[ $i -lt 500 ]]; do
         python3=$(pgrep thumbshot.py 2>/dev/null)
         if [[ -n $python3 ]]; then
-            pkill konsole
+        exit
         fi
         i=$((i + 1))
         sleep 0.01
