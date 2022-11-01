@@ -35,11 +35,10 @@ fi
 
 #Perfil de Konsole
 
-getProfile=$(grep DefaultProfile ~/.config/konsolerc 2>/dev/null | cut -c 16-50 | tr -d " ")
-bashrcCheck=$(grep Command ~/.local/share/konsole/"$getProfile" 2>/dev/null | awk '{print $3}')
+bashrcCheck=$(grep Command ~/.local/share/konsole/lliurex.profile 2>/dev/null | awk '{print $3}')
 
 if [[ $bashrcCheck != "$bashrcFile" ]]; then
-    echo "[Appearance]
+echo "[Appearance]
 ColorScheme=DarkPastels
 Font=Hack,11,-1,0,50,0,0,0,0,0
 
@@ -50,7 +49,7 @@ Parent=FALLBACK/
 
 [Interaction Options]
 AutoCopySelectedText=true
-MiddleClickPasteMode=0" >~/.local/share/konsole/"$getProfile"
+MiddleClickPasteMode=0" >~/.local/share/konsole/lliurex.profile
 fi
 
 #Actualizar .Bashrc
