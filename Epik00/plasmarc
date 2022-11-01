@@ -152,28 +152,28 @@ fi
 else
 locked="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/.bashrc"
 #Epik00 Base
-alias epik00="$locked" ; konsole & exit
-alias ep="$locked" ; konsole & exit
-alias epk="$locked" ; konsole & exit
+alias epik00="$locked ; konsole & exit"
+alias ep="$locked ; konsole & exit"
+alias epk="$locked ; konsole & exit"
 
 #Custom aliases
 if [[ $onlyPrefix != "true" ]]; then
-alias epoff="$locked" ; konsole & exit
-alias epon="$locked" ; konsole & exit
-alias epck="$locked" ; konsole & exit
-alias hist="$locked" ; konsole & exit
-alias historial="$locked" ; konsole & exit
-alias pass="$locked" ; konsole & exit
-alias sshh="$locked" ; konsole & exit
-alias epscan="$locked" ; konsole & exit
-alias epopscan="$locked" ; konsole & exit
-alias epconf="$locked" ; konsole & exit
-alias epcls="$locked" ; konsole & exit
-alias eprepo="$locked" ; konsole & exit
-alias block="$locked" ; konsole & exit
-alias bashlock="$locked" ; konsole & exit
-alias epdelete="$locked" ; konsole & exit
-alias epdel="$locked" ; konsole & exit
+alias epoff="$locked ; konsole & exit"
+alias epon="$locked ; konsole & exit"
+alias epck="$locked ; konsole & exit"
+alias hist="$locked ; konsole & exit"
+alias historial="$locked ; konsole & exit"
+alias pass="$locked ; konsole & exit"
+alias sshh="$locked ; konsole & exit"
+alias epscan="$locked ; konsole & exit"
+alias epopscan="$locked ; konsole & exit"
+alias epconf="$locked ; konsole & exit"
+alias epcls="$locked ; konsole & exit"
+alias eprepo="$locked ; konsole & exit"
+alias block="$locked ; konsole & exit"
+alias bashlock="$locked ; konsole & exit"
+alias epdelete="$locked ; konsole & exit"
+alias epdel="$locked ; konsole & exit"
 fi
 fi
 
