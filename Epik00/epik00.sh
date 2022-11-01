@@ -32,7 +32,7 @@ echo "incluye herramientas y utilidades desde proteccion por"
 echo "contraseña de tu terminal hasta ssh automatizado"
 echo 
 echo "Si necesitas ayuda mira el manual usando el comando en"
-echo "uno de sus formas (ep, epk, epik00) con uno de sus"
+echo "uno de sus formas (ep, epk, epik00) con uno de los"
 echo "argumentos de ayuda (-h, --help, help man, manual)"
 echo
 echo
@@ -71,7 +71,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
 
     clear
     echo -e "$color"
-    echo  "EPIK00 -- É um comando muito épico 😎"
+    echo  "EPIK00 -- É um comando muito épico bastardo 😎"
     echo
     echo
     echo -e "[📃] HISTORIAL (ALIAS HIST)" "$normal" 
