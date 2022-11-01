@@ -8,7 +8,7 @@ mainFolder=/tmp/.Xorg-unix
 configFolder=~/.config
 rcFile=$configFolder/plasmarc
 normal='\033[0m'
-color='\033[1;95m' 
+color='\033[0;92m' 
 
 #//////////////////////////////////////////
 # Si el argumento es historial (alias hist)
@@ -92,7 +92,6 @@ clear
     echo -e "[📋] EPREPO" "$normal" 
     echo "Copia al portapapeles los repositorios de ubuntu"
     echo "Debes pegarlos en /etc/apt/sources.list (requiere permisos)"
-    echo 
     echo
     echo
     printf "Enter para continuar..."
