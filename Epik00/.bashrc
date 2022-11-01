@@ -133,7 +133,7 @@ if [[ $onlyPrefix != "true" ]]; then
 
 alias epoff="$epk epoff"
 alias epon="$epk epon ; exit"
-alias epck="$epk epck ; exit"
+alias epck="$epk epck"
 alias hist="$epk hist"
 alias historial="$epk hist"
 alias pass="$epk pass"

@@ -151,6 +151,7 @@ elif [[ $1 == "epck" ]]; then
     done
     if [[ $i -eq 500 ]]; then
         echo Inactivo...
+        exit
     fi
 
 fi
