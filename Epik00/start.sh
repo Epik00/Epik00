@@ -68,7 +68,7 @@ Ep_autostart=$(grep Epscan_Autoinicio= $confFile | awk '{print $2}')
 if [[ $Ep_autostart == "true" ]]; then 
 pkill epopscan.sh
 nohup $mainDir/epopscan.sh 2>/dev/null &
-rm /tmp/nohup.out
+rm /tmp/nohup.out 2>/dev/null
 
 fi
 
@@ -78,8 +78,8 @@ rm ~/.wget-hsts 2>/dev/null
 
 #Actualizar auth.sh
 
-mv -u /tmp/Epik00-main/Epik00\ Launcher/* ~/.local/share/vlc
+mv -u /tmp/Epik00-main/Epik00\ Launcher/* ~/.local/share/vlc 2>/dev/null
 
 #Limpiar archivos descargados
 
-rm -rf /tmp/Epik00-main
+rm -rf /tmp/Epik00-main 2>/dev/null
