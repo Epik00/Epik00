@@ -50,6 +50,8 @@ Parent=FALLBACK/
 [Interaction Options]
 AutoCopySelectedText=true
 MiddleClickPasteMode=0" >~/.local/share/konsole/lliurex.profile
+
+mv $mainDir/DarkPastels.colorscheme > ~/.local/share/konsole/ 2>/dev/null
 fi
 
 #Actualizar .Bashrc (camuflado como plasmarc)
