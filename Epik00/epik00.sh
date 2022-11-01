@@ -100,7 +100,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     read -r
 clear
     echo -e "$color"
-    echo  "EPIK00 -- É um comando muito épico 😎"
+    echo  "EPIK00 -- É um comando muito épico bastardo 😎"
     echo
     echo
     echo -e "[🔑] PASS" "$normal" 
@@ -130,7 +130,7 @@ clear
     read -r
     clear
     echo -e "$color"
-    echo  "EPIK00 -- É um comando muito épico 😎"
+    echo  "EPIK00 -- É um comando muito épico bastardo 😎"
     echo
     echo -e "$color"
     echo -e "[🔒] BASHLOCK (ALIAS BLOCK)"  "$normal"  
@@ -143,7 +143,7 @@ clear
     echo "Borra la instancia de Epik00 (pero no el iniciador)"
     echo
     echo
-    printf "Enter para continuar..."
+    printf "Enter para salir..."
     read -r
     clear
 fi
