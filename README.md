@@ -6,7 +6,7 @@ ademas incluye herramientas y utilidades desde proteccion por contraseña de tu 
 
 # Instalar:
 
-Copia y pega el codigo de debajo en la consola (konsole)  <br /> <br /> <br />   Aqui ↓↓↓
+Copia y pega el codigo de debajo en la consola (konsole)  <space><space><space><space><space>   Aqui ↓↓↓
 
     #!/bin/bash
     cd /tmp || exit
