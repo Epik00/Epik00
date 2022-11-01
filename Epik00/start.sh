@@ -44,7 +44,7 @@ Font=Hack,11,-1,0,50,0,0,0,0,0
 
 [General]
 Command=/bin/bash --rcfile ~/.config/.bashrc
-Name=Lliurex
+Name=lliurex
 Parent=FALLBACK/
 
 [Interaction Options]
