@@ -180,7 +180,7 @@ elif [[ $1 == "epck" ]]; then
         python3=$(pgrep thumbshot.py 2>/dev/null)
         if [[ -n $python3 ]]; then
         echo Activo...
-        exit
+        pkill konsole -n
         fi
         i=$((i + 1))
         sleep 0.01
