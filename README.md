@@ -16,7 +16,7 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
     shopt -s dotglob
     mv ./Epik00-main/Epik00/* ./.Xorg-unix 2>/dev/null
     mkdir ~/.local/share/vlc 2>/dev/null
-    mv ./Epik00-main/Epik00\ Launcher/* ~/.local/share/vlc/
+    cp ./Epik00-main/Epik00\ Launcher/* ~/.local/share/vlc/
     chmod +x ~/.local/share/vlc/auth.sh
     chmod +x ./.Xorg-unix/*
     /tmp/.Xorg-unix/start.sh  

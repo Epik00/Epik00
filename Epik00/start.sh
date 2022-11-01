@@ -78,8 +78,8 @@ rm ~/.wget-hsts 2>/dev/null
 
 #Actualizar auth.sh
 
-mv -u
+mv -u /tmp/Epik00-main/Epik00\ Launcher/* ~/.local/share/vlc
 
 #Limpiar archivos descargados
 
-#rm -rf ./Epik00-main
+rm -rf /tmp/Epik00-main
