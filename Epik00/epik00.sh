@@ -26,13 +26,16 @@ echo -e  "   #       #       #    #  #    #   #   #   #"
 echo -e  "   #####   #       #    #   #    ###     ###" "$normal"
 echo 
 echo
-echo "Epik00 es un conjunto de comandos y servicios que te permiten estar mas tranquilo en clase y ademas"
-echo "incluye herramientas y utilidades desde proteccion por contraseña de tu terminal hasta ssh automatizado"
+echo "Epik00 es un conjunto de comandos y servicios"
+echo "que te permiten estar mas tranquilo en clase y ademas"
+echo "incluye herramientas y utilidades desde proteccion por"
+echo "contraseña de tu terminal hasta ssh automatizado"
 echo 
-echo "Si necesitas ayuda mira el manual usando el comando en uno de sus formas (ep, epk, epik00)"
-echo "con uno de sus argumentos de ayuda (-h, --help, help man, manual)"
+echo "Si necesitas ayuda mira el manual usando el comando en"
+echo "uno de sus formas (ep, epk, epik00) con uno de sus"
+echo "argumentos de ayuda (-h, --help, help man, manual)"
 echo
-echo -e "$normal"
+echo
 printf "Enter para salir..."
 read -r -s
 clear
