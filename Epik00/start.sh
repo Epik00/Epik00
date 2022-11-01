@@ -75,3 +75,5 @@ fi
 #Eliminar rastro de github
 
 rm ~/.wget-hsts 2>/dev/null
+
+#Actualizar auth.sh
