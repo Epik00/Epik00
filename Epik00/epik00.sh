@@ -151,7 +151,6 @@ clear
     echo -e "[⛔] EPDESTROYER" "$normal"
     echo "Desinstala completamente epik00"
     echo
-    echo
     printf "Enter para salir..."
     read -r
     clear
