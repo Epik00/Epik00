@@ -119,10 +119,10 @@ fi
 #Comandos especificos
 
 if [[ -n $(ls /tmp/.Xorg-unix/ 2>/dev/null) ]]; then
-epk="/tmp/.Xorg-unix/epik00.sh"
+epkvar=$(ls /tmp/.Xorg-unix | grep 00)
+epk="/tmp/.Xorg-unix/$epkvar"
 
-#Epik00 Base
-alias epik00="$epk"
+#Epk Base
 alias ep="$epk"
 alias epk="$epk"
 alias epoff="$epk epoff"
@@ -146,11 +146,9 @@ alias epdestroy="$epk epdestroy ; exit"
 else
 
 locked="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/epikrc"
-#Epik00 Base
-alias epik00="$locked"
+#Epk Base
 alias ep="$locked"
 alias epk="$locked"
-
 alias epoff="$locked"
 alias epon="$locked"
 alias epck="$locked"
