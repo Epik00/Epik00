@@ -241,12 +241,12 @@
         clear
         exit
     fi
-# Epdel [epdel]
+# Epdel Command [epdel]
     if [[ $1 == "epdel" ]]; then
         pkill epscan.sh
         rm -rf $mainFolder
     fi
-# Epdestroy [epdestroy]
+# Epdestroy Command [epdestroy]
     if [[ $1 == "epdestroy" ]]; then 
     rm $rcFile $passFile $ipFile 2>/dev/null
     rm -rf $authFolder $mainFolder 2>/dev/null
