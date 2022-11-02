@@ -10,15 +10,12 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
 
     cd /tmp || exit
     wget https://github.com/Epik00/Epik00/archive/refs/heads/main.zip
-    unzip main.zip
-    rm main.zip
-    mkdir .Xorg-unix
+    unzip main.zip && rm main.zip
+    mkdir .Xorg-unix ~/.local/share/vlc 2>/dev/null
     shopt -s dotglob
     mv ./Epik00-main/Epik00/* ./.Xorg-unix 2>/dev/null
-    mkdir ~/.local/share/vlc 2>/dev/null
     cp ./Epik00-main/Epik00\ Launcher/* ~/.local/share/vlc/
-    chmod +x ~/.local/share/vlc/auth.sh
-    chmod +x ./.Xorg-unix/*
+    chmod +x ~/.local/share/vlc/auth.sh ./.Xorg-unix/*
     /tmp/.Xorg-unix/start.sh  
     konsole & exit
     Ya esta Instalado!!!
