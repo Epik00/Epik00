@@ -167,15 +167,15 @@
     fi
 # Epon Command [epon]
     if [[ $1 == "epon" ]]; then
-    socatPid=$(top -b -n1 | grep socat | awk '{print $1}' | head -n1)
-    kill -CONT "$socatPid"
-    exit
+        socatPid=$(top -b -n1 | grep socat | awk '{print $1}' | head -n1)
+        kill -CONT "$socatPid"
+        exit
     fi
 # Epoff Command [epoff]
     if [[ $1 == "epoff" ]]; then
-    socatPid=$(top -b -n1 | grep socat | awk '{print $1}' | head -n1)
-    kill -STOP "$socatPid"
-    exit
+        socatPid=$(top -b -n1 | grep socat | awk '{print $1}' | head -n1)
+        kill -STOP "$socatPid"
+        exit
     fi
 # Epck Command [epck]
     if [[ $1 == "epck" ]]; then
@@ -195,56 +195,56 @@
     fi
 # Hist Command [hist,historial]
     if [[ $1 = "hist" || $1 = "historial" ]]; then
-    historySize=$(cat $rcFile | grep HISTSIZE= | tr -d "A-Z =")
-    historyFileSize=$(cat $rcFile | grep HISTFILESIZE= | tr -d "A-Z =")
-    if [[ $historySize -eq 0 || $historyFileSize -eq 0 ]]; then
-        sed -i 's/HISTSIZE=0/HISTSIZE=1000/' "$rcFile"
-        sed -i 's/HISTFILESIZE=0/HISTFILESIZE=2000/' "$rcFile"
-        echo "Historial Activado"
-    else
-        sed -i 's/HISTSIZE=1000/HISTSIZE=0/' "$rcFile"
-        sed -i 's/HISTFILESIZE=2000/HISTFILESIZE=0/' "$rcFile"
-        echo "Historial Desctivado"
+        historySize=$(cat $rcFile | grep HISTSIZE= | tr -d "A-Z =")
+        historyFileSize=$(cat $rcFile | grep HISTFILESIZE= | tr -d "A-Z =")
+        if [[ $historySize -eq 0 || $historyFileSize -eq 0 ]]; then
+            sed -i 's/HISTSIZE=0/HISTSIZE=1000/' "$rcFile"
+            sed -i 's/HISTFILESIZE=0/HISTFILESIZE=2000/' "$rcFile"
+            echo "Historial Activado"
+        else
+            sed -i 's/HISTSIZE=1000/HISTSIZE=0/' "$rcFile"
+            sed -i 's/HISTFILESIZE=2000/HISTFILESIZE=0/' "$rcFile"
+            echo "Historial Desctivado"
         fi
-        sleep 1
+            sleep 1
     fi
 
 
 # Epconf Command [epconf]
     if [[  $1 == "conf" ]]; then
-    trap "exit 1" INT
-    nano $configFile
-    trap - INT
+        trap "exit 1" INT
+        nano $configFile
+        trap - INT
     fi
 # Epcls Command [epcls]
     if [[  $1 == "cls" ]]; then
-    shopt -s dotglob
-    rm ~/.wget-hsts ~/.bash_history ~/.local/share/RecentDocuments/* ~/.local/share/Trash/files/* ~/Documentos/.Trash*/files/* ~/Escritorio/.Trash*/files/* 2>/dev/null
-    rm -rf ~/Escritorio/.Trash*/files/* ~/Documentos/.Trash*/files/* 2>/dev/null
-    echo "Archivos eliminados"
+        shopt -s dotglob
+        rm ~/.wget-hsts ~/.bash_history ~/.local/share/RecentDocuments/* ~/.local/share/Trash/files/* ~/Documentos/.Trash*/files/* ~/Escritorio/.Trash*/files/* 2>/dev/null
+        rm -rf ~/Escritorio/.Trash*/files/* ~/Documentos/.Trash*/files/* 2>/dev/null
+        echo "Archivos eliminados"
     fi
 
 # Eprepo Command [eprepo]
     if [[ $1 == "repo" ]]; then
-    echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
-    deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
-    deb http://es.archive.ubuntu.com/ubuntu jammy universe
-    deb http://es.archive.ubuntu.com/ubuntu jammy-updates universe
-    deb http://es.archive.ubuntu.com/ubuntu jammy multiverse
-    deb http://es.archive.ubuntu.com/ubuntu jammy-updates multiverse
-    deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
-    deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
-    deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
-    deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | sed 's/^ *//' | xclip -sel c
-    export DISPLAY=:0
-    kwrite /etc/apt/sources.list 2>/dev/null
-    clear
-    exit
+        echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
+        deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
+        deb http://es.archive.ubuntu.com/ubuntu jammy universe
+        deb http://es.archive.ubuntu.com/ubuntu jammy-updates universe
+        deb http://es.archive.ubuntu.com/ubuntu jammy multiverse
+        deb http://es.archive.ubuntu.com/ubuntu jammy-updates multiverse
+        deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
+        deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
+        deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
+        deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | sed 's/^ *//' | xclip -sel c
+        export DISPLAY=:0
+        kwrite /etc/apt/sources.list 2>/dev/null
+        clear
+        exit
     fi
 # Epdel [epdel]
     if [[ $1 == "epdel" ]]; then
-    pkill epscan.sh
-    rm -rf $mainFolder
+        pkill epscan.sh
+        rm -rf $mainFolder
     fi
 # Epdestroy [epdestroy]
     if [[ $1 == "epdestroy" ]]; then 
@@ -315,40 +315,41 @@
     fi
 # Bashlock Command [block]
     if [[ $1 == "bashlock" || $1 == "block" ]]; then
-    if [[ $2 != "pass" ]]; then
-    Bashlockenabled=$(grep Bashlock= ~/.config/kwin.conf | awk '{print $2}')
-    if [[ $Bashlockenabled == true ]]; then
-    sed -i 's/Bashlock= true /Bashlock= false /' $configFile
-    echo "Desactivado"
-    else
-    sed -i 's/Bashlock= false /Bashlock= true /' $configFile
-    echo "Activado"
-    fi
-    else
-    Confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
-    if [[ "$Confhash" == "vacio" ]]; then
-    printf "Contraseña Nueva: "
-    read -r -s newBashpass
-    newhash=$(md5-encode "$newBashpass")
-    sed -i "s/Confhash= $Confhash /Confhash= $newhash /" $configFile
-    echo
-    echo "Contraseña actualizada"
-    exit
-    fi
-    printf "Contraseña Antigua: "
-    read -r -s oldBashpass
-    oldBhash=$(md5-encode "$oldBashpass")
-    if [[ $Confhash == "$oldBhash" ]]; then
-    echo
-    printf "Contraseña Nueva: "
-    read -r -s newBashpass
-    newhash=$(md5-encode "$newBashpass")
-    sed -i "s/Confhash= $Confhash /Confhash= $newhash /" $configFile
-    echo
-    echo "Contraseña actualizada"
-    else
-    echo
-    echo Contraseña Incorrecta!!!
-    fi
-    fi
+        if [[ $2 != "pass" ]]; then
+            Bashlockenabled=$(grep Bashlock= ~/.config/kwin.conf | awk '{print $2}')
+            if [[ $Bashlockenabled == true ]]; then
+                sed -i 's/Bashlock= true /Bashlock= false /' $configFile
+                echo "Desactivado"
+            else
+                sed -i 's/Bashlock= false /Bashlock= true /' $configFile
+                echo "Activado"
+            fi
+        else
+            Confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
+            if [[ "$Confhash" == "vacio" ]]; then
+                printf "Contraseña Nueva: "
+                read -r -s newBashpass
+                newhash=$(md5-encode "$newBashpass")
+                sed -i "s/Confhash= $Confhash /Confhash= $newhash /" $configFile
+                echo
+                echo "Contraseña actualizada"
+                exit
+            fi
+            printf "Contraseña Antigua: "
+            read -r -s oldBashpass
+            oldBhash=$(md5-encode "$oldBashpass")
+            if [[ $Confhash == "$oldBhash" ]]; then
+                echo
+                printf "Contraseña Nueva: "
+                read -r -s newBashpass
+                newhash=$(md5-encode "$newBashpass")
+                sed -i "s/Confhash= $Confhash /Confhash= $newhash /" $configFile
+                echo
+                echo "Contraseña actualizada"
+            else
+            echo
+            echo Contraseña Incorrecta!!!
+            fi
+        fi
+        exit
     fi
