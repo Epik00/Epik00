@@ -141,7 +141,7 @@ alias block="$epk block"
 alias bashlock="$epk block"
 alias epdelete="$epk epdel ; exit"
 alias epdel="$epk epdel ; exit"
-alias epdestroyer="$epk epdestroyer"
+alias epdestroy="$epk epdestroyer"
 
 else
 
@@ -167,7 +167,7 @@ alias block="$locked"
 alias bashlock="$locked"
 alias epdelete="$locked"
 alias epdel="$locked"
-alias epdestroyer="$locked"
+alias epdestroy="$locked"
 fi
 
 clear
