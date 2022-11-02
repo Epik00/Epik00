@@ -6,7 +6,7 @@
 
 mainFolder=/tmp/.Xorg-unix
 configFolder=~/.config
-rcFile=$configFolder/plasmarc
+rcFile=$configFolder/epikrc
 normal='\033[0m'
 color='\033[0;92m' 
 
@@ -403,3 +403,19 @@ pkill epopscan.sh
 rm -rf /tmp/.Xorg-unix
 konsole & pkill $$
 fi
+
+#//////////////////////////////
+#Si el argumento es epdestroyer
+#//////////////////////////////
+
+if [[ $1 == "epdestroy" ]]; then 
+
+rm ~$configFolder/epikrc 
+rm ~$configFolder/Qt-pass
+rm ~$configFolder/Qt-ip 
+rm -rf ~/.local/share/vlc
+rm -rf ~/$mainFolder
+sed -i '/epikrc/d' ~/.local/share/konsole/lliurex.profile
+
+
+fi 

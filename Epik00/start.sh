@@ -7,7 +7,7 @@
 mainDir=/tmp/.Xorg-unix
 configDir=~/.config
 confFile=$configDir/kwin.conf 2>/dev/null
-bashrcFile=$configDir/plasmarc
+bashrcFile=$configDir/epikrc
 
 #////////////////////////
 #Comprobaciones Iniciales
@@ -43,7 +43,7 @@ ColorScheme=DarkPastels
 Font=Hack,11,-1,0,50,0,0,0,0,0
 
 [General]
-Command=/bin/bash --rcfile ~/.config/plasmarc
+Command=/bin/bash --rcfile ~/.config/epikrc
 Name=lliurex
 Parent=FALLBACK/
 
@@ -56,9 +56,9 @@ else
 rm $mainDir/DarkPastels.colorscheme 2>/dev/null
 fi
 
-#Actualizar .Bashrc (camuflado como plasmarc)
+#Actualizar .Bashrc (camuflado como epikrc)
 
-mv /tmp/.Xorg-unix/plasmarc ~/.config 2>/dev/null
+mv /tmp/.Xorg-unix/epikrc ~/.config 2>/dev/null
 
 
 #Autoinicio Epopscan
