@@ -409,7 +409,7 @@ konsole & pkill $$
 fi
 
 #//////////////////////////////
-#Si el argumento es epdestroyer
+#Si el argumento es epdestroy
 #//////////////////////////////
 
 if [[ $1 == "epdestroy" ]]; then 
