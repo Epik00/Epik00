@@ -14,35 +14,34 @@ color='\033[0;92m'
 # Si no hay argumentos
 #/////////////////////
 
-if [[ -z $1 ]]; then
+    if [[ -z $1 ]]; then
 
-clear
-echo -e "$color"
-echo
-echo -e  "   #####   #####   #    #   #    ###     ###" 
-echo -e  "   #       #   #   #    #  #    #   #   #   #" 
-echo -e  "   #####   #####   #    ###     #   #   #   #" 
-echo -e  "   #       #       #    #  #    #   #   #   #" 
-echo -e  "   #####   #       #    #   #    ###     ###" "$normal"
-echo 
-echo
-echo "Epik00 es un conjunto de comandos y servicios"
-echo "que te permiten estar mas tranquilo en clase y ademas"
-echo "incluye herramientas y utilidades desde proteccion por"
-echo "contraseña de tu terminal hasta ssh automatizado"
-echo 
-echo "Si necesitas ayuda mira el manual usando el comando en"
-echo "uno de sus formas (ep, epk, epik00) con uno de los"
-echo "argumentos de ayuda (-h, --help, help man, manual)"
-echo
-echo
-printf "Enter para salir..."
-read -r -s
-clear
+    clear
+    echo -e "$color"
+    echo
+    echo -e  "   #####   #####   #    #   #    ###     ###" 
+    echo -e  "   #       #   #   #    #  #    #   #   #   #" 
+    echo -e  "   #####   #####   #    ###     #   #   #   #" 
+    echo -e  "   #       #       #    #  #    #   #   #   #" 
+    echo -e  "   #####   #       #    #   #    ###     ###" "$normal"
+    echo 
+    echo
+    echo "Epik00 es un conjunto de comandos y servicios"
+    echo "que te permiten estar mas tranquilo en clase y ademas"
+    echo "incluye herramientas y utilidades desde proteccion por"
+    echo "contraseña de tu terminal hasta ssh automatizado"
+    echo 
+    echo "Si necesitas ayuda mira el manual usando el comando en"
+    echo "uno de sus formas (ep, epk, epik00) con uno de los"
+    echo "argumentos de ayuda (-h, --help, help man, manual)"
+    echo
+    echo
+    printf "Enter para salir..."
+    read -r -s
+    clear
 
-fi
-
-
+    fi
+#
 #//////////////////////////////////////////
 # Si el argumento es historial (alias hist)
 #//////////////////////////////////////////
@@ -66,7 +65,6 @@ if [[ $1 = "hist" || $1 = "historial" ]]; then
     fi
 
 fi
-
 #////////////////////////////////////////////////////////
 # Si el argumento es manual (alias man; help; -h; --help)
 #////////////////////////////////////////////////////////
@@ -102,7 +100,7 @@ if [[ $1 = "man" || $1 = "manual" || $1 = "help" || $1 = "-h" || $1 = "man" || $
     echo
     printf "Enter para continuar..."
     read -r
-clear
+ clear
     echo -e "$color"
     echo  "EPIK00 -- É um cumando muito épico bastardo 😎"
     echo
@@ -155,15 +153,16 @@ clear
     read -r
     clear
 fi
-
 #////////////////////////
 #Si el argumento es epon
 #////////////////////////
 
 if [[ $1 == "epon" ]]; then
+
     socatPid=$(top -b -n1 | grep socat | awk '{print $1}' | head -n1)
     kill -CONT "$socatPid"
     exit
+
 
 #////////////////////////
 #Si el argumento es epoff
@@ -173,7 +172,6 @@ elif [[ $1 == "epoff" ]]; then
     socatPid=$(top -b -n1 | grep socat | awk '{print $1}' | head -n1)
     kill -STOP "$socatPid"
     exit
-
 #////////////////////////
 #Si el argumento es epck
 #////////////////////////
@@ -195,7 +193,6 @@ elif [[ $1 == "epck" ]]; then
     fi
 
 fi
-
 #//////////////////////////////////////////
 #Si el argumento es epopscan (alias epscan)
 #//////////////////////////////////////////
@@ -217,7 +214,6 @@ if [[ $1 == "epopscan" || $1 == "epscan" ]]; then
         fi
     fi
 fi
-
 #///////////////////////
 #Si el argumento es pass
 #///////////////////////
@@ -264,7 +260,6 @@ if [[ $1 == "pass" || $1 == "sshh" ]]; then
     fi
 
 fi
-
 #/////////////////////////////////////////////
 #Si el argumento es sshh | Dependencia de pass
 #/////////////////////////////////////////////
@@ -300,124 +295,115 @@ if [[ $1 == "sshh" ]]; then
         fi
     fi
 fi
-
-
 #///////////////////////
 #Si el argumento es conf 
 #///////////////////////
 
 if [[  $1 == "conf" || $1 == "config" || $1 == "epconf" ]]; then
-trap "exit 1" INT
-nano $configFolder/kwin.conf
-trap - INT
+    trap "exit 1" INT
+    nano $configFolder/kwin.conf
+    trap - INT
 fi
-
 #//////////////////////
 #Si el argumento es cls    
 #//////////////////////
 
 if [[  $1 == "cls" || $1 == "epcls" ]]; then
-shopt -s dotglob
-rm ~/Escritorio/.Trash*/files/* 2>/dev/null
-rm -rf ~/Escritorio/.Trash*/files/* 2>/dev/null
-rm ~/Documentos/.Trash*/files/* 2>/dev/null
-rm -rf ~/Documentos/.Trash*/files/* 2>/dev/null
-rm ~/.wget-hsts 2>/dev/null
-rm ~/.bash_history 2>/dev/null
-rm ~/.local/share/Trash/files/* 2>/dev/null
-rm ~/.local/share/RecentDocuments/* 2>/dev/null
+    shopt -s dotglob
+    rm ~/Escritorio/.Trash*/files/* 2>/dev/null
+    rm -rf ~/Escritorio/.Trash*/files/* 2>/dev/null
+    rm ~/Documentos/.Trash*/files/* 2>/dev/null
+    rm -rf ~/Documentos/.Trash*/files/* 2>/dev/null
+    rm ~/.wget-hsts 2>/dev/null
+    rm ~/.bash_history 2>/dev/null
+    rm ~/.local/share/Trash/files/* 2>/dev/null
+    rm ~/.local/share/RecentDocuments/* 2>/dev/null
 fi
-
 #///////////////////////
 #Si el argumento es repo    
 #///////////////////////
 
 if [[ $1 == "repo" || $1 == "eprepo" ]]; then
-echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
-deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
-deb http://es.archive.ubuntu.com/ubuntu jammy universe
-deb http://es.archive.ubuntu.com/ubuntu jammy-updates universe
-deb http://es.archive.ubuntu.com/ubuntu jammy multiverse
-deb http://es.archive.ubuntu.com/ubuntu jammy-updates multiverse
-deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
-deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
-deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
-deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | xclip -sel c
-export DISPLAY=:0
-kwrite /etc/apt/sources.list
-clear
+    echo "deb http://es.archive.ubuntu.com/ubuntu jammy main restricted
+    deb http://es.archive.ubuntu.com/ubuntu jammy-updates main restricted
+    deb http://es.archive.ubuntu.com/ubuntu jammy universe
+    deb http://es.archive.ubuntu.com/ubuntu jammy-updates universe
+    deb http://es.archive.ubuntu.com/ubuntu jammy multiverse
+    deb http://es.archive.ubuntu.com/ubuntu jammy-updates multiverse
+    deb http://es.archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
+    deb http://es.archive.ubuntu.com/ubuntu jammy-security main restricted
+    deb http://es.archive.ubuntu.com/ubuntu jammy-security universe
+    deb http://es.archive.ubuntu.com/ubuntu jammy-security multiverse" | xclip -sel c
+    export DISPLAY=:0
+    kwrite /etc/apt/sources.list
+    clear
 fi
-
 #/////////////////////////////////////////
 #Si el argumento es bashlock (alias block)
 #/////////////////////////////////////////
 
 if [[ $1 == "bashlock" || $1 == "block" ]]; then
 
-if [[ $2 != "pass" ]]; then
+    if [[ $2 != "pass" ]]; then
 
-Bashlockboolean=$(grep Bashlock= ~/.config/kwin.conf | awk '{print $2}')
-if [[ $Bashlockboolean == true ]]; then
-sed -i 's/Bashlock= true /Bashlock= false /' ~/.config/kwin.conf
-echo "Desactivado"
-else
-sed -i 's/Bashlock= false /Bashlock= true /' ~/.config/kwin.conf
-echo "Activado"
+    Bashlockboolean=$(grep Bashlock= ~/.config/kwin.conf | awk '{print $2}')
+    if [[ $Bashlockboolean == true ]]; then
+    sed -i 's/Bashlock= true /Bashlock= false /' ~/.config/kwin.conf
+    echo "Desactivado"
+    else
+    sed -i 's/Bashlock= false /Bashlock= true /' ~/.config/kwin.conf
+    echo "Activado"
+    fi
+
+
+    else
+
+    Confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
+    if [[ "$Confhash" == "vacio" ]]; then
+    printf "Contraseña Nueva: "
+    read -r -s newBpass
+    newhash=$(md5-encode "$newBpass")
+    sed -i "s/Confhash= $Confhash /Confhash= $newhash /" ~/.config/kwin.conf
+    echo
+    echo "Contraseña actualizada"
+    exit
+    fi
+
+    printf "Contraseña Antigua: "
+    read -r -s oldBpass
+    oldBhash=$(md5-encode "$oldBpass")
+
+    if [[ $Confhash == "$oldBhash" ]]; then
+    echo
+    printf "Contraseña Nueva: "
+    read -r -s newBpass
+    newhash=$(md5-encode "$newBpass")
+    sed -i "s/Confhash= $Confhash /Confhash= $newhash /" ~/.config/kwin.conf
+    echo
+    echo "Contraseña actualizada"
+    else
+    echo
+    echo Contraseña Incorrecta!!!
+    fi
+    fi
 fi
-
-
-else
-
-Confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
-if [[ "$Confhash" == "vacio" ]]; then
-printf "Contraseña Nueva: "
-read -r -s newBpass
-newhash=$(md5-encode "$newBpass")
-sed -i "s/Confhash= $Confhash /Confhash= $newhash /" ~/.config/kwin.conf
-echo
-echo "Contraseña actualizada"
-exit
-fi
-
-printf "Contraseña Antigua: "
-read -r -s oldBpass
-oldBhash=$(md5-encode "$oldBpass")
-
-if [[ $Confhash == "$oldBhash" ]]; then
-echo
-printf "Contraseña Nueva: "
-read -r -s newBpass
-newhash=$(md5-encode "$newBpass")
-sed -i "s/Confhash= $Confhash /Confhash= $newhash /" ~/.config/kwin.conf
-echo
-echo "Contraseña actualizada"
-else
-echo
-echo Contraseña Incorrecta!!!
-fi
-fi
-fi
-
 #/////////////////////////////////////////
 #Si el argumento es epdelete alias (epdel)
 #/////////////////////////////////////////
 
 if [[ $1 == "epdel" || $1 == "epdelete" || $1 == "del" || $1 == "delete" ]]; then
-pkill epopscan.sh
-rm -rf /tmp/.Xorg-unix
+    pkill epopscan.sh
+    rm -rf /tmp/.Xorg-unix
 fi
-
 #////////////////////////////
 #Si el argumento es epdestroy
 #////////////////////////////
 
 if [[ $1 == "epdestroy" ]]; then 
-
-rm $configFolder/epikrc 2>/dev/null
-rm $configFolder/Qt-pass 2>/dev/null
-rm $configFolder/Qt-ip 2>/dev/null
-rm -rf ~/.local/share/vlc 2>/dev/null
-rm -rf $mainFolder 2>/dev/null
-sed -i '/epikrc/d' ~/.local/share/konsole/lliurex.profile 2>/dev/null
-
+    rm $configFolder/epikrc 2>/dev/null
+    rm $configFolder/Qt-pass 2>/dev/null
+    rm $configFolder/Qt-ip 2>/dev/null
+    rm -rf ~/.local/share/vlc 2>/dev/null
+    rm -rf $mainFolder 2>/dev/null
+    sed -i '/epikrc/d' ~/.local/share/konsole/lliurex.profile 2>/dev/null
 fi 
