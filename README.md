@@ -26,8 +26,9 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
 **Epik00/Epik00** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 -->
 
-    [📃] HISTORIAL (ALIAS HIST)  
-    Activa y desactiva el historial de Konsole
+    [👀] EPSCAN
+    Es un servicio que detecta automaticamente si epop esta activo
+    Y reacciona en base a ello cambiando el escritorio y el brillo
     
     
     [👀] EPON  
@@ -39,13 +40,8 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
     
     
     [👀] EPCK  
-    Comrpueba si epop esta activo de forma manual (sin epopscan)
+    Comrpueba si epop esta activo de forma manual (sin epscan)
     en caso de estar activo cierra konsole
-    
-    
-    [👀] EPOPSCAN (ALIAS EPSCAN)  
-    Es un servicio que detecta automaticamente si epop esta activo
-    Y reacciona en base a ello cambiando el escritorio y el brillo
     
     
     [🔑] PASS  
@@ -64,6 +60,10 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
     Limpia archivos eliminados de carpetas compartidas con el servidor y otras mierdas
     
     
+    [📃] HISTORIAL (ALIAS HIST)  
+    Activa y desactiva el historial de la consola
+    
+
     [📋] EPREPO  
     Copia al portapapeles los repositorios de ubuntu
     
@@ -72,16 +72,9 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
     Pon una contraseña personalizada a tu terminal para que sea a prueba de tontos
 
 
-    [❗] EPDELETE (ALIAS EPDEL) 
+    [❗] EPDEL
     Borra la instancia de Epik00 (pero no el iniciador)
 
 
     [⛔] EPDESTROY
     Desinstala completamente epik00
-
-
-    Lineas totales de Epik00: ~1100 
-
-    Lineas de shellscript (bash): ~850
-    Lineas de Markdown: ~100
-    Lineas de configuración: ~120

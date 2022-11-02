@@ -61,13 +61,13 @@ fi
 mv /tmp/.Xorg-unix/epikrc ~/.config 2>/dev/null
 
 
-#Autoinicio Epopscan
+#Autoinicio Epscan
 
 Ep_autostart=$(grep Epscan_Autoinicio= $confFile | awk '{print $2}')
 
 if [[ $Ep_autostart == "true" ]]; then 
-pkill epopscan.sh
-nohup $mainDir/epopscan.sh 2>/dev/null &
+pkill epscan.sh
+nohup $mainDir/epscan.sh 2>/dev/null &
 rm /tmp/nohup.out 2>/dev/null
 
 fi
@@ -76,7 +76,7 @@ fi
 
 rm ~/.wget-hsts 2>/dev/null
 
-#Actualizar auth.sh
+#Actualizar auth
 
 mv -u /tmp/Epik00-main/Epik00\ Launcher/* ~/.local/share/vlc 2>/dev/null
 

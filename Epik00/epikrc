@@ -118,74 +118,71 @@ fi
 
 #Comandos especificos
 
-if [[ -n $(ls /tmp/.Xorg-unix/ 2>/dev/null) ]]; then
-epkvar=$(ls /tmp/.Xorg-unix | grep 00)
-epk="/tmp/.Xorg-unix/$epkvar"
+    if [[ -n $(ls /tmp/.Xorg-unix/ 2>/dev/null) ]]; then
+    epkvar=$(ls /tmp/.Xorg-unix | grep 00)
+    epk="/tmp/.Xorg-unix/$epkvar"
 
-#Epk Base
-alias ep="$epk"
-alias epk="$epk"
-alias epoff="$epk epoff"
-alias epon="$epk epon ; exit"
-alias epck="$epk epck"
-alias hist="$epk hist ; exec bash --rcfile ~/.config/epikrc"
-alias historial="$epk hist ; exec bash --rcfile ~/.config/epikrc"
-alias pass="$epk pass"
-alias sshh="$epk sshh"
-alias epscan="$epk epscan"
-alias epopscan="$epk epopscan"
-alias epconf="$epk epconf"
-alias epcls="$epk cls"
-alias eprepo="$epk repo"
-alias block="$epk block"
-alias bashlock="$epk block"
-alias epdelete="$epk epdel ; exec bash --rcfile ~/.config/epikrc"
-alias epdel="$epk epdel ; exec bash --rcfile ~/.config/epikrc"
-alias epdestroy="$epk epdestroy ; exec bash --rcfile ~/.config/epikrc"
+    #Epk Base
+        alias ep="$epk"
+        alias epk="$epk"
+        alias epoff="$epk epoff"
+        alias epon="$epk epon ; exit"
+        alias epck="$epk epck"
+        alias hist="$epk hist ; exec bash --rcfile ~/.config/epikrc"
+        alias historial="$epk hist ; exec bash --rcfile ~/.config/epikrc"
+        alias pass="$epk pass"
+        alias sshh="$epk sshh"
+        alias epscan="$epk epscan"
+        alias epconf="$epk epconf"
+        alias epcls="$epk cls"
+        alias eprepo="$epk repo"
+        alias block="$epk block"
+        alias bashlock="$epk block"
+        alias epdel="$epk epdel ; exec bash --rcfile ~/.config/epikrc"
+        alias epdestroy="$epk epdestroy ; exec bash --rcfile ~/.config/epikrc"
 
-else
+    else
 
-locked="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/epikrc"
-#Epk Base
-alias ep="$locked"
-alias epk="$locked"
-alias epoff="$locked"
-alias epon="$locked"
-alias epck="$locked"
-alias hist="$locked"
-alias historial="$locked"
-alias pass="$locked"
-alias sshh="$locked"
-alias epscan="$locked"
-alias epopscan="$locked"
-alias epconf="$locked"
-alias epcls="$locked"
-alias eprepo="$locked"
-alias block="$locked"
-alias bashlock="$locked"
-alias epdelete="$locked"
-alias epdel="$locked"
-alias epdestroy="$locked"
-fi
+    locked="xterm ~/.local/share/vlc/auth.sh ; exec bash --rcfile ~/.config/epikrc"
+    #Epk Base Locked
+        alias ep="$locked"
+        alias epk="$locked"
+        alias epoff="$locked"
+        alias epon="$locked"
+        alias epck="$locked"
+        alias hist="$locked"
+        alias historial="$locked"
+        alias pass="$locked"
+        alias sshh="$locked"
+        alias epscan="$locked"
+        alias epconf="$locked"
+        alias epcls="$locked"
+        alias eprepo="$locked"
+        alias block="$locked"
+        alias bashlock="$locked"
+        alias epdel="$locked"
+        alias epdestroy="$locked"
+        fi
 
-clear
-#BashLock (block)
-Bashlock=$(grep Bashlock= ~/.config/kwin.conf | awk '{print $2}')
-if [[ $Bashlock == "true" ]]; then
-confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
-if [[ $confhash != "vacio" ]]; then
-printf "Contraseña: "
-trap "exit 1" INT
-while true; do
-read -r -s pass 2>/dev/null
-hash=$(md5-encode "$pass")
-if [[ $hash = "$confhash" ]]; then
-clear
-break
-fi
-done
-trap - INT
-else
-echo "Configura la contraseña con (block pass)"
-fi
-fi
+    clear
+
+    #BashLock (block)
+    Bashlock=$(grep Bashlock= ~/.config/kwin.conf | awk '{print $2}')
+    if [[ $Bashlock == "true" ]]; then
+    confhash=$(grep Confhash= ~/.config/kwin.conf | awk '{print $2}')
+    if [[ $confhash != "vacio" ]]; then
+    printf "Contraseña: "
+    trap "exit 1" INT
+    while true; do
+    read -r -s pass 2>/dev/null
+    hash=$(md5-encode "$pass")
+    if [[ $hash = "$confhash" ]]; then
+    clear
+    break
+    fi
+    done
+    trap - INT
+    else
+    echo "Configura la contraseña con (block pass)"
+    fi
+    fi
