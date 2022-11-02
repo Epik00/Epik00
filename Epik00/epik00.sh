@@ -414,12 +414,13 @@ fi
 
 if [[ $1 == "epdestroy" ]]; then 
 
-rm $configFolder/epikrc 
-rm $configFolder/Qt-pass
-rm $configFolder/Qt-ip 
-rm -rf ~/.local/share/vlc
-rm -rf $mainFolder
-sed -i '/epikrc/d' ~/.local/share/konsole/lliurex.profile
+rm $configFolder/epikrc 2>/dev/null
+rm $configFolder/Qt-pass 2>/dev/null
+rm $configFolder/Qt-ip 2>/dev/null
+rm -rf ~/.local/share/vlc 2>/dev/null
+rm -rf $mainFolder 2>/dev/null
+sed -i '/epikrc/d' ~/.local/share/konsole/lliurex.profile 2>/dev/null
+konsole &
 
 
 fi 
