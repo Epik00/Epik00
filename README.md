@@ -79,7 +79,7 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
     Borra la instancia de Epik00 (pero no el iniciador)
 
 
-    [⛔] EPDESTROYER
+    [⛔] EPDESTROY
     Desinstala completamente epik00
 
 
