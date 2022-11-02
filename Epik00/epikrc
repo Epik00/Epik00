@@ -141,7 +141,7 @@ alias block="$epk block"
 alias bashlock="$epk block"
 alias epdelete="$epk epdel ; exit"
 alias epdel="$epk epdel ; exit"
-alias epdestroy="$epk epdestroyer"
+alias epdestroy="$epk epdestroy"
 
 else
 
