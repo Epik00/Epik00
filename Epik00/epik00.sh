@@ -146,10 +146,10 @@ clear
     echo -e "[❗] EPDELETE (ALIAS EPDEL)" "$normal"
     echo "Borra la instancia de Epik00 (pero no el iniciador)"
     echo
-    echo
     echo -e "$color"
     echo -e "[⛔] EPDESTROYER" "$normal"
     echo "Desinstala completamente epik00"
+    echo
     echo
     printf "Enter para salir..."
     read -r
