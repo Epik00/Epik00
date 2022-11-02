@@ -56,13 +56,13 @@ if [[ $1 = "hist" || $1 = "historial" ]]; then
         sed -i 's/HISTFILESIZE=0/HISTFILESIZE=2000/' "$rcFile"
         echo "Historial Activado"
         sleep 1
-        konsole &
+        
     else
         sed -i 's/HISTSIZE=1000/HISTSIZE=0/' "$rcFile"
         sed -i 's/HISTFILESIZE=2000/HISTFILESIZE=0/' "$rcFile"
         echo "Historial Desctivado"
         sleep 1
-        konsole &
+        
     fi
 
 fi
@@ -405,7 +405,6 @@ fi
 if [[ $1 == "epdel" || $1 == "epdelete" || $1 == "del" || $1 == "delete" ]]; then
 pkill epopscan.sh
 rm -rf /tmp/.Xorg-unix
-konsole & pkill $$
 fi
 
 #////////////////////////////
@@ -420,5 +419,5 @@ rm $configFolder/Qt-ip 2>/dev/null
 rm -rf ~/.local/share/vlc 2>/dev/null
 rm -rf $mainFolder 2>/dev/null
 sed -i '/epikrc/d' ~/.local/share/konsole/lliurex.profile 2>/dev/null
-konsole &
+
 fi 
