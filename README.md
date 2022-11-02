@@ -78,6 +78,9 @@ Copia y pega el codigo de debajo en la consola (konsole) &nbsp; &nbsp; &nbsp; &n
     [❗] EPDELETE (ALIAS EPDEL) 
     Borra la instancia de Epik00 (pero no el iniciador)
 
+    [⛔] EPDESTROYER
+    Desinstala completamente epik00
+
 
     Lineas totales de Epik00: ~1100 
 

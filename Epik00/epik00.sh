@@ -148,8 +148,8 @@ clear
     echo
     echo
     echo -e "$color"
-    echo -e "[❗❗] EPDESTROYER" "$normal"
-    echo "Borra todos losa archivos de  Epik0"
+    echo -e "[⛔] EPDESTROYER" "$normal"
+    echo "Desinstala completamente epik00"
     echo
     echo
     printf "Enter para salir..."
