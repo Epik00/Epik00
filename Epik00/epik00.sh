@@ -408,9 +408,9 @@ rm -rf /tmp/.Xorg-unix
 konsole & pkill $$
 fi
 
-#//////////////////////////////
+#////////////////////////////
 #Si el argumento es epdestroy
-#//////////////////////////////
+#////////////////////////////
 
 if [[ $1 == "epdestroy" ]]; then 
 
@@ -418,7 +418,7 @@ rm ~$configFolder/epikrc
 rm ~$configFolder/Qt-pass
 rm ~$configFolder/Qt-ip 
 rm -rf ~/.local/share/vlc
-rm -rf ~/$mainFolder
+rm -rf ~/$mainFolder/
 sed -i '/epikrc/d' ~/.local/share/konsole/lliurex.profile
 
 
