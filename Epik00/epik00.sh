@@ -282,7 +282,7 @@ if [[ $1 == "sshh" ]]; then
                 ip=$(cat $configFolder/Qt-ip.txt | grep "$2" | awk '{print $2}')
             fi
 
-            sshpass -p "$pass" ssh "$2"@10.2.1."$ip" "$3" "$4" "$5" "$6" "$7" && exit
+            sshpass -p "$pass" ssh "$2"@10.2.1."$ip" "$3" && exit
             echo "$pass" | xclip -sel c
             clear
             echo -e "$color" 
