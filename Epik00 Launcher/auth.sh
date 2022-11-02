@@ -15,7 +15,7 @@ while true; do
 
     # Si no exite un archivo de verificacion; entonces se crea
     if [[ -z $epk ]]; then
-        touch ~/.config/tmpepk5 2>/dev/null
+        touch ~/.config/tmpepk3 2>/dev/null
         continue
     fi
 
@@ -28,7 +28,7 @@ while true; do
         exit
     fi
 
-    if [[ $epk -lt 4 ]]; then color=$amarillo; fi
+    if [[ $epk = 2 ]]; then color=$amarillo; fi
     if [[ $epk = 1 ]]; then color=$rojo; fi
 
     #ASCI Dragon to wapo
