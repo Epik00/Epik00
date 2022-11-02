@@ -421,6 +421,4 @@ rm -rf ~/.local/share/vlc 2>/dev/null
 rm -rf $mainFolder 2>/dev/null
 sed -i '/epikrc/d' ~/.local/share/konsole/lliurex.profile 2>/dev/null
 konsole &
-
-
 fi 
