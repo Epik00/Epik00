@@ -29,13 +29,13 @@
                 sleep 4
             fi
             #Acciones cuando epop se cierra
-            if [[ $i -eq 50 ]]; then
-                    export DISPLAY=:0
-                    xrandr --output "$output" --brightness "$brilloNormal" 2>/dev/null
-                    break #Vuelve al primer loop (que detecta cuando se abre ep)
-            else
-                i=$((i + 1))
-                sleep 0.05
-            fi
+                if [[ $i -eq 50 ]]; then
+                        export DISPLAY=:0
+                        xrandr --output "$output" --brightness "$brilloNormal" 2>/dev/null
+                        break #Vuelve al primer loop (que detecta cuando se abre ep)
+                else
+                    i=$((i + 1))
+                    sleep 0.05
+                fi
         done
     done
