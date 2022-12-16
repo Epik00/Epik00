@@ -173,9 +173,13 @@
     fi
 # Epoff Command [epoff]
     if [[ $1 == "epoff" ]]; then
-        socatPid=$(top -b -n1 | grep socat | awk '{print $1}' | head -n1)
+    i=1
+    while [[ $i < "10" ]]; do
+        socatPid=$(ps aux | grep socat | awk '{print $2}' | head -n$i)
         kill -STOP "$socatPid"
-        exit
+        i=$((i + 1))
+    done
+    exit
     fi
 # Epck Command [epck]
     if [[ $1 == "epck" ]]; then
